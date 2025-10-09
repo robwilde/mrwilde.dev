@@ -1,3 +1,93 @@
 baseURL = 'https://mrwilde.dev/'
 languageCode = 'en-au'
-title = 'I am Mr Wilde`
+title = 'Mr Wilde'
+theme = 'terminal'
+timeZone = "Australia/Sydney"
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:title/"
+
+[taxonomies]
+  tag = "tags"
+  author = "authors"
+
+[indexes]
+  tag = "tags"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+    # Enable or disable smartypants (automatic conversion of ASCII punctuation to smart punctuation)
+    smartypants = true
+    # Enable or disable fractions (automatic conversion of fractions)
+    fractions = true
+    # Enable or disable superscript and subscript support
+    # (enable to allow ^ and ~ for superscript and subscript)
+    superscript = true
+    unsafe = true
+
+ignoreFiles = [
+"themes/terminal/content"
+]
+
+# [outputs]
+#   blog = [
+#     "HTML",
+#     "RSS",
+#     "sitemap-blog.xml"
+#   ]
+#   home = [
+#     "HTML",
+#     "RSS",
+#     "sitemap.xml"
+#   ]
+
+[params]
+  disqus = "mydisquscode"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/robwilde"
+
+  [[params.social]]
+    name = "x"
+    url = "https://x.com/mrwilde"
+
+  [[params.social]]
+    name = "youtube"
+    url = "https://youtube.com/@MrWilde"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/robertewilde"
+
+  [[params.social]]
+    name = "buy me a coffee"
+    url = "https://www.buymeacoffee.com/mrwilde"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.116.0"
+
+[[menus.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about.html"
+  weight = 20
+
+[[menus.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog"
+  weight = 30
+
+[[menus.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags"
+  weight = 40
