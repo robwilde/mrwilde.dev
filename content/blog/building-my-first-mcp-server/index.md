@@ -10,7 +10,7 @@ authors: ["Robert Wilde"]
 description: How I built my first MCP server to automatically save Claude Code responses to Obsidian - from scratch to itch.
 ---
 
-![claude-code-mcp-obsidian.png](/claude-code-mcp-obsidian.png)
+![Claude Code to Obsidian MCP](claude-code-mcp-obsidian.png)
 
 ## Finally, an Idea Worth Building
 

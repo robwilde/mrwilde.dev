@@ -31,23 +31,21 @@ timeZone = "Australia/Sydney"
     unsafe = true
 
 ignoreFiles = [
-"themes/terminal/content"
+    "themes/terminal/content"
 ]
 
-# [outputs]
-#   blog = [
+#
+#[outputs]
+#    blog = [
 #     "HTML",
-#     "RSS",
-#     "sitemap-blog.xml"
-#   ]
-#   home = [
+#     "RSS"
+#    ]
+#    home = [
 #     "HTML",
-#     "RSS",
-#     "sitemap.xml"
-#   ]
+#     "RSS"    ]
 
 [params]
-  disqus = "mydisquscode"
+  disqus = "mrwilde-dev"
 
   [[params.social]]
     name = "github"
