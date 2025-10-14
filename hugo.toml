@@ -89,3 +89,7 @@ ignoreFiles = [
   name = "Tags"
   url = "/tags"
   weight = 40
+
+[caches]
+    [caches.images]
+        dir = ':cacheDir/images'
