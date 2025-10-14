@@ -34,18 +34,24 @@ ignoreFiles = [
     "themes/terminal/content"
 ]
 
-#
-#[outputs]
-#    blog = [
-#     "HTML",
-#     "RSS"
-#    ]
-#    home = [
-#     "HTML",
-#     "RSS"    ]
+# Enable RSS feeds for blog and home
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
 
 [params]
   disqus = "mrwilde-dev"
+
+  # SEO and Social Media
+  description = "All the nerd stuff from Mr Wilde's brain, if you can handle it."
+  author = "Robert Wilde"
+  twitter_username = "mrwilde"
+
+  # Default image for social media sharing (add this file to /static/ later)
+  # og_image = "/images/social-share-default.png"
+
+  # You can also set a logo that will be used as fallback
+  # logo = "/images/logo.png"
 
   [[params.social]]
     name = "github"
