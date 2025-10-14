@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cli on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/cli/</link>
+    <description>Recent content in Cli on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +1100</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is WP-CLI and what can it do for you?</title>
+      <link>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</guid>
+      <description>&lt;h2 id=&#34;so-what-is-wp-cli&#34;&gt;So what is WP-CLI?&lt;/h2&gt;&#xA;&lt;p&gt;WP-CLI or the WordPress Command Line Interface is a PHP based tool that allows you to manage your WordPress site via SSH (Secure Shell) interface.&lt;/p&gt;&#xA;&lt;p&gt;In simpler terms, it is the back-door to your website. WP-Admin is the GUI or Graphical User interface gives you something nice to look at, with buttons and colours that can be accessed via a web page. WP-CLI drops the GUI and works with simple commands, providing more control and speed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

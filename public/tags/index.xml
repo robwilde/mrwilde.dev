@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/</link>
+    <description>Recent content in Tags on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 02 Aug 2025 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Tools</title>
+      <link>https://mrwilde.dev/tags/ai-tools/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/ai-tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>https://mrwilde.dev/tags/claude/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>https://mrwilde.dev/tags/development/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://mrwilde.dev/tags/mcp/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Obsidian</title>
+      <link>https://mrwilde.dev/tags/obsidian/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/obsidian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://mrwilde.dev/tags/python/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cicd</title>
+      <link>https://mrwilde.dev/tags/cicd/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/cicd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://mrwilde.dev/tags/devops/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://mrwilde.dev/tags/docker/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github-Actions</title>
+      <link>https://mrwilde.dev/tags/github-actions/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Letsencrypt</title>
+      <link>https://mrwilde.dev/tags/letsencrypt/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/letsencrypt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>https://mrwilde.dev/tags/nginx/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Retype</title>
+      <link>https://mrwilde.dev/tags/retype/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/retype/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Better Developer</title>
+      <link>https://mrwilde.dev/tags/better-developer/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/better-developer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DeveloperProductivity</title>
+      <link>https://mrwilde.dev/tags/developerproductivity/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/developerproductivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SoftwareEngineering</title>
+      <link>https://mrwilde.dev/tags/softwareengineering/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/softwareengineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TechnicalLeadership</title>
+      <link>https://mrwilde.dev/tags/technicalleadership/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/technicalleadership/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://mrwilde.dev/tags/ai/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://mrwilde.dev/tags/guide/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev</title>
+      <link>https://mrwilde.dev/tags/dev/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/dev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev-Environment</title>
+      <link>https://mrwilde.dev/tags/dev-environment/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/dev-environment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Helpers</title>
+      <link>https://mrwilde.dev/tags/helpers/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/helpers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>https://mrwilde.dev/tags/tools/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cli</title>
+      <link>https://mrwilde.dev/tags/cli/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wordpress</title>
+      <link>https://mrwilde.dev/tags/wordpress/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Computers</title>
+      <link>https://mrwilde.dev/tags/computers/</link>
+      <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/computers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>https://mrwilde.dev/tags/hardware/</link>
+      <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Energy</title>
+      <link>https://mrwilde.dev/tags/energy/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/energy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Science</title>
+      <link>https://mrwilde.dev/tags/science/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thorium</title>
+      <link>https://mrwilde.dev/tags/thorium/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/thorium/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Public-Speaking</title>
+      <link>https://mrwilde.dev/tags/public-speaking/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/public-speaking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Talks</title>
+      <link>https://mrwilde.dev/tags/talks/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/tags/talks/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

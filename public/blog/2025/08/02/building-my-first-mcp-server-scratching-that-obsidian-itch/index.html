@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-au"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How I built my first MCP server to automatically save Claude Code responses to Obsidian - from scratch to itch.">
+
+<meta name="ICBM" content="19.0760, 72.8777">
+<meta name="geo.position" content="19.0760;72.8777">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Mumbai">
+<title>Building My First MCP Server: Scratching That Obsidian Itch | Mr Wilde</title>
+
+
+        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="https://mrwilde.dev/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
+      <p>Love Your Work!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  
+  <div class="flex flex-col pt-8 gap-10">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl max-sm:text-2xl font-bold">Building My First MCP Server: Scratching That Obsidian Itch</h2>
+      
+      <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
+        <p>📅 Saturday, Aug 2, 2025</p>
+        <p>⏰ 00:00:00</p>
+        
+          <p>🔄 Saturday, Aug 2, 2025 00:00:00</p>
+        
+        <p>📖 Reading time: 6 min</p>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <div class="py-1">📝</div>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/authors/robert-wilde'
+      class="border border-orange-400 p-1 hover:bg-orange-400 focus:bg-orange-400 text-center focus:text-color-white">
+      Robert Wilde
+    </a>
+  
+</div>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <p class="py-1">🏷️</p>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/tags/mcp'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">MCP</a>
+  
+    <a href='/tags/claude'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Claude</a>
+  
+    <a href='/tags/obsidian'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Obsidian</a>
+  
+    <a href='/tags/python'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Python</a>
+  
+    <a href='/tags/ai-tools'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">AI Tools</a>
+  
+    <a href='/tags/development'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Development</a>
+  
+</div>
+      </div>
+      <hr />
+      <div class="flex flex-col gap-10">
+        <div class="prose prose-invert max-w-full">
+          <p><img src="claude-code-mcp-obsidian.png" alt="Claude Code to Obsidian MCP"></p>
+<h2 id="finally-an-idea-worth-building">Finally, an Idea Worth Building</h2>
+<p>After months of hearing about Model Context Protocol (MCP) servers and thinking &ldquo;that&rsquo;s cool, but what would I actually build?&rdquo;, I finally had my moment. Like many developers, there&rsquo;s no better motivation to work on a project than <strong>scratching your own itch</strong>.</p>
+<p>Mine was simple: I kept losing valuable Claude Code responses. Those perfectly crafted solutions, detailed explanations, and code snippets would disappear into the void of my terminal&rsquo;s scrollback buffer. Meanwhile, my Obsidian vault sat there, begging to become the permanent home for this knowledge.</p>
+<p>That&rsquo;s when it clicked - I needed to build an MCP server that automatically saves Claude Code responses to Obsidian.</p>
+<h2 id="the-challenge">The Challenge</h2>
+<p>Working with Claude Code daily, I noticed a pattern: I&rsquo;d get fantastic responses—detailed code explanations, debugging insights, architectural suggestions—and then they&rsquo;d vanish. Copy-pasting to Obsidian manually was tedious and I&rsquo;d inevitably forget to do it.</p>
+<p>What I needed was automatic capture that preserved context, added proper metadata, and organized everything in my existing knowledge management system.</p>
+<blockquote>
+<p><strong>The Itch</strong>
+Every time I scrolled back through my terminal looking for that perfect Claude response from yesterday, I knew I had to build something.</p></blockquote>
+<h2 id="the-solution">The Solution</h2>
+<p>The architecture turned out simpler than I initially thought:</p>
+<ul>
+<li><strong>MCP Server</strong>: Provides tools that Claude Code can use directly</li>
+<li><strong>Project Detection</strong>: Automatically detects current project context</li>
+<li><strong>Template Engine</strong>: Formats content using customizable templates</li>
+<li><strong>Direct Integration</strong>: Just ask Claude to &ldquo;save to Obsidian&rdquo; and it happens</li>
+</ul>
+<p>No hooks required—the MCP server makes tools available that Claude Code can use naturally during conversations.</p>
+<h2 id="building-the-real-thing">Building the Real Thing</h2>
+<h3 id="beyond-my-initial-concept">Beyond My Initial Concept</h3>
+<p>What I actually built was far more polished than my initial hook-based approach. The final MCP server provides a clean, direct integration where you simply ask Claude Code to save content to Obsidian.</p>
+<h3 id="key-features-i-implemented">Key Features I Implemented</h3>
+<ul>
+<li><strong>One-command installation</strong>: <code>python3 install.py</code> handles everything</li>
+<li><strong>Project-specific configuration</strong>: Each project can have custom folders and templates</li>
+<li><strong>Rich formatting</strong>: Automatic frontmatter, timestamps, and structured templates</li>
+<li><strong>Multiple content types</strong>: Reports, reviews, and notes with different formatting</li>
+</ul>
+<p>The core insight was making it <strong>conversational</strong>—instead of automatic hooks, you explicitly ask Claude to save content:</p>
+<p>The server provides four main tools:</p>
+<ul>
+<li><strong>save_to_obsidian</strong>: Primary tool for saving formatted content</li>
+<li><strong>save_claude_response</strong>: Direct response saving</li>
+<li><strong>list_vault_files</strong>: Browse existing vault files</li>
+<li><strong>get_vault_structure</strong>: View vault folder hierarchy</li>
+</ul>
+<h3 id="the-magic-of-direct-integration">The Magic of Direct Integration</h3>
+<p>Instead of hooks, I made it conversational. You simply ask Claude Code:</p>
+<pre tabindex="0"><code>&#34;Create a security review of the authentication system and save to Obsidian&#34;
+&#34;Generate API documentation and save it to Obsidian as a report&#34;
+&#34;Document the database schema and save to Obsidian&#34;
+</code></pre><p>Claude Code automatically uses the <code>save_to_obsidian</code> tool to format and save content to your vault with proper structure and metadata.</p>
+<h3 id="project-specific-configuration">Project-Specific Configuration</h3>
+<p>Each project can have custom settings in <code>.claude/obsidian.json</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;folder&#34;</span>: <span style="color:#e6db74">&#34;Projects/My Awesome Project&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;templates&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;report&#34;</span>: <span style="color:#e6db74">&#34;# {title}\n\n**📋 Report Generated**\n- **Date:** {timestamp}\n- **Project:** {project}\n\n{content}&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;review&#34;</span>: <span style="color:#e6db74">&#34;# Code Review: {title}\n\n**👀 Review Details**\n- **Date:** {timestamp}\n- **Project:** {project}\n\n{content}&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="automatic-formatting">Automatic Formatting</h3>
+<p>The server generates properly structured files with frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>created: 2025-01-27T14:30:22.123456
+</span></span><span style="display:flex;"><span>source: claude-code
+</span></span><span style="display:flex;"><span>tags: [claude-code, report, project-name]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Security Review: Authentication System
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>📋 Report Generated**
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **Date:** 2025-01-27 14:30:22
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **Project:** my-awesome-project
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **Type:** Technical Report
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Your content here, formatted according to the template]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">*Generated by Claude Code*</span>
+</span></span></code></pre></div><h3 id="template-flexibility">Template Flexibility</h3>
+<p>One of the best features is the template system. Different content types get different formatting:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;templates&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;security-review&#34;</span>: <span style="color:#e6db74">&#34;# 🔒 Security Review: {title}\n\n**Reviewed by:** Claude Code\n**Date:** {timestamp}\n\n## Executive Summary\n\n{content}&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;api-docs&#34;</span>: <span style="color:#e6db74">&#34;# 📚 API Documentation: {title}\n\n**Generated:** {timestamp}\n**Version:** 1.0\n\n{content}&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="getting-it-running">Getting It Running</h2>
+<h3 id="super-simple-installation">Super Simple Installation</h3>
+<p>I built an interactive installer that handles everything:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/your-username/obsidian-mcp-server.git
+</span></span><span style="display:flex;"><span>cd obsidian-mcp-server
+</span></span><span style="display:flex;"><span>python3 install.py
+</span></span></code></pre></div><p>The installer:</p>
+<ul>
+<li>✅ Checks Python 3.8+ and installs MCP dependencies</li>
+<li>✅ Prompts for your Obsidian vault path</li>
+<li>✅ Installs the MCP server globally to <code>~/.claude/</code></li>
+<li>✅ Configures Claude Code settings automatically</li>
+<li>✅ Optionally creates project-specific configuration</li>
+</ul>
+<h3 id="for-existing-projects">For Existing Projects</h3>
+<p>Add project-specific configuration to any existing project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 install.py --project-config
+</span></span></code></pre></div><p>This creates a <code>.claude/obsidian.json</code> file in your current project with custom folder and template settings.</p>
+<h2 id="what-i-learned">What I Learned</h2>
+<h3 id="mcp-is-simpler-than-expected">MCP is Simpler Than Expected</h3>
+<p>The Model Context Protocol documentation made it seem complex, but the reality is refreshingly simple. You define tools, handle requests, and return responses. The Python SDK abstracts away the protocol details.</p>
+<h3 id="conversational-beats-automatic">Conversational Beats Automatic</h3>
+<p>My initial hook-based approach felt clever, but the conversational approach proved better. Being explicit about what to save gives you control over content and context.</p>
+<h3 id="templates-transform-usability">Templates Transform Usability</h3>
+<p>The template system was a game-changer. Different content types (reports, reviews, notes) get appropriate formatting automatically. No more manually structuring every saved item.</p>
+<blockquote>
+<p><strong>Pro Tip</strong>
+Start with simple templates and evolve them. I began with basic frontmatter and gradually added project-specific formatting.</p></blockquote>
+<h2 id="the-payoff">The Payoff</h2>
+<p>Now I can tell Claude Code &ldquo;generate a security analysis and save it to Obsidian&rdquo; and get a perfectly formatted document in my vault. The project-specific configuration means each project&rsquo;s documentation lands in the right folder with the right formatting.</p>
+<p>More importantly, <strong>I scratched my itch</strong>. That nagging feeling of losing valuable information is gone. My knowledge management system finally captures the full context of my development workflow.</p>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<p>A few things that initially tripped me up:</p>
+<ul>
+<li><strong>MCP server path</strong>: Ensure the Python path in settings.json is correct</li>
+<li><strong>Vault permissions</strong>: Make sure Claude Code can write to your Obsidian vault</li>
+<li><strong>Project detection</strong>: The <code>.claude/obsidian.json</code> file needs to be in your project root</li>
+<li><strong>Template syntax</strong>: Use double braces <code>{timestamp}</code> for variable substitution</li>
+</ul>
+<h2 id="why-this-approach-works">Why This Approach Works</h2>
+<p>Sure, I could have manually copied responses or used existing clipboard managers. But there&rsquo;s something deeply satisfying about building a solution that perfectly fits your workflow.</p>
+<p>The conversational approach feels natural—you&rsquo;re already talking to Claude, so asking it to save content is intuitive. The project-specific configuration means each codebase gets its own organization without any manual setup.</p>
+<h2 id="real-world-usage">Real-World Usage</h2>
+<p>Now I regularly ask Claude Code to:</p>
+<ul>
+<li>&ldquo;Create a deployment guide and save to Obsidian as a report&rdquo;</li>
+<li>&ldquo;Review this security vulnerability and save the analysis to Obsidian&rdquo;</li>
+<li>&ldquo;Document this API endpoint and save it to Obsidian&rdquo;</li>
+</ul>
+<p>Each gets properly formatted, timestamped, and filed in the right project folder.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Building my first MCP server taught me that the best projects often start with the simplest problems. I wasn&rsquo;t trying to revolutionize AI tooling—I just wanted to stop losing Claude responses.</p>
+<p>The final solution exceeded my expectations. What started as a basic &ldquo;save responses&rdquo; idea became a comprehensive documentation workflow that integrates seamlessly with how I already work.</p>
+<p>Sometimes the most powerful solutions come from scratching your own itch.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://modelcontextprotocol.io/">Model Context Protocol Specification</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code Documentation</a></li>
+<li><a href="https://github.com/modelcontextprotocol/python-sdk">MCP Python SDK</a></li>
+<li><a href="https://docs.obsidian.md/">Obsidian Developer Documentation</a></li>
+</ul>
+
+          <hr />
+        </div>
+        <div>
+          
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.url = "https:\/\/mrwilde.dev\/blog\/2025\/08\/02\/building-my-first-mcp-server-scratching-that-obsidian-itch\/";
+    this.page.identifier = "building-my-first-mcp-server"; 
+    };
+    (function () { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mrwilde-dev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+  
+
+  </div>
+  
+        <script type="text/javascript" src="/js/navbar.min.a2e7a3db4f1b58e7616cfd31a099340a207d5b99d96df87f525f17c604e184c1.js" integrity="sha256-ouej208bWOdhbP0xoJk0CiB9W5nZbfh/Ul8XxgThhME=" crossorigin="anonymous"></script>
+
+  <script id="dsq-count-scr" src="//nayanseth.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

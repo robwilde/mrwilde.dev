@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en-au"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="My experience deploying a Retype blog with Docker, GitHub Actions, and Let&#39;s Encrypt on a home server">
+
+<meta name="ICBM" content="19.0760, 72.8777">
+<meta name="geo.position" content="19.0760;72.8777">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Mumbai">
+<title>Hosting my Retype blog with CI/CD | Mr Wilde</title>
+
+
+        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="https://mrwilde.dev/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
+      <p>Love Your Work!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  
+  <div class="flex flex-col pt-8 gap-10">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl max-sm:text-2xl font-bold">Hosting my Retype blog with CI/CD</h2>
+      
+      <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
+        <p>📅 Thursday, Jul 3, 2025</p>
+        <p>⏰ 00:00:00</p>
+        
+          <p>🔄 Thursday, Jul 3, 2025 00:00:00</p>
+        
+        <p>📖 Reading time: 6 min</p>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <div class="py-1">📝</div>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/authors/robert-wilde'
+      class="border border-orange-400 p-1 hover:bg-orange-400 focus:bg-orange-400 text-center focus:text-color-white">
+      Robert Wilde
+    </a>
+  
+</div>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <p class="py-1">🏷️</p>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/tags/docker'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">docker</a>
+  
+    <a href='/tags/cicd'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">cicd</a>
+  
+    <a href='/tags/github-actions'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">github-actions</a>
+  
+    <a href='/tags/nginx'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">nginx</a>
+  
+    <a href='/tags/letsencrypt'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">letsencrypt</a>
+  
+    <a href='/tags/retype'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">retype</a>
+  
+    <a href='/tags/devops'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">DevOps</a>
+  
+</div>
+      </div>
+      <hr />
+      <div class="flex flex-col gap-10">
+        <div class="prose prose-invert max-w-full">
+          <p>Setting up a modern CI/CD pipeline for a static site generator might seem straightforward, but real-world deployment often presents unexpected challenges. Here&rsquo;s my journey deploying a Retype blog with Docker, GitHub Actions, and Let&rsquo;s Encrypt SSL certificates on my home OpenMediaVault server.</p>
+<h2 id="the-vision">The Vision</h2>
+<p>I wanted to achieve three key goals:</p>
+<ol>
+<li><strong>Linux compatibility</strong>: Update the Dockerfile to use npm instead of .NET SDK</li>
+<li><strong>Automatic updates</strong>: Configure Docker to pull from GitHub repository on rebuild</li>
+<li><strong>HTTPS support</strong>: Production-ready SSL certificates with Let&rsquo;s Encrypt</li>
+</ol>
+<h2 id="architecture-overview">Architecture Overview</h2>
+<p>The final solution consists of:</p>
+<ul>
+<li><strong>Multi-stage Docker build</strong> with Node.js and nginx</li>
+<li><strong>GitHub Actions CI/CD</strong> for automated Docker Hub deployments</li>
+<li><strong>Let&rsquo;s Encrypt integration</strong> with automatic certificate renewal</li>
+<li><strong>OpenMediaVault deployment</strong> using docker-compose plugin</li>
+</ul>
+<h2 id="docker-configuration">Docker Configuration</h2>
+<h3 id="simplified-dockerfile-with-github-actions-build">Simplified Dockerfile with GitHub Actions Build</h3>
+<p>After optimizing the build process, the final Dockerfile became much simpler by leveraging GitHub Actions to handle the Retype build:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">nginx:alpine</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> public/ /usr/share/nginx/html/public/<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> deploy/nginx-standalone.conf /etc/nginx/nginx.conf<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span> <span style="color:#e6db74">80</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>This approach:</p>
+<ul>
+<li>Eliminates the multi-stage build complexity</li>
+<li>Uses GitHub Actions to build the Retype site before Docker</li>
+<li>Creates a lightweight nginx-only container</li>
+<li>Significantly reduces build time and image size</li>
+</ul>
+<h3 id="nginx-configuration">Nginx Configuration</h3>
+<p>The nginx config needed to handle both HTTP and HTTPS while supporting Let&rsquo;s Encrypt validation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">server_name</span> <span style="color:#e6db74">mrwilde.dev</span> <span style="color:#e6db74">www.mrwilde.dev</span> <span style="color:#e6db74">_</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">index</span> <span style="color:#e6db74">index.html</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Let&#39;s Encrypt challenge
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/.well-known/acme-challenge/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">root</span> <span style="color:#e6db74">/var/www/certbot</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Serve content normally
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">try_files</span> $uri $uri/ <span style="color:#e6db74">/index.html</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">443</span> <span style="color:#e6db74">ssl</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">http2</span> <span style="color:#66d9ef">on</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">server_name</span> <span style="color:#e6db74">mrwilde.dev</span> <span style="color:#e6db74">www.mrwilde.dev</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ssl_certificate</span> <span style="color:#e6db74">/etc/letsencrypt/live/mrwilde.dev/fullchain.pem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ssl_certificate_key</span> <span style="color:#e6db74">/etc/letsencrypt/live/mrwilde.dev/privkey.pem</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ssl_protocols</span> <span style="color:#e6db74">TLSv1.2</span> <span style="color:#e6db74">TLSv1.3</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">add_header</span> <span style="color:#e6db74">Strict-Transport-Security</span> <span style="color:#e6db74">&#34;max-age=31536000</span>; <span style="color:#f92672">includeSubDomains&#34;</span> <span style="color:#e6db74">always</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">try_files</span> $uri $uri/ <span style="color:#e6db74">/index.html</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="github-actions-cicd-pipeline">GitHub Actions CI/CD Pipeline</h2>
+<p>The key breakthrough was using the official Retype build action before creating the Docker image. This automated workflow triggers on pushes to develop, main, and master branches:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and Push Docker Image</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">main, master, develop ]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull_request</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">main, master ]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout code</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup .NET</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-dotnet@v4</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">dotnet-version</span>: <span style="color:#ae81ff">9.0</span><span style="color:#ae81ff">.x</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build Retype site</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">retypeapp/action-build@latest</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">id</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">verbose</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">output</span>: <span style="color:#ae81ff">public</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Copy Retype output to public directory</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mkdir -p public
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        cp -r &#34;${{ steps.build.outputs.retype-output-path }}&#34;/* public/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Docker Buildx</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">docker/setup-buildx-action@v3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Login to Docker Hub</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">docker/login-action@v3</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">username</span>: <span style="color:#ae81ff">${{ secrets.DOCKER_USERNAME }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">password</span>: <span style="color:#ae81ff">${{ secrets.DOCKER_PASSWORD }}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Extract metadata</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">id</span>: <span style="color:#ae81ff">meta</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">docker/metadata-action@v5</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">images</span>: <span style="color:#ae81ff">mrwilde/mrwilde-retype</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">tags</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=ref,event=branch
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=ref,event=pr
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=sha,prefix=sha-
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=raw,value=latest,enable={{is_default_branch}}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and push Docker image</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">docker/build-push-action@v5</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">context</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">file</span>: <span style="color:#ae81ff">./deploy/Dockerfile</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">push</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">tags</span>: <span style="color:#ae81ff">${{ steps.meta.outputs.tags || &#39;mrwilde/mrwilde-retype:latest&#39; }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">labels</span>: <span style="color:#ae81ff">${{ steps.meta.outputs.labels }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">cache-from</span>: <span style="color:#ae81ff">type=gha</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">cache-to</span>: <span style="color:#ae81ff">type=gha,mode=max</span>
+</span></span></code></pre></div><p>The critical insight was that the <code>retypeapp/action-build@latest</code> action outputs to a dynamic path accessible via <code>steps.build.outputs.retype-output-path</code>, which we then copy to the expected <code>public/</code> directory for Docker to use.</p>
+<h2 id="docker-compose-orchestration">Docker Compose Orchestration</h2>
+<p>The docker-compose.yml needed to handle both the web server and certificate management:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mrwilde-website</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">mrwilde/mrwilde-retype:develop</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8280:80&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8444:443&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">ssl-data:/etc/letsencrypt</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">certbot-data:/var/www/certbot</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">mrwilde-site</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">certbot</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">certbot/certbot</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">certbot</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">ssl-data:/etc/letsencrypt</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">certbot-data:/var/www/certbot</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">dns</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">1.1.1.1</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8.8.8.8</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">extra_hosts</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;mrwilde.dev:144.6.123.191&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;www.mrwilde.dev:144.6.123.191&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>: [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;sh&#34;</span>, <span style="color:#e6db74">&#34;-c&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;if [ ! -f /etc/letsencrypt/live/mrwilde.dev/fullchain.pem ]; then certbot certonly --webroot --webroot-path=/var/www/certbot --email robert@mrwilde.com --agree-tos --no-eff-email -d mrwilde.dev -d www.mrwilde.dev; fi &amp;&amp; while true; do sleep 12h; certbot renew --quiet; done&#34;</span>
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ssl-data</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">certbot-data</span>:
+</span></span></code></pre></div><h2 id="challenges-and-solutions">Challenges and Solutions</h2>
+<h3 id="1-docker-hub-authentication">1. Docker Hub Authentication</h3>
+<p><strong>Problem</strong>: &ldquo;push access denied, repository does not exist or may require authorization&rdquo;</p>
+<p><strong>Solution</strong>: Set up proper GitHub secrets (<code>DOCKER_USERNAME</code>, <code>DOCKER_PASSWORD</code>) and ensure the Docker Hub repository name matched exactly.</p>
+<h3 id="2-lets-encrypt-validation-timeouts">2. Let&rsquo;s Encrypt Validation Timeouts</h3>
+<p><strong>Problem</strong>: &ldquo;Timeout during connect (likely firewall problem)&rdquo;</p>
+<p><strong>Root Cause</strong>: Even with a static IP, my ISP required explicit requests to open ports 80 and 443.</p>
+<p><strong>Solution</strong>: Contacted ISP to explicitly open these ports, despite having port forwarding configured.</p>
+<h3 id="3-port-conflicts">3. Port Conflicts</h3>
+<p><strong>Problem</strong>: Connection refused errors when accessing the site</p>
+<p><strong>Discovery</strong>: Other containers (Firefly III) were using overlapping ports</p>
+<p><strong>Solution</strong>: Changed from ports <code>8281:80/8443:443</code> to <code>8280:80/8444:443</code></p>
+<h3 id="4-certificate-chicken-and-egg-problem">4. Certificate Chicken-and-Egg Problem</h3>
+<p><strong>Problem</strong>: Nginx couldn&rsquo;t start with HTTPS config when no certificates existed, but certbot needed nginx running for validation.</p>
+<p><strong>Solution</strong>:</p>
+<ol>
+<li>Initially deploy with only HTTP server block</li>
+<li>Let certbot generate certificates</li>
+<li>Re-enable HTTPS server block</li>
+<li>Restart nginx to load certificates</li>
+</ol>
+<h3 id="5-dns-resolution-issues">5. DNS Resolution Issues</h3>
+<p><strong>Problem</strong>: Certbot was resolving domains to local IP instead of public IP</p>
+<p><strong>Solution</strong>: Added custom DNS servers (<code>1.1.1.1</code>, <code>8.8.8.8</code>) and explicit host entries in the certbot container.</p>
+<h3 id="6-retype-build-action-output-path">6. Retype Build Action Output Path</h3>
+<p><strong>Problem</strong>: Docker build failed with &ldquo;<code>/public</code>: not found&rdquo; even though the Retype action was running successfully</p>
+<p><strong>Root Cause</strong>: The <code>retypeapp/action-build@latest</code> action outputs to a dynamic path, not the expected <code>public/</code> directory</p>
+<p><strong>Solution</strong>: Used the action&rsquo;s output variable <code>steps.build.outputs.retype-output-path</code> to copy the built files to the correct location:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Copy Retype output to public directory</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    mkdir -p public
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    cp -r &#34;${{ steps.build.outputs.retype-output-path }}&#34;/* public/</span>
+</span></span></code></pre></div><p>This required updating the nginx configuration to use <code>/usr/share/nginx/html/public</code> as the document root.</p>
+<h2 id="key-learnings">Key Learnings</h2>
+<h3 id="openmediavault-constraints">OpenMediaVault Constraints</h3>
+<p>Working with OMV&rsquo;s docker-compose plugin meant:</p>
+<ul>
+<li>GUI-only management (no direct file system access)</li>
+<li>Everything must be self-contained in containers</li>
+<li>Limited debugging capabilities compared to traditional Docker setups</li>
+</ul>
+<h3 id="lets-encrypt-best-practices">Let&rsquo;s Encrypt Best Practices</h3>
+<ul>
+<li>Always test with staging certificates first</li>
+<li>Ensure proper DNS resolution for domain validation</li>
+<li>Use webroot validation for better reliability</li>
+<li>Implement automatic renewal (every 12 hours in our case)</li>
+</ul>
+<h3 id="docker-multi-stage-benefits">Docker Multi-Stage Benefits</h3>
+<ul>
+<li>Smaller production images (nginx alpine vs full Node.js)</li>
+<li>Separation of build and runtime environments</li>
+<li>Automatic code pulling on each build</li>
+</ul>
+<h2 id="final-architecture">Final Architecture</h2>
+<p>The deployed solution now provides:</p>
+<ul>
+<li><strong>HTTP access</strong>: <code>mrwilde.dev:80</code> → <code>8280</code> (for Let&rsquo;s Encrypt challenges)</li>
+<li><strong>HTTPS access</strong>: <code>mrwilde.dev:443</code> → <code>8444</code> (production traffic)</li>
+<li><strong>Automatic updates</strong>: GitHub push triggers Docker Hub build</li>
+<li><strong>SSL management</strong>: Production Let&rsquo;s Encrypt certificates with auto-renewal</li>
+<li><strong>Security headers</strong>: HSTS, XSS protection, and content type enforcement</li>
+</ul>
+<h2 id="performance-and-monitoring">Performance and Monitoring</h2>
+<p>The nginx configuration includes:</p>
+<ul>
+<li><strong>Gzip compression</strong> for text assets</li>
+<li><strong>Static asset caching</strong> with 1-year expiration</li>
+<li><strong>HTTP/2 support</strong> for modern browsers</li>
+<li><strong>Security headers</strong> for enhanced protection</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>What started as a simple static site deployment evolved into a comprehensive CI/CD pipeline with multiple challenging technical hurdles. The key to success was systematic troubleshooting, understanding the constraints of the deployment environment, and building robust automation.</p>
+<p>The final solution automatically:</p>
+<ul>
+<li>Pulls code changes from GitHub</li>
+<li>Builds and deploys Docker images</li>
+<li>Maintains SSL certificates</li>
+<li>Serves content with proper security headers</li>
+</ul>
+<p>This setup provides a solid foundation for hosting personal projects with professional-grade infrastructure, all running on a home server with enterprise-level automation.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://retype.com/">Retype Documentation</a></li>
+<li><a href="https://docs.docker.com/build/building/multi-stage/">Docker Multi-Stage Builds</a></li>
+<li><a href="https://letsencrypt.org/docs/">Let&rsquo;s Encrypt Documentation</a></li>
+<li><a href="https://docs.github.com/en/actions/publishing-packages/publishing-docker-images">GitHub Actions Docker Guide</a></li>
+<li><a href="https://github.com/openmediavault/openmediavault-compose">OpenMediaVault Docker Compose Plugin</a></li>
+</ul>
+
+          <hr />
+        </div>
+        <div>
+          
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.url = "https:\/\/mrwilde.dev\/blog\/2025\/07\/03\/hosting-my-retype-blog-with-ci\/cd\/";
+    this.page.identifier = "hosting-retype-blog-with-cicd"; 
+    };
+    (function () { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mrwilde-dev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+  
+
+  </div>
+  
+        <script type="text/javascript" src="/js/navbar.min.a2e7a3db4f1b58e7616cfd31a099340a207d5b99d96df87f525f17c604e184c1.js" integrity="sha256-ouej208bWOdhbP0xoJk0CiB9W5nZbfh/Ul8XxgThhME=" crossorigin="anonymous"></script>
+
+  <script id="dsq-count-scr" src="//nayanseth.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

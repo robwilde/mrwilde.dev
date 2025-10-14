@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MCP on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/mcp/</link>
+    <description>Recent content in MCP on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 02 Aug 2025 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/mcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building My First MCP Server: Scratching That Obsidian Itch</title>
+      <link>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;claude-code-mcp-obsidian.png&#34; alt=&#34;Claude Code to Obsidian MCP&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finally-an-idea-worth-building&#34;&gt;Finally, an Idea Worth Building&lt;/h2&gt;&#xA;&lt;p&gt;After months of hearing about Model Context Protocol (MCP) servers and thinking &amp;ldquo;that&amp;rsquo;s cool, but what would I actually build?&amp;rdquo;, I finally had my moment. Like many developers, there&amp;rsquo;s no better motivation to work on a project than &lt;strong&gt;scratching your own itch&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Mine was simple: I kept losing valuable Claude Code responses. Those perfectly crafted solutions, detailed explanations, and code snippets would disappear into the void of my terminal&amp;rsquo;s scrollback buffer. Meanwhile, my Obsidian vault sat there, begging to become the permanent home for this knowledge.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

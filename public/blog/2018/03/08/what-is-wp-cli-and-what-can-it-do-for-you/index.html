@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-au"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="the back-door to your WordPress website">
+
+<meta name="ICBM" content="19.0760, 72.8777">
+<meta name="geo.position" content="19.0760;72.8777">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Mumbai">
+<title>What is WP-CLI and what can it do for you? | Mr Wilde</title>
+
+
+        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="https://mrwilde.dev/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
+      <p>Love Your Work!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  
+  <div class="flex flex-col pt-8 gap-10">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl max-sm:text-2xl font-bold">What is WP-CLI and what can it do for you?</h2>
+      
+      <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
+        <p>📅 Thursday, Mar 8, 2018</p>
+        <p>⏰ 00:00:00</p>
+        
+          <p>🔄 Thursday, Mar 8, 2018 00:00:00</p>
+        
+        <p>📖 Reading time: 3 min</p>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <div class="py-1">📝</div>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/authors/robert-wilde'
+      class="border border-orange-400 p-1 hover:bg-orange-400 focus:bg-orange-400 text-center focus:text-color-white">
+      Robert Wilde
+    </a>
+  
+</div>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <p class="py-1">🏷️</p>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/tags/wordpress'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">wordpress</a>
+  
+    <a href='/tags/cli'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">cli</a>
+  
+    <a href='/tags/tools'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Tools</a>
+  
+</div>
+      </div>
+      <hr />
+      <div class="flex flex-col gap-10">
+        <div class="prose prose-invert max-w-full">
+          <h2 id="so-what-is-wp-cli">So what is WP-CLI?</h2>
+<p>WP-CLI or the WordPress Command Line Interface is a PHP based tool that allows you to manage your WordPress site via SSH (Secure Shell) interface.</p>
+<p>In simpler terms, it is the back-door to your website. WP-Admin is the GUI or Graphical User interface gives you something nice to look at, with buttons and colours that can be accessed via a web page. WP-CLI drops the GUI and works with simple commands, providing more control and speed.</p>
+<h2 id="why-should-you-use-wp-cli">Why should you use WP-CLI?</h2>
+<p>This will depend on whether you manage one site or multiple sites but there is always benefit to using WP-CLI. When I am doing regular maintenance on a site or inspecting a client site for the first time there are several commands I always run.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp plugin status
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp theme status
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp core check-update
+</span></span></code></pre></div><h2 id="fundamentals-of-a-wp-cli-command">Fundamentals of a WP-CLI command</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp core update --version<span style="color:#f92672">=</span>4.9.1 --force
+</span></span></code></pre></div><p>WP-CLI install page has details on how to add tab completions, so you just hit tab and get a list of available commands,
+sub-commands and options. <a href="https://wp-cli.org">https://wp-cli.org</a></p>
+<h2 id="lets-dig-deeper-and-see-what-we-can-do">Let&rsquo;s dig deeper and see what we can do!</h2>
+<h3 id="managing-users">Managing Users</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp user list
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp user update <span style="color:#ae81ff">2</span> --user_pass<span style="color:#f92672">=</span>Its@Secret!
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp user update <span style="color:#ae81ff">2</span> --user_pass<span style="color:#f92672">=</span>Its@Secret!
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp user delete iamnewuser
+</span></span></code></pre></div><p>Also a number of maintenance tools for DB as well but be very careful running them. Best rule if you are not sure, don&rsquo;t run them.</p>
+<h3 id="database-management">Database Management</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp db export pluginupdate.sql
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp db import pluginupdate.sql
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp search-replace <span style="color:#e6db74">&#34;//yoursite.com&#34;</span> <span style="color:#e6db74">&#34;//staging.yoursite.com&#34;</span> --dry-run
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp db repair
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp db optimize
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp db drop
+</span></span></code></pre></div><h3 id="posts">Posts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp post list --post_type<span style="color:#f92672">=</span>page --fields<span style="color:#f92672">=</span>post_title,post_statuses
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp post list --post_type<span style="color:#f92672">=</span>post --posts_per_page<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> --format<span style="color:#f92672">=</span>csv
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp post list --post_type<span style="color:#f92672">=</span>post --posts_per_page<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span> --format<span style="color:#f92672">=</span>csv &gt; posts.csv
+</span></span></code></pre></div><h2 id="building-and-scaffolding-sites">Building and Scaffolding Sites</h2>
+<p>Here are some more detailed commands for building and setting up your sites. You will need a database in place before you begin.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp core wp core download
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp core config --dbname<span style="color:#f92672">=</span>mrwilde_database --dbuser<span style="color:#f92672">=</span>mrwilde_user --dbpass<span style="color:#f92672">=</span>mrwilde_password --dbhost<span style="color:#f92672">=</span>localhost --dbprefix<span style="color:#f92672">=</span>mrwilde_
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp core install --url<span style="color:#f92672">=</span>mrwilde.com --title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Mr Wilde&#39;s Website&#34;</span> --admin_user<span style="color:#f92672">=</span>admin_user --admin_password<span style="color:#f92672">=</span>admin_password --admin_email<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;robert@mrwilde.com&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp plugin install query-monitor developer php-compatibility-checker theme-checker --activate
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp scaffold child-theme mrwilde-theme --parent_theme<span style="color:#f92672">=</span>twentyseventeen --theme_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MrWilde New Theme&#39;</span> --author<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Robert Wilde&#39;</span> --author_uri<span style="color:#f92672">=</span>https://mrwilde.com --theme_uri<span style="color:#f92672">=</span>https://mrwilde.com --activate
+</span></span></code></pre></div><h2 id="advanced-commands-and-piping">Advanced commands and Piping</h2>
+<p>Here a some more advanced commands that you can use for testing and fault-finding.
+I would highly advise you don&rsquo;t use these on a production server as they will change your site and possibly prevent it from being accessed via a web page.</p>
+<p>These commands are for development &amp; staging environments only and make sure you do a wp db export database-name.sql first as insurance.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp post list --post_type<span style="color:#f92672">=</span>attachment --post_mime_type<span style="color:#f92672">=</span>application/pdf --format<span style="color:#f92672">=</span>ids | xargs wp media regenerate
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp post delete lets you easily delete all posts.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp post delete wp post delete <span style="color:#66d9ef">$(</span>wp post list --post_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;page&#39;</span> --format<span style="color:#f92672">=</span>ids<span style="color:#66d9ef">)</span> // run a commands remotely on a site wp user list --ssh<span style="color:#f92672">=</span>robert@mrwilde.com/var/www
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wp core download --version<span style="color:#f92672">=</span>nightly --force
+</span></span></code></pre></div><p>That is only a small sample of commands for WP-CLI. Here are some links for beginners and advanced users as well as a few posts on how to install WP-CLI on your host.</p>
+<ul>
+<li><a href="https://wp-cli.org/">Home of WP_CLI</a></li>
+<li><a href="https://code.tutsplus.com/tutorials/what-is-wp-cli-a-beginners-guide--cms-28649">Beginners Guide to WP-CLI</a></li>
+<li><a href="https://tinyletter.com/wp-cli-tips">WP-CLI Tips by John Blackbourn (Creator of Query-Monitor)</a></li>
+<li><a href="https://www.smashingmagazine.com/2015/09/wordpress-management-with-wp-cli/">WP-CLI – Advanced WordPress Management</a></li>
+<li><a href="https://make.wordpress.org/cli/handbook/external-resources/">Other External Resources</a></li>
+</ul>
+<h3 id="installing-on-shared-host">Installing on Shared Host</h3>
+<ul>
+<li><a href="https://swapnil.blog/2018/01/10/installing-wp-cli-on-shared-hosting/">https://swapnil.blog/2018/01/10/installing-wp-cli-on-shared-hosting/</a></li>
+<li><a href="https://au.godaddy.com/help/how-to-install-wordpress-cli-on-shared-hosting-12363">https://au.godaddy.com/help/how-to-install-wordpress-cli-on-shared-hosting-12363</a></li>
+</ul>
+
+          <hr />
+        </div>
+        <div>
+          
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.url = "https:\/\/mrwilde.dev\/blog\/2018\/03\/08\/what-is-wp-cli-and-what-can-it-do-for-you\/";
+    this.page.identifier = "what-is-wp-cli"; 
+    };
+    (function () { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mrwilde-dev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+  
+
+  </div>
+  
+        <script type="text/javascript" src="/js/navbar.min.a2e7a3db4f1b58e7616cfd31a099340a207d5b99d96df87f525f17c604e184c1.js" integrity="sha256-ouej208bWOdhbP0xoJk0CiB9W5nZbfh/Ul8XxgThhME=" crossorigin="anonymous"></script>
+
+  <script id="dsq-count-scr" src="//nayanseth.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

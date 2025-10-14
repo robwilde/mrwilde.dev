@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guide on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/guide/</link>
+    <description>Recent content in Guide on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Thu, 19 Jun 2025 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI as a Development Tool: Enhancing, Not Replacing</title>
+      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <description>&lt;h2 id=&#34;tools-define-our-trade&#34;&gt;Tools Define Our Trade&lt;/h2&gt;&#xA;&lt;p&gt;Throughout my career, including experience in construction, I&amp;rsquo;ve learned that &lt;strong&gt;tools are crucial&lt;/strong&gt;. Yet, developers&#xA;often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when&#xA;PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we&#xA;leverage it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reducing-development-arrogance&#34;&gt;Reducing Development Arrogance&lt;/h2&gt;&#xA;&lt;p&gt;One unexpected benefit of working with AI tools is reducing my own &lt;strong&gt;development arrogance&lt;/strong&gt;. As a contractor, I&amp;rsquo;ve&#xA;encountered numerous approaches to writing code:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build a budget PC</title>
+      <link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link>
+      <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
+      <description>&lt;p&gt;If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from &lt;a href=&#34;https://twitter.com/paulhardware?lang=en&#34;&gt;@paulshardware&lt;/a&gt; has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.&lt;/p&gt;&#xA;&lt;p&gt;Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD. It is the basics for a PC, perfectly suited if you are looking to upgrade your current PC. There is a list at the start of software and peripherals, monitor, keyboard, mouse, not included in the build.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
