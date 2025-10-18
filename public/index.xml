@@ -6,8 +6,15 @@
     <description>Recent content in Home on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
-    <lastBuildDate>Sat, 02 Aug 2025 00:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +1100</lastBuildDate>
     <atom:link href="https://mrwilde.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title>
+      <link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid>
+      <description>&lt;p&gt;&lt;em&gt;A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from&#xA;happening again&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;/h2&gt;&#xA;&lt;p&gt;I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive&#xA;compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at&#xA;the top:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;You are not required to code the full solution before the interview. Instead, prepare to walk through your design&#xA;decisions and, if desired, share code snippets or pseudocode to illustrate critical parts.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building My First MCP Server: Scratching That Obsidian Itch</title>
       <link>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
@@ -77,6 +84,13 @@
       <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
       <guid>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</guid>
       <description>&lt;p&gt;It is all done, finished, over and kaput. WordCampSC has come and gone and what a fantastic weekend.&#xA;If I were only there as an attendee, I would still have learnt so much and been glad to have gone, but I was speaking for the first time.&lt;/p&gt;&#xA;&lt;p&gt;Did it go as planned? HELL NO! Part of the live demo material did not play out as rehearsed, several hours a day leading up to the event,&#xA;and every time I looked into the crowd all I could see were the faces of, what appeared to be, very confused people.&#xA;So why am I so happy? It is never, ever as bad as you think.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://mrwilde.dev/blog/1/01/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mrwilde.dev/blog/1/01/01/</guid>
+      <description>&lt;h1 id=&#34;requirements-first-framework&#34;&gt;Requirements-First Framework&lt;/h1&gt;&#xA;&lt;p&gt;A systematic approach to preventing over-engineering and scope creep in technical challenges, interviews, and projects.&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The Requirements-First Framework is a structured methodology designed to help engineers—especially senior developers—avoid the common pitfall of building impressive solutions to the wrong problem. Born from a failed technical interview, this framework addresses cognitive biases that lead skilled engineers to over-engineer, misread requirements, and focus on code over communication.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Read the full story:&lt;/strong&gt; &lt;a href=&#34;https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/&#34;&gt;How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

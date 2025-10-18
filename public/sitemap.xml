@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mrwilde.dev/tags/ai-tools/</loc>
-    <lastmod>2025-08-02T00:00:00+10:00</lastmod>
-  </url><url>
     <loc>https://mrwilde.dev/authors/</loc>
+    <lastmod>2025-10-17T00:00:00+11:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/better-developer/</loc>
+    <lastmod>2025-10-17T00:00:00+11:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/guide/</loc>
+    <lastmod>2025-10-17T00:00:00+11:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</loc>
+    <lastmod>2025-10-17T00:00:00+11:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/software-engineering/</loc>
+    <lastmod>2025-10-17T00:00:00+11:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/technical-leadership/</loc>
+    <lastmod>2025-10-17T00:00:00+11:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/ai-tools/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</loc>
@@ -50,9 +65,6 @@
     <loc>https://mrwilde.dev/tags/retype/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>https://mrwilde.dev/tags/better-developer/</loc>
-    <lastmod>2025-07-01T00:00:00+10:00</lastmod>
-  </url><url>
     <loc>https://mrwilde.dev/tags/developerproductivity/</loc>
     <lastmod>2025-07-01T00:00:00+10:00</lastmod>
   </url><url>
@@ -69,9 +81,6 @@
     <lastmod>2025-06-19T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</loc>
-    <lastmod>2025-06-19T00:00:00+10:00</lastmod>
-  </url><url>
-    <loc>https://mrwilde.dev/tags/guide/</loc>
     <lastmod>2025-06-19T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/about.html</loc>
@@ -142,5 +151,7 @@
   </url><url>
     <loc>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</loc>
     <lastmod>2016-04-09T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/blog/1/01/01/</loc>
   </url>
 </urlset>

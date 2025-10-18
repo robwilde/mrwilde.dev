@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en-au"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A post-mortem on how cognitive bias sabotaged my interview preparation, and the systematic approach I built to prevent it from happening again."><link rel="canonical" href="https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/">
+<link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="https://mrwilde.dev/blog/index.xml"><meta name="author" content="Robert Wilde">
+<meta name="language" content="en-au"><meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Mr Wilde">
+<meta property="og:title" content="How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)">
+<meta property="og:description" content="A post-mortem on how cognitive bias sabotaged my interview preparation, and the systematic approach I built to prevent it from happening again.">
+<meta property="og:url" content="https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/">
+<meta property="og:locale" content="en-au"><meta property="og:type" content="article">
+<meta property="article:published_time" content="2025-10-17T00:00:00&#43;11:00">
+<meta property="article:modified_time" content="2025-10-17T00:00:00&#43;11:00">
+<meta property="article:author" content="Robert Wilde">
+<meta property="article:tag" content="Technical Leadership"><meta property="article:tag" content="Software Engineering"><meta property="article:tag" content="Better Developer"><meta property="article:tag" content="Guide">
+  
+
+  
+
+
+
+
+  
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mrwilde">
+<meta name="twitter:creator" content="@mrwilde">
+<meta name="twitter:title" content="How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)">
+<meta name="twitter:description" content="A post-mortem on how cognitive bias sabotaged my interview preparation, and the systematic approach I built to prevent it from happening again.">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0f172a">
+<meta name="msapplication-TileColor" content="#0f172a">
+
+
+
+<meta name="ICBM" content="-27.4705, 153.0260">
+<meta name="geo.position" content="-27.4705;153.0260">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane">
+
+<title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again) | Mr Wilde</title>
+
+
+        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="https://mrwilde.dev/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
+      <p>Love Your Work!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  
+  <div class="flex flex-col pt-8 gap-10">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl max-sm:text-2xl font-bold">How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</h2>
+      
+      <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
+        <p>📅 Friday, Oct 17, 2025</p>
+        <p>⏰ 00:00:00</p>
+        
+          <p>🔄 Friday, Oct 17, 2025 00:00:00</p>
+        
+        <p>📖 Reading time: 16 min</p>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <div class="py-1">📝</div>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/authors/robert-wilde'
+      class="border border-orange-400 p-1 hover:bg-orange-400 focus:bg-orange-400 text-center focus:text-color-white">
+      Robert Wilde
+    </a>
+  
+</div>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <p class="py-1">🏷️</p>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/tags/technical-leadership'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Technical Leadership</a>
+  
+    <a href='/tags/software-engineering'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Software Engineering</a>
+  
+    <a href='/tags/better-developer'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Better Developer</a>
+  
+    <a href='/tags/guide'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Guide</a>
+  
+</div>
+      </div>
+      <hr />
+      <div class="flex flex-col gap-10">
+        <div class="prose prose-invert max-w-full">
+          <p><em>A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from
+happening again</em></p>
+<h2 id="the-setup">The Setup</h2>
+<p>I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive
+compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at
+the top:</p>
+<p><strong>&ldquo;You are not required to code the full solution before the interview. Instead, prepare to walk through your design
+decisions and, if desired, share code snippets or pseudocode to illustrate critical parts.&rdquo;</strong></p>
+<p>I had a long weekend to prepare. I&rsquo;m a Senior Software Engineer with deep PHP and Laravel expertise. I&rsquo;d helped multiple
+companies modernize legacy systems. This should have been straightforward.</p>
+<p>So naturally, I completely missed the point and spent the entire weekend doing exactly what they told me not to do.</p>
+<h2 id="the-moment-of-realization">The Moment of Realization</h2>
+<p>Monday, 12:45 PM. Fifteen minutes before the interview.</p>
+<p>I stared at my screen, looking at the fully refactored Laravel 12 application I&rsquo;d built, the comprehensive test suite
+I&rsquo;d written, the elaborate service layer architecture I&rsquo;d implemented. My heart sank as I finally, <em>finally</em> read the
+requirements properly:</p>
+<ul>
+<li>I had used <code>Http::pool()</code> for concurrent requests instead of designing an actual async solution.</li>
+<li>I was given oauth credentials and the challenge mentioned updating the basic to oauth. I focused on the external to
+internal client api and should have focused on the client to the external api.</li>
+<li>The data provided to connect to the internal API was not working, so I spent several hours building a mock internal
+API. My thinking was that this would make e2e testing more complete and ci/cd could utilise this for self-contained
+testing. I had reasons but again was not following the instructions.</li>
+<li>I had diagrams I had not updated, no flowcharts I had not revised</li>
+<li>I had a mess of context files I&rsquo;d never cleaned up</li>
+<li>I had no clear presentation prepared</li>
+</ul>
+<p>The interview was chaotic. I was just walking through each commit, like a guide pull request. I should have been going
+over my plan of what to do and not showing then what I did. I should have been explaining the architecture and
+presenting the trade-offs.</p>
+<p>I knew within the first five minutes that I&rsquo;d failed.</p>
+<h2 id="the-painful-truth">The Painful Truth</h2>
+<p>Here&rsquo;s what hurt the most: I&rsquo;m not a junior developer who doesn&rsquo;t know better. I&rsquo;ve mentored other developers. I&rsquo;ve led
+technical decisions on production systems. I&rsquo;ve given conference talks about software architecture. I recently helped a
+recent uni graduate do their own technical challenge and land their first job.</p>
+<p>And yet, when faced with a clear set of instructions, I did the exact opposite of what they asked.</p>
+<p>Why?</p>
+<h2 id="the-psychology-of-why-smart-people-miss-requirements">The Psychology of Why Smart People Miss Requirements</h2>
+<p>After the interview, I did what any engineer would do: I researched why this happened. Turns out, I wasn&rsquo;t experiencing
+some unique personal failings. I was experiencing well-documented cognitive biases that affect everyone, especially
+technically skilled people.</p>
+<h3 id="attentional-bias">Attentional Bias</h3>
+<p>My attention fixated on technical implementation, the comfortable, familiar territory where I feel competent, while
+filtering out the presentation requirements, which felt ambiguous and uncomfortable. Research shows that our perception
+is affected by our current train of thought, often causing us to focus on certain elements while ignoring
+others [attentional-bias-decision-lab][attentional-bias-frontiers]. My
+brain literally filtered out the parts of the requirements that made me uncomfortable.</p>
+<h3 id="the-mere-urgency-effect">The Mere Urgency Effect</h3>
+<p>I prioritized tasks that <em>felt</em> urgent (getting the code working, making the refactoring &ldquo;perfect&rdquo;) over tasks that were
+actually <em>important</em> (diagrams, OAuth for external clients, presentation structure). Studies show that people tend to
+prioritize tasks they perceive as time-sensitive over tasks that provide objectively greater rewards, even when those
+urgent tasks aren&rsquo;t the ones that matter most <a href="https://www.todoist.com/productivity-methods/eisenhower-matrix" title="The Eisenhower Matrix">mere-urgency-effect</a>.</p>
+<h3 id="activity-bias-or-productive-procrastination">Activity Bias (or &ldquo;Productive Procrastination&rdquo;)</h3>
+<p>Coding gave me immediate satisfaction. Every commit felt like progress. Creating diagrams and analyzing requirements
+felt abstract and anxiety-inducing. My brain chose the dopamine hit of &ldquo;look at all this code I wrote&rdquo; over the
+uncomfortable work of strategic thinking.</p>
+<h3 id="present-bias">Present Bias</h3>
+<p>The immediate reward of seeing working code outweighed the delayed reward of having a good presentation. I told
+myself, &ldquo;I&rsquo;ll do the diagrams later&rdquo; knowing full well that &ldquo;later&rdquo; would never come.</p>
+<h3 id="the-competence-trap">The Competence Trap</h3>
+<p>Here&rsquo;s the insidious part: I&rsquo;m <em>so</em> skilled at coding that my brain defaults to it when faced with ambiguity. Coding is
+my hammer, and this problem looked like a nail. When experts face uncertainty, they retreat to what they know best, even
+when it&rsquo;s not what&rsquo;s needed.</p>
+<p>The really painful part? While the Dunning-Kruger effect <a href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" title="Dunning-Kruger effect">dunning-kruger</a>
+describes how unskilled people overestimate their abilities, there&rsquo;s a flip side; experts tend to underestimate their
+own abilities at unfamiliar tasks. I assumed &ldquo;anyone can make a diagram&rdquo; but &ldquo;not everyone can refactor code this well.&rdquo;
+So I overinvested in the wrong thing.</p>
+<h2 id="what-i-should-have-done">What I Should Have Done</h2>
+<p>Looking back with clear eyes, here&rsquo;s what a proper approach would have looked like:</p>
+<p><strong>Day 1 (2 hours):</strong></p>
+<ul>
+<li>Extract all requirements into a checklist</li>
+<li>Highlight the phrase &ldquo;not required to code the full solution&rdquo;</li>
+<li>Create a presentation outline FIRST</li>
+<li>Sketch draft diagrams showing current vs. proposed architecture</li>
+<li>Identify 3-4 code snippets I&rsquo;d need to illustrate key points</li>
+</ul>
+<p><strong>Day 2-3 (8 hours):</strong></p>
+<ul>
+<li>Implement ONLY the strategy pattern as a proof of concept</li>
+<li>Implement OAuth 2.0 for external clients (the thing they explicitly asked about)</li>
+<li>Write a few key tests to demonstrate the testing approach</li>
+<li>Document my decisions and trade-offs</li>
+</ul>
+<p><strong>Day 4 (3 hours):</strong></p>
+<ul>
+<li>Polish diagrams</li>
+<li>Practice presentation out loud</li>
+<li>Prepare talking points for discussion</li>
+<li>Clean up any demo code</li>
+</ul>
+<p><strong>Day 5 (1 hour):</strong></p>
+<ul>
+<li>Final review of the requirement checklist</li>
+<li>One more dry run of presentation</li>
+</ul>
+<p>Total time: ~14 hours spread across 5 days, with plenty of buffer.</p>
+<p>Instead, I spent 20+ hours in a coding frenzy, finishing at midnight on Sunday, exhausted and with nothing presentable.</p>
+<h2 id="the-framework-i-built-to-prevent-this">The Framework I Built to Prevent This</h2>
+<p>I&rsquo;m sharing this publicly because I know I&rsquo;m not the only one who does this. So I built a systematic framework based on
+requirements analysis, best practices and cognitive bias mitigation techniques. I call it the <strong>Requirements-First
+Framework</strong>, and it&rsquo;s designed to interrupt the automatic patterns that lead us astray.</p>
+<hr>
+<h3 id="phase-0-requirements-extraction-mandatory---do-this-first">Phase 0: Requirements Extraction (MANDATORY - DO THIS FIRST)</h3>
+<p><strong>Time Box:</strong> 30-60 minutes
+<strong>When:</strong> Immediately upon receiving any task, before touching code
+<strong>Rule:</strong> You cannot start implementation until this phase is complete</p>
+<p>Create a file called <code>REQUIREMENTS.md</code> in your project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Requirements Document
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Date Created: [DATE]
+</span></span><span style="display:flex;"><span>Task: [NAME]
+</span></span><span style="display:flex;"><span>Review By: [DATE - set 24 hours before deadline]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## EXPLICIT REQUIREMENTS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>(Things they explicitly said you must do)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Submission Format
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Requirement 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Requirement 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Deliverables
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Deliverable 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Deliverable 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Technical Requirements
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Technical requirement 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Technical requirement 2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## EVALUATION CRITERIA
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>(How will they judge success?)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> Criterion 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> Criterion 2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> Criterion 3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## EXPLICITLY EXCLUDED
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>(Things they said NOT to do)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ❌ NOT doing full implementation - they said &#34;not required&#34;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ❌ NOT perfecting code - they&#39;re evaluating architecture thinking
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## RED FLAGS TO AVOID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>(Common mistakes for this type of task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ⚠️ Getting lost in implementation details
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ⚠️ Ignoring presentation requirements
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ⚠️ Focusing on impressive work that wasn&#39;t asked for
+</span></span></code></pre></div><h4 id="highlight-key-trigger-phrases">Highlight Key Trigger Phrases</h4>
+<p>Go through the requirements and highlight these indicators:</p>
+<p><strong>Presentation Indicators:</strong></p>
+<ul>
+<li>&ldquo;discuss and present&rdquo;</li>
+<li>&ldquo;come prepared to explain&rdquo;</li>
+<li>&ldquo;use diagrams&rdquo;</li>
+<li>&ldquo;whiteboarding&rdquo;</li>
+<li>&ldquo;walk through your design&rdquo;</li>
+</ul>
+<p><strong>Exclusion Indicators:</strong></p>
+<ul>
+<li>&ldquo;not required to&hellip;&rdquo;</li>
+<li>&ldquo;instead&hellip;&rdquo;</li>
+<li>&ldquo;rather than&hellip;&rdquo;</li>
+<li>&ldquo;focus on X not Y&rdquo;</li>
+</ul>
+<p><strong>Evaluation Indicators:</strong></p>
+<ul>
+<li>&ldquo;will be evaluated based on&rdquo;</li>
+<li>&ldquo;we&rsquo;re looking for&rdquo;</li>
+<li>&ldquo;demonstrate&rdquo;</li>
+<li>&ldquo;show your understanding of&rdquo;</li>
+</ul>
+<h4 id="answer-two-critical-questions">Answer Two Critical Questions</h4>
+<p>Before starting any work:</p>
+<p><strong>Question 1: What is the PRIMARY outcome they want?</strong></p>
+<ul>
+<li>Not &ldquo;what can I build&rdquo; but &ldquo;what do they need to see&rdquo;?</li>
+<li>Not &ldquo;what shows my skills&rdquo; but &ldquo;what proves I meet their need&rdquo;</li>
+</ul>
+<p><strong>Question 2: If I only had 25% of the time, what would I focus on?</strong></p>
+<ul>
+<li>This reveals the true priorities</li>
+<li>Everything else is optional</li>
+</ul>
+<p>For my interview, my honest answers would have been:</p>
+<ol>
+<li>They want to see my architectural thinking and communication skills, not perfect code</li>
+<li>With 25% time: Diagrams + discussing trade-offs + explaining a strategy pattern with one code example</li>
+</ol>
+<p>That would have saved me.</p>
+<hr>
+<h3 id="phase-1-presentation-first-planning-do-before-implementation">Phase 1: Presentation-First Planning (Do Before Implementation)</h3>
+<p><strong>Time Box:</strong> 1-2 hours
+<strong>Rule:</strong> Plan your presentation BEFORE writing code</p>
+<p>Create your presentation outline first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Presentation Outline
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Opening (2 minutes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I&#39;ll cover today
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> My approach to the problem
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Section 1: Current State Critique (5 minutes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Diagram: Current architecture
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Problems identified (3-5 key issues)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Section 2: Proposed Solution (8 minutes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Diagram: Proposed architecture
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Key improvements with rationale
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Code snippet examples (3-4 snippets max)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Section 3: Trade-offs &amp; Priorities (5 minutes)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I would do first (MVP)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I would do next (Phase 2)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I deliberately deprioritized (and why)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Materials Needed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Diagram 1: Current architecture
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Diagram 2: Proposed architecture
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Code snippet 1: [Description]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Code snippet 2: [Description]
+</span></span></code></pre></div><p><strong>Why this works:</strong> If you plan your presentation first, you&rsquo;ll only build what you need for the presentation. You
+literally cannot overengineer if you&rsquo;ve already decided what you&rsquo;re showing.</p>
+<p>Create your diagram <em>sketches</em> before writing any code. Even rough boxes-and-arrows on paper. This forces architectural
+thinking before implementation.</p>
+<hr>
+<h3 id="phase-2-time-boxed-implementation">Phase 2: Time-Boxed Implementation</h3>
+<p><strong>Rule:</strong> Every task gets a time box. When time expires, you stop.</p>
+<p>Create a time box matrix:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| Task                          | Time Box | Status        |
+</span></span><span style="display:flex;"><span>|-------------------------------|----------|---------------|
+</span></span><span style="display:flex;"><span>| Requirements extraction       | 1 hour   | ✅ Done       |
+</span></span><span style="display:flex;"><span>| Create presentation outline   | 1 hour   | ✅ Done       |
+</span></span><span style="display:flex;"><span>| Create diagrams (draft)       | 2 hours  | ✅ Done       |
+</span></span><span style="display:flex;"><span>| Prototype core pattern        | 3 hours  | 🔄 In Progress |
+</span></span><span style="display:flex;"><span>| Write tests                   | 2 hours  | ⏳ Planned    |
+</span></span><span style="display:flex;"><span>| Polish diagrams               | 1 hour   | ⏳ Planned    |
+</span></span><span style="display:flex;"><span>| Practice presentation         | 1 hour   | ⏳ Planned    |
+</span></span><span style="display:flex;"><span>| BUFFER                        | 2 hours  | ⏳ Reserved   |
+</span></span></code></pre></div><p><strong>Time box rules:</strong></p>
+<ol>
+<li>Set a timer. Literally. Use your phone.</li>
+<li>When timer goes off, stop immediately. Even mid-function.</li>
+<li>Assess: Did I achieve the goal?</li>
+<li>If no: Do I extend (with written justification) or move on?</li>
+</ol>
+<p><strong>The Stopping Rule:</strong></p>
+<p>If you&rsquo;re coding and losing track of time, STOP and ask:</p>
+<ol>
+<li>&ldquo;Will this specific code be shown in my presentation?&rdquo;</li>
+<li>&ldquo;Does this code prove a concept I need to demonstrate?&rdquo;</li>
+<li>&ldquo;Or am I just perfecting something that doesn&rsquo;t matter?&rdquo;</li>
+</ol>
+<p>If #3, stop immediately. Save and close the file.</p>
+<hr>
+<h3 id="phase-3-regular-check-ins-mandatory">Phase 3: Regular Check-Ins (Mandatory)</h3>
+<p>Set calendar reminders to check against requirements.</p>
+<h4 id="daily-check-in-5-minutes">Daily Check-In (5 minutes)</h4>
+<p>Every day at the same time:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Daily Check-In: [DATE]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### What I completed today:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [Task 1]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [Task 2]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Against requirement checklist:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ✅ Met requirement: [which one]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ❌ Haven&#39;t addressed: [which one]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Red flags check:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Am I building something they said NOT to do? ❌ No
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Am I ignoring evaluation criteria? ❌ No
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Am I doing &#34;impressive&#34; work that wasn&#39;t asked for? ⚠️ YES - STOP
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Course correction needed?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>[Yes/No + What to change]
+</span></span></code></pre></div><h4 id="the-48-hour-warning-check-in-30-minutes">The 48-Hour Warning Check-In (30 minutes)</h4>
+<p>48 hours before deadline, do a full review:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## 48-Hour Pre-Mortem
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>If I submitted what I have RIGHT NOW:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Evaluation Criteria Scoring (1-10)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> [Criterion 1]: [Score]/10 - Reasoning: [Why]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> [Criterion 2]: [Score]/10 - Reasoning: [Why]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### What&#39;s Missing That&#39;s Required?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Missing item 1 - Impact: HIGH
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> Missing item 2 - Impact: MEDIUM
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### What Did I Build That Wasn&#39;t Asked For?
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [Item 1] - Time spent: [X hours] - Could have spent on: [Y]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Honest Assessment:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Would this pass? YES / NO / MAYBE
+</span></span><span style="display:flex;"><span>If NO or MAYBE, what&#39;s the ONE thing that would move it to YES?
+</span></span></code></pre></div><p>This 48-hour check-in would have saved me. I would have seen:</p>
+<ul>
+<li>Missing: OAuth implementation (HIGH impact)</li>
+<li>Missing: Diagrams (HIGH impact)</li>
+<li>Missing: Presentation practice (MEDIUM impact)</li>
+<li>Not asked for: Full Laravel 12 refactoring (12 hours wasted)</li>
+</ul>
+<hr>
+<h3 id="phase-4-the-presentation-dry-run-mandatory">Phase 4: The Presentation Dry Run (Mandatory)</h3>
+<p><strong>Time Box:</strong> 1-2 hours
+<strong>When:</strong> 24 hours before delivery
+<strong>Rule:</strong> Do this even if it feels awkward</p>
+<p>Practice your presentation out loud:</p>
+<ol>
+<li>Set a timer for the presentation length (20 minutes)</li>
+<li>Present to an empty room or record yourself</li>
+<li>Follow your outline exactly</li>
+<li>Note where you struggle:
+<ul>
+<li>Where did you not have materials ready?</li>
+<li>Where couldn&rsquo;t you explain clearly?</li>
+<li>Where did you go over time?</li>
+</ul>
+</li>
+</ol>
+<p><strong>The &ldquo;Explain to a Rubber Duck&rdquo; Test:</strong></p>
+<p>Before the real presentation, explain your approach in one paragraph:</p>
+<p>&ldquo;The problem they gave me was [X]. The most important thing they&rsquo;re evaluating is [Y]. My approach was [Z]. The key
+things I need to show are [A, B, C].&rdquo;</p>
+<p>If you can&rsquo;t clearly articulate this, you&rsquo;re not ready.</p>
+<hr>
+<h2 id="emergency-protocol-when-you-realize-youre-off-track">Emergency Protocol: When You Realize You&rsquo;re Off Track</h2>
+<h3 id="the-oh-shit-moment-protocol">The &ldquo;Oh Shit&rdquo; Moment Protocol</h3>
+<p>When you realize you&rsquo;ve been focusing on the wrong thing:</p>
+<p><strong>1. STOP immediately.</strong> Close your IDE. Step away.</p>
+<p><strong>2. Emergency triage (15 minutes):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Emergency Triage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>TIME REMAINING: [X hours]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CURRENT STATE:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I&#39;ve built: [description]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I&#39;m missing: [description]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>REQUIREMENTS REVIEW:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What&#39;s actually required: [list]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I&#39;ve met: [list]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What I&#39;m missing: [list]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SALVAGE PLAN:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Can I repurpose what I built? [Yes/No + How]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What must I create from scratch? [List]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> What can I skip entirely? [List]
+</span></span></code></pre></div><p><strong>3. Execute ruthlessly:</strong></p>
+<ul>
+<li>Cut everything that doesn&rsquo;t directly address requirements</li>
+<li>Accept &ldquo;good enough&rdquo; over &ldquo;perfect&rdquo;</li>
+<li>Focus on demonstration over completion</li>
+</ul>
+<hr>
+<h2 id="cognitive-bias-countermeasures">Cognitive Bias Countermeasures</h2>
+<p>Beyond the process framework, here are mental tricks that help:</p>
+<h3 id="the-what-would-i-advise-someone-else-technique">The &ldquo;What Would I Advise Someone Else&rdquo; Technique</h3>
+<p>When you&rsquo;re deep in work, ask:</p>
+<p><strong>&ldquo;If a friend showed me this situation, what would I tell them?&rdquo;</strong></p>
+<p>We&rsquo;re much better at seeing other people&rsquo;s mistakes than our own. This creates psychological distance and clarity.</p>
+<h3 id="the-future-self-check">The &ldquo;Future Self&rdquo; Check</h3>
+<p>Set a recurring reminder:</p>
+<p><strong>&ldquo;Will Future Me (in the interview) be glad I spent time on this specific thing?&rdquo;</strong></p>
+<p>If uncertain, the answer is probably &ldquo;no.&rdquo;</p>
+<h3 id="the-uncomfortable-truth-journal">The &ldquo;Uncomfortable Truth&rdquo; Journal</h3>
+<p>Keep a document: <code>UNCOMFORTABLE_TRUTHS.md</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## Things I Know But Don&#39;t Want to Admit
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> I&#39;m avoiding creating diagrams because I&#39;m not confident
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> I&#39;m overengineering code because it feels safer than prep
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> I haven&#39;t practiced presenting because it makes me anxious
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Action Plan
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>For each truth, what&#39;s the smallest step I can take TODAY?
+</span></span></code></pre></div><p>Writing down what you&rsquo;re avoiding makes it conscious, which makes it addressable.</p>
+<hr>
+<h2 id="how-this-would-have-changed-my-outcome">How This Would Have Changed My Outcome</h2>
+<p>If I follow this framework for my interview:</p>
+<p><strong>Phase 0 would have caught:</strong></p>
+<ul>
+<li>&ldquo;Not required to code full solution&rdquo; ← Red flag</li>
+<li>&ldquo;Use diagrams and whiteboarding&rdquo; ← Required deliverable</li>
+<li>&ldquo;Discuss and present ideas&rdquo; ← True evaluation focus</li>
+<li>External client OAuth vs. internal API ← Priority clarification</li>
+</ul>
+<p><strong>Phase 1 would have forced:</strong></p>
+<ul>
+<li>Creating diagram placeholders before any code</li>
+<li>Outlining talking points first</li>
+<li>Identifying exactly 3-4 code snippets to show</li>
+</ul>
+<p><strong>Phase 2 time boxes would have prevented:</strong></p>
+<ul>
+<li>12+ hours on full refactoring</li>
+<li>Going down http::pool rabbit holes</li>
+<li>Perfecting code that wouldn&rsquo;t be shown</li>
+</ul>
+<p><strong>Phase 3 check-ins would have revealed:</strong></p>
+<ul>
+<li>Missing OAuth on Day 2 (time to fix it)</li>
+<li>Missing diagrams on Day 3 (time to create them)</li>
+<li>Over-engineering on Day 4 (time to stop)</li>
+</ul>
+<p><strong>Phase 4 dry run would have shown:</strong></p>
+<ul>
+<li>I couldn&rsquo;t walk through my solution clearly</li>
+<li>I didn&rsquo;t have visual aids</li>
+<li>My presentation was incoherent</li>
+</ul>
+<p>The framework catches these issues BEFORE the interview, not moments before when it&rsquo;s too late.</p>
+<hr>
+<h2 id="implementation-start-small">Implementation: Start Small</h2>
+<p>Don&rsquo;t try to use the entire framework at once. Build the habit gradually:</p>
+<p><strong>Week 1:</strong> Just do Phase 0 (requirement extraction) for every task
+<strong>Week 2:</strong> Add daily check-ins
+<strong>Week 3:</strong> Add presentation-first planning
+<strong>Week 4:</strong> Add dry runs for presentations
+<strong>Week 5:</strong> Add time boxing
+<strong>Week 6:</strong> Full framework operational</p>
+<p>By week 6, these practices become automatic.</p>
+<hr>
+<h2 id="for-your-next-technical-challenge">For Your Next Technical Challenge</h2>
+<p>Here&rsquo;s your immediate action plan:</p>
+<h3 id="1-create-your-template-folder">1. Create Your Template Folder</h3>
+<p>Right now, create a folder called <code>interview-templates</code> with these files:</p>
+<ul>
+<li><code>REQUIREMENTS.md</code> (empty template)</li>
+<li><code>TIME_BOX_MATRIX.md</code> (empty template)</li>
+<li><code>DAILY_CHECKIN.md</code> (empty template)</li>
+<li><code>PRESENTATION_OUTLINE.md</code> (empty template)</li>
+</ul>
+<p>When you get your next challenge, copy this folder and fill it out.</p>
+<h3 id="2-set-up-your-pre-task-checklist">2. Set Up Your Pre-Task Checklist</h3>
+<p>Print this and put it somewhere visible:</p>
+<pre tabindex="0"><code>□ I have created REQUIREMENTS.md
+□ I have identified what they&#39;re evaluating
+□ I have created a presentation outline
+□ I have created time boxes for all tasks
+□ I have set daily check-in reminders
+□ I have scheduled a 48-hour warning
+□ I have scheduled a dry run
+□ I have identified what I&#39;m NOT doing
+
+ONLY PROCEED IF ALL BOXES ARE CHECKED
+</code></pre><h3 id="3-find-an-accountability-partner">3. Find an Accountability Partner</h3>
+<p>Reach out to someone you trust. Ask them:</p>
+<p>&ldquo;I&rsquo;m working on breaking a bad habit where I over-engineer and miss requirements. Can you be my check-in person for my
+next interview prep? I just need you to ask me three questions at the midpoint: What was required? What did you build?
+Do they match?&rdquo;</p>
+<p>External accountability catches blind spots.</p>
+<hr>
+<h2 id="the-uncomfortable-truth-about-senior-engineers">The Uncomfortable Truth About Senior Engineers</h2>
+<p>Here&rsquo;s what I&rsquo;ve learned:</p>
+<ul>
+<li>this problem gets <em>worse</em> as you get better at engineering.</li>
+<li>Junior developers don&rsquo;t have this problem because they&rsquo;re not confident enough to go off-script. They follow
+instructions carefully because they&rsquo;re not sure of themselves.</li>
+<li>Senior developers have the opposite problem. We&rsquo;re so confident in our technical skills that we think we know better
+than the requirements. We see a problem and immediately think &ldquo;I know how to solve this properly&rdquo; and charge ahead.</li>
+<li>We confuse technical competence with reading comprehension.</li>
+</ul>
+<p>I&rsquo;ve mentored developers, led teams, modernised legacy systems, and given conference talks. And I still fell into this
+trap. That&rsquo;s not despite my experience, it&rsquo;s <em>because</em> of it.</p>
+<p>The framework exists because willpower and experience aren&rsquo;t enough. Our brains are wired to seek comfort, avoid
+ambiguity, and jump to implementation. Senior engineers need <em>systems</em> to counteract these tendencies precisely because
+we&rsquo;re good enough to build the wrong thing very efficiently.</p>
+<hr>
+<h2 id="why-im-sharing-this">Why I&rsquo;m Sharing This</h2>
+<p>I&rsquo;m publishing this post-mortem because:</p>
+<ol>
+<li>
+<p><strong>This is common.</strong> You&rsquo;re not alone if you&rsquo;ve done this.</p>
+</li>
+<li>
+<p><strong>It&rsquo;s not a character flaw.</strong> These are well-documented cognitive patterns that affect everyone, especially skilled
+people facing ambiguous tasks.</p>
+</li>
+<li>
+<p><strong>It&rsquo;s fixable.</strong> Not through willpower, but through systems.</p>
+</li>
+<li>
+<p><strong>Someone needs to say it out loud.</strong> We all pretend we&rsquo;re perfectly rational engineers who follow requirements.
+We&rsquo;re not. We&rsquo;re humans with biases, and we need frameworks to compensate.</p>
+</li>
+</ol>
+<p>The research shows that awareness alone doesn&rsquo;t fix cognitive bias. But awareness <em>plus</em> systematic countermeasures
+does.</p>
+<p>So here&rsquo;s my systematic countermeasure, built from my failure, tested against the research, and ready for you to use.</p>
+<h2 id="resources">Resources</h2>
+<p>If you want to understand more about the cognitive science behind this:</p>
+<ul>
+<li><a href="https://www.penguin.co.uk/books/56314/thinking-fast-and-slow-by-kahneman-daniel/9780141033570"><strong>Thinking, Fast and Slow</strong> by Daniel Kahneman</a> - The definitive book on cognitive bias</li>
+<li><a href="https://sites.socsci.uci.edu/~bskyrms/bio/readings/tversky_k_heuristics_biases.pdf"><strong>Judgment Under Uncertainty: Heuristics and Biases</strong></a> - The original research paper by Kahneman and
+Tversky</li>
+<li><a href="https://atulgawande.com/book/the-checklist-manifesto/"><strong>The Checklist Manifesto</strong> by Atul Gawande</a> - How checklists prevent experts from making
+avoidable mistakes</li>
+<li><a href="https://www.sciencedirect.com/topics/computer-science/requirement-engineering"><strong>Requirements Engineering</strong></a> - Academic literature on requirements gathering best practices</li>
+</ul>
+<p>If you want templates and tools:</p>
+<ul>
+<li>I&rsquo;ve created a <a href="https://github.com/robwilde/requirement-first-framework">GitHub repository</a> with all the templates from this post</li>
+</ul>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>I failed that interview. That hurt. But failing taught me something valuable:</p>
+<p><strong>Being a good engineer isn&rsquo;t enough. You also have to solve the right problem.</strong></p>
+<p>And sometimes the right problem isn&rsquo;t technical at all. Sometimes it&rsquo;s communication, presentation, and understanding
+what people actually need to see.</p>
+<p>The Requirements-First Framework is my apology to Future Me, and my gift to anyone else who&rsquo;s ever spent a weekend
+building the wrong thing because it felt right.</p>
+<p>You&rsquo;re not broken. Your brain is just being a brain.</p>
+<p>Build systems that compensate, and you&rsquo;ll be fine.</p>
+<hr>
+<p><em>Have you experienced something similar? I&rsquo;d love to hear your stories and what frameworks you&rsquo;ve built to prevent it.
+Connect with me on <a href="https://linkedin.com/in/robertewilde" title="Robert Wilde on LinkedIn">LinkedIn</a> or <a href="https://github.com/robwilde" title="Robert Wilde on GitHub">GitHub</a>.</em></p>
+
+          <hr />
+        </div>
+        <div>
+          
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.url = "https:\/\/mrwilde.dev\/blog\/2025\/10\/17\/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again\/";
+    this.page.identifier = "technical-interview-failure-framework"; 
+    };
+    (function () { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mrwilde-dev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+  
+
+  </div>
+  
+        <script type="text/javascript" src="/js/navbar.min.a2e7a3db4f1b58e7616cfd31a099340a207d5b99d96df87f525f17c604e184c1.js" integrity="sha256-ouej208bWOdhbP0xoJk0CiB9W5nZbfh/Ul8XxgThhME=" crossorigin="anonymous"></script>
+
+  <script id="dsq-count-scr" src="//mrwilde-dev.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

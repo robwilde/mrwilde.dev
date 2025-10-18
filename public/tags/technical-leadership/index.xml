@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Better Developer on Mr Wilde</title>
-    <link>https://mrwilde.dev/tags/better-developer/</link>
-    <description>Recent content in Better Developer on Mr Wilde</description>
+    <title>Technical Leadership on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/technical-leadership/</link>
+    <description>Recent content in Technical Leadership on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +1100</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/tags/better-developer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mrwilde.dev/tags/technical-leadership/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title>
       <link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
       <guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid>
       <description>&lt;p&gt;&lt;em&gt;A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from&#xA;happening again&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;/h2&gt;&#xA;&lt;p&gt;I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive&#xA;compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at&#xA;the top:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;You are not required to code the full solution before the interview. Instead, prepare to walk through your design&#xA;decisions and, if desired, share code snippets or pseudocode to illustrate critical parts.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Reducing Cognitive Load</title>
-      <link>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</link>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</guid>
-      <description>&lt;p&gt;Today I completed an API endpoint that a colleague needed to integrate with their system. Rather than simply sending over the endpoint URL and waiting for the inevitable questions, I took a different approach.&lt;/p&gt;&#xA;&lt;p&gt;I prepared a comprehensive package that included a POSTMAN collection with pre-configured diagnostics, a fully populated example request with actual data including signature and delivery images, and a sample of the generated PDF output.&lt;/p&gt;&#xA;&lt;p&gt;The entire process took me perhaps ten additional minutes.&#xA;My colleague&amp;rsquo;s response was telling:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
