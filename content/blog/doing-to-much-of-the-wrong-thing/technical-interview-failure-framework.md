@@ -72,7 +72,7 @@ technically skilled people.
 My attention fixated on technical implementation, the comfortable, familiar territory where I feel competent, while
 filtering out the presentation requirements, which felt ambiguous and uncomfortable. Research shows that our perception
 is affected by our current train of thought, often causing us to focus on certain elements while ignoring
-others [attentional-bias-decision-lab][attentional-bias-frontiers]. My
+others [attentional-bias-decision-lab] [attentional-bias-frontiers]. My
 brain literally filtered out the parts of the requirements that made me uncomfortable.
 
 ### The Mere Urgency Effect
@@ -80,7 +80,7 @@ brain literally filtered out the parts of the requirements that made me uncomfor
 I prioritized tasks that *felt* urgent (getting the code working, making the refactoring "perfect") over tasks that were
 actually *important* (diagrams, OAuth for external clients, presentation structure). Studies show that people tend to
 prioritize tasks they perceive as time-sensitive over tasks that provide objectively greater rewards, even when those
-urgent tasks aren't the ones that matter most [mere-urgency-effect][eisenhower-matrix].
+urgent tasks aren't the ones that matter most [mere-urgency-effect] [eisenhower-matrix].
 
 ### Activity Bias (or "Productive Procrastination")
 
@@ -671,6 +671,8 @@ If you want templates and tools:
 - I've created a [GitHub repository](https://github.com/robwilde/requirement-first-framework) with all the templates from this post 
 
 [attentional-bias-decision-lab]: https://thedecisionlab.com/biases/attentional-bias "Why do we focus more on some things than others?"
+
+[attentional-bias-frontiers]: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00686/full "Editorial: Behavioral and physiological bases of attentional biases"
 
 [mere-urgency-effect]: https://academic.oup.com/jcr/article-abstract/45/3/673/4847790 "The Mere Urgency Effect"
 
