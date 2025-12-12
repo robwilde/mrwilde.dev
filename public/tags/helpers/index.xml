@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Helpers on Mr Wilde</title>
-    <link>https://mrwilde.dev/tags/helpers/</link>
+    <link>http://localhost:1313/tags/helpers/</link>
     <description>Recent content in Helpers on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +1100</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/tags/helpers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/helpers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alf - Your Little Bash Alias Friend</title>
-      <link>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</link>
+      <link>http://localhost:1313/blog/2022/01/05/alf-your-little-bash-alias-friend/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
-      <guid>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid>
+      <guid>http://localhost:1313/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid>
       <description>&lt;h2 id=&#34;alf--your-little-bash-alias-friend&#34;&gt;Alf — Your Little Bash Alias Friend&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create aliases by using a config file.&lt;/li&gt;&#xA;&lt;li&gt;Create aliases for sub-commands (for example, g s for git status).&lt;/li&gt;&#xA;&lt;li&gt;Synchronize your aliases across hosts or users by uploading your config file to GitHub.&lt;/li&gt;&#xA;&lt;li&gt;Does not alter anything in your system except for creating the ~/.bash_aliases file, which is normally already sourced&#xA;by your login process.&#xA;Works with bash and zsh.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/DannyBen/alf&#34;&gt;github link&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>

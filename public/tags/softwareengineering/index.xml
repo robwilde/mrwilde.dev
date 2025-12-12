@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SoftwareEngineering on Mr Wilde</title>
-    <link>https://mrwilde.dev/tags/softwareengineering/</link>
+    <link>http://localhost:1313/tags/softwareengineering/</link>
     <description>Recent content in SoftwareEngineering on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Tue, 01 Jul 2025 00:00:00 +1000</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/tags/softwareengineering/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/softwareengineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reducing Cognitive Load</title>
-      <link>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</link>
+      <link>http://localhost:1313/blog/2025/07/01/reducing-cognitive-load/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</guid>
+      <guid>http://localhost:1313/blog/2025/07/01/reducing-cognitive-load/</guid>
       <description>&lt;p&gt;Today I completed an API endpoint that a colleague needed to integrate with their system. Rather than simply sending over the endpoint URL and waiting for the inevitable questions, I took a different approach.&lt;/p&gt;&#xA;&lt;p&gt;I prepared a comprehensive package that included a POSTMAN collection with pre-configured diagnostics, a fully populated example request with actual data including signature and delivery images, and a sample of the generated PDF output.&lt;/p&gt;&#xA;&lt;p&gt;The entire process took me perhaps ten additional minutes.&#xA;My colleague&amp;rsquo;s response was telling:&lt;/p&gt;</description>
     </item>
   </channel>

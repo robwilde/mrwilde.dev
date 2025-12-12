@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Better Dev on Mr Wilde</title>
+    <link>http://localhost:1313/tags/better-dev/</link>
+    <description>Recent content in Better Dev on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Fri, 12 Dec 2025 00:00:00 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/better-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your code is Crap and that&#39;s OK</title>
+      <link>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

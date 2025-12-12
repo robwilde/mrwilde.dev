@@ -2,80 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robert Wilde on Mr Wilde</title>
-    <link>https://mrwilde.dev/authors/robert-wilde/</link>
+    <link>http://localhost:1313/authors/robert-wilde/</link>
     <description>Recent content in Robert Wilde on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
-    <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +1100</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/authors/robert-wilde/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Dec 2025 00:00:00 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/authors/robert-wilde/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your code is Crap and that&#39;s OK</title>
+      <link>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
+      <description>&lt;h2 id=&#34;a-fundamental-truth-all-developers-must-acknowledge--your-code-is-&#34;&gt;A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no&#xA;client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I&#xA;have some oceanfront property to sell you.&lt;/p&gt;&#xA;&lt;p&gt;The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our&#xA;systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute&#xA;perfection. The key is to accept this truth and, as the immortal words of Dory suggest, &amp;ldquo;Just keep swimming.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title>
-      <link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link>
+      <link>http://localhost:1313/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid>
+      <guid>http://localhost:1313/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid>
       <description>&lt;p&gt;&lt;em&gt;A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from&#xA;happening again&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;/h2&gt;&#xA;&lt;p&gt;I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive&#xA;compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at&#xA;the top:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;You are not required to code the full solution before the interview. Instead, prepare to walk through your design&#xA;decisions and, if desired, share code snippets or pseudocode to illustrate critical parts.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building My First MCP Server: Scratching That Obsidian Itch</title>
-      <link>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
+      <link>http://localhost:1313/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid>
+      <guid>http://localhost:1313/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;claude-code-mcp-obsidian.png&#34; alt=&#34;Claude Code to Obsidian MCP&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finally-an-idea-worth-building&#34;&gt;Finally, an Idea Worth Building&lt;/h2&gt;&#xA;&lt;p&gt;After months of hearing about Model Context Protocol (MCP) servers and thinking &amp;ldquo;that&amp;rsquo;s cool, but what would I actually build?&amp;rdquo;, I finally had my moment. Like many developers, there&amp;rsquo;s no better motivation to work on a project than &lt;strong&gt;scratching your own itch&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Mine was simple: I kept losing valuable Claude Code responses. Those perfectly crafted solutions, detailed explanations, and code snippets would disappear into the void of my terminal&amp;rsquo;s scrollback buffer. Meanwhile, my Obsidian vault sat there, begging to become the permanent home for this knowledge.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hosting my Retype blog with CI/CD</title>
-      <link>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</link>
+      <link>http://localhost:1313/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</guid>
+      <guid>http://localhost:1313/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</guid>
       <description>&lt;p&gt;Setting up a modern CI/CD pipeline for a static site generator might seem straightforward, but real-world deployment often presents unexpected challenges. Here&amp;rsquo;s my journey deploying a Retype blog with Docker, GitHub Actions, and Let&amp;rsquo;s Encrypt SSL certificates on my home OpenMediaVault server.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-vision&#34;&gt;The Vision&lt;/h2&gt;&#xA;&lt;p&gt;I wanted to achieve three key goals:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Linux compatibility&lt;/strong&gt;: Update the Dockerfile to use npm instead of .NET SDK&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Automatic updates&lt;/strong&gt;: Configure Docker to pull from GitHub repository on rebuild&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HTTPS support&lt;/strong&gt;: Production-ready SSL certificates with Let&amp;rsquo;s Encrypt&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;&#xA;&lt;p&gt;The final solution consists of:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reducing Cognitive Load</title>
-      <link>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</link>
+      <link>http://localhost:1313/blog/2025/07/01/reducing-cognitive-load/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</guid>
+      <guid>http://localhost:1313/blog/2025/07/01/reducing-cognitive-load/</guid>
       <description>&lt;p&gt;Today I completed an API endpoint that a colleague needed to integrate with their system. Rather than simply sending over the endpoint URL and waiting for the inevitable questions, I took a different approach.&lt;/p&gt;&#xA;&lt;p&gt;I prepared a comprehensive package that included a POSTMAN collection with pre-configured diagnostics, a fully populated example request with actual data including signature and delivery images, and a sample of the generated PDF output.&lt;/p&gt;&#xA;&lt;p&gt;The entire process took me perhaps ten additional minutes.&#xA;My colleague&amp;rsquo;s response was telling:&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI as a Development Tool: Enhancing, Not Replacing</title>
-      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <link>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
       <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <guid>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
       <description>&lt;h2 id=&#34;tools-define-our-trade&#34;&gt;Tools Define Our Trade&lt;/h2&gt;&#xA;&lt;p&gt;Throughout my career, including experience in construction, I&amp;rsquo;ve learned that &lt;strong&gt;tools are crucial&lt;/strong&gt;. Yet, developers&#xA;often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when&#xA;PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we&#xA;leverage it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reducing-development-arrogance&#34;&gt;Reducing Development Arrogance&lt;/h2&gt;&#xA;&lt;p&gt;One unexpected benefit of working with AI tools is reducing my own &lt;strong&gt;development arrogance&lt;/strong&gt;. As a contractor, I&amp;rsquo;ve&#xA;encountered numerous approaches to writing code:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Alf - Your Little Bash Alias Friend</title>
-      <link>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</link>
+      <link>http://localhost:1313/blog/2022/01/05/alf-your-little-bash-alias-friend/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
-      <guid>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid>
+      <guid>http://localhost:1313/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid>
       <description>&lt;h2 id=&#34;alf--your-little-bash-alias-friend&#34;&gt;Alf — Your Little Bash Alias Friend&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create aliases by using a config file.&lt;/li&gt;&#xA;&lt;li&gt;Create aliases for sub-commands (for example, g s for git status).&lt;/li&gt;&#xA;&lt;li&gt;Synchronize your aliases across hosts or users by uploading your config file to GitHub.&lt;/li&gt;&#xA;&lt;li&gt;Does not alter anything in your system except for creating the ~/.bash_aliases file, which is normally already sourced&#xA;by your login process.&#xA;Works with bash and zsh.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/DannyBen/alf&#34;&gt;github link&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is WP-CLI and what can it do for you?</title>
-      <link>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</link>
+      <link>http://localhost:1313/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
-      <guid>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</guid>
+      <guid>http://localhost:1313/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</guid>
       <description>&lt;h2 id=&#34;so-what-is-wp-cli&#34;&gt;So what is WP-CLI?&lt;/h2&gt;&#xA;&lt;p&gt;WP-CLI or the WordPress Command Line Interface is a PHP based tool that allows you to manage your WordPress site via SSH (Secure Shell) interface.&lt;/p&gt;&#xA;&lt;p&gt;In simpler terms, it is the back-door to your website. WP-Admin is the GUI or Graphical User interface gives you something nice to look at, with buttons and colours that can be accessed via a web page. WP-CLI drops the GUI and works with simple commands, providing more control and speed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to build a budget PC</title>
-      <link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link>
+      <link>http://localhost:1313/blog/2016/10/07/how-to-build-a-budget-pc/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
-      <guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
+      <guid>http://localhost:1313/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
       <description>&lt;p&gt;If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from &lt;a href=&#34;https://twitter.com/paulhardware?lang=en&#34;&gt;@paulshardware&lt;/a&gt; has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.&lt;/p&gt;&#xA;&lt;p&gt;Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD. It is the basics for a PC, perfectly suited if you are looking to upgrade your current PC. There is a list at the start of software and peripherals, monitor, keyboard, mouse, not included in the build.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thorium is the new GOLD</title>
-      <link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link>
+      <link>http://localhost:1313/blog/2016/06/03/thorium-is-the-new-gold/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid>
+      <guid>http://localhost:1313/blog/2016/06/03/thorium-is-the-new-gold/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;    &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/jjM9E6d42-M?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;My Favourite videos on YouTube now are everything from &lt;a href=&#34;https://twitter.com/kirksorensen&#34;&gt;@kirksorensen&lt;/a&gt;,&#xA;by &lt;a href=&#34;https://twitter.com/gordonmcdowell&#34;&gt;@gordonmcdowell&lt;/a&gt;, talking about Thorium and Liquid Fluoride Thorium Reactor.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://youtu.be/YVSmf_qmkbg&#34;&gt;Watch the LFTR explanation on YouTube&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;    &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/YVSmf_qmkbg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.&lt;/p&gt;</description>
     </item>
     <item>
       <title>This one time at WordCamp - I was the person Speaking</title>
-      <link>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</link>
+      <link>http://localhost:1313/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</guid>
+      <guid>http://localhost:1313/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</guid>
       <description>&lt;p&gt;It is all done, finished, over and kaput. WordCampSC has come and gone and what a fantastic weekend.&#xA;If I were only there as an attendee, I would still have learnt so much and been glad to have gone, but I was speaking for the first time.&lt;/p&gt;&#xA;&lt;p&gt;Did it go as planned? HELL NO! Part of the live demo material did not play out as rehearsed, several hours a day leading up to the event,&#xA;and every time I looked into the crowd all I could see were the faces of, what appeared to be, very confused people.&#xA;So why am I so happy? It is never, ever as bad as you think.&lt;/p&gt;</description>
     </item>
   </channel>

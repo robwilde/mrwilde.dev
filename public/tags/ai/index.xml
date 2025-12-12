@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on Mr Wilde</title>
-    <link>https://mrwilde.dev/tags/ai/</link>
+    <link>http://localhost:1313/tags/ai/</link>
     <description>Recent content in AI on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Thu, 19 Jun 2025 00:00:00 +1000</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI as a Development Tool: Enhancing, Not Replacing</title>
-      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <link>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
       <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <guid>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
       <description>&lt;h2 id=&#34;tools-define-our-trade&#34;&gt;Tools Define Our Trade&lt;/h2&gt;&#xA;&lt;p&gt;Throughout my career, including experience in construction, I&amp;rsquo;ve learned that &lt;strong&gt;tools are crucial&lt;/strong&gt;. Yet, developers&#xA;often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when&#xA;PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we&#xA;leverage it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reducing-development-arrogance&#34;&gt;Reducing Development Arrogance&lt;/h2&gt;&#xA;&lt;p&gt;One unexpected benefit of working with AI tools is reducing my own &lt;strong&gt;development arrogance&lt;/strong&gt;. As a contractor, I&amp;rsquo;ve&#xA;encountered numerous approaches to writing code:&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nginx on Mr Wilde</title>
-    <link>https://mrwilde.dev/tags/nginx/</link>
+    <link>http://localhost:1313/tags/nginx/</link>
     <description>Recent content in Nginx on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Thu, 03 Jul 2025 00:00:00 +1000</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hosting my Retype blog with CI/CD</title>
-      <link>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</link>
+      <link>http://localhost:1313/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</guid>
+      <guid>http://localhost:1313/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</guid>
       <description>&lt;p&gt;Setting up a modern CI/CD pipeline for a static site generator might seem straightforward, but real-world deployment often presents unexpected challenges. Here&amp;rsquo;s my journey deploying a Retype blog with Docker, GitHub Actions, and Let&amp;rsquo;s Encrypt SSL certificates on my home OpenMediaVault server.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-vision&#34;&gt;The Vision&lt;/h2&gt;&#xA;&lt;p&gt;I wanted to achieve three key goals:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Linux compatibility&lt;/strong&gt;: Update the Dockerfile to use npm instead of .NET SDK&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Automatic updates&lt;/strong&gt;: Configure Docker to pull from GitHub repository on rebuild&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HTTPS support&lt;/strong&gt;: Production-ready SSL certificates with Let&amp;rsquo;s Encrypt&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview&lt;/h2&gt;&#xA;&lt;p&gt;The final solution consists of:&lt;/p&gt;</description>
     </item>
   </channel>
