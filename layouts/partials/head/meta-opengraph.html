@@ -1,0 +1,62 @@
+{{- /* Open Graph / Facebook Meta Tags */ -}}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ .Description | default site.Params.description | default "Love Your Work!" }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="{{ site.LanguageCode | default "en_AU" }}">
+
+{{- /* Determine og:type */ -}}
+{{ if .IsPage -}}
+  {{ if eq .Type "blog" -}}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ with .Lastmod -}}
+<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+{{ with .Params.authors -}}
+  {{ range . -}}
+<meta property="article:author" content="{{ . }}">
+  {{- end }}
+{{- end }}
+{{ with .Params.tags -}}
+  {{ range . -}}
+<meta property="article:tag" content="{{ . }}">
+  {{- end }}
+{{- end }}
+  {{ else -}}
+<meta property="og:type" content="website">
+  {{- end }}
+{{ else -}}
+<meta property="og:type" content="website">
+{{- end }}
+
+{{- /* Determine og:image - check multiple sources */ -}}
+{{ $image := "" }}
+{{- /* 1. Check for explicit image in front matter */ -}}
+{{ if .Params.image -}}
+  {{ $image = .Params.image | absURL }}
+{{ else if .Params.featured_image -}}
+  {{ $image = .Params.featured_image | absURL }}
+{{ else if .Params.og_image -}}
+  {{ $image = .Params.og_image | absURL }}
+{{- /* 2. Check for images in page bundle */ -}}
+{{ else -}}
+  {{ $images := .Resources.ByType "image" }}
+  {{ if $images -}}
+    {{ $firstImage := index $images 0 }}
+    {{ $image = $firstImage.Permalink }}
+  {{ else -}}
+    {{- /* 3. Fallback to site default og image */ -}}
+    {{ if site.Params.og_image -}}
+      {{ $image = site.Params.og_image | absURL }}
+    {{ else if site.Params.logo -}}
+      {{ $image = site.Params.logo | absURL }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{ with $image -}}
+<meta property="og:image" content="{{ . }}">
+<meta property="og:image:secure_url" content="{{ . }}">
+<meta property="og:image:alt" content="{{ $.Title }}">
+{{- end }}

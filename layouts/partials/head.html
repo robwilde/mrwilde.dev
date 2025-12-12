@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ .Description }}">
+
+{{- /* SEO Meta Tags */ -}}
+{{ partial "head/meta-seo.html" . }}
+
+{{- /* Open Graph Meta Tags */ -}}
+{{ partial "head/meta-opengraph.html" . }}
+
+{{- /* Twitter Card Meta Tags */ -}}
+{{ partial "head/meta-twitter.html" . }}
+
+{{- /* Favicons */ -}}
+{{ partial "head/favicons.html" . }}
+
+<!-- Geo tags -->
+<meta name="ICBM" content="-27.4705, 153.0260">
+<meta name="geo.position" content="-27.4705;153.0260">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane">
+
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+{{ partialCached "head/css.html" . }}

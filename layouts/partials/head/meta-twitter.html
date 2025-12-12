@@ -1,0 +1,43 @@
+{{- /* Twitter Card Meta Tags */ -}}
+{{- /* Determine card type - summary_large_image if we have an image, otherwise summary */ -}}
+{{ $cardType := "summary" }}
+{{ $image := "" }}
+
+{{- /* Check for images - same logic as Open Graph */ -}}
+{{ if .Params.image -}}
+  {{ $image = .Params.image | absURL }}
+  {{ $cardType = "summary_large_image" }}
+{{ else if .Params.featured_image -}}
+  {{ $image = .Params.featured_image | absURL }}
+  {{ $cardType = "summary_large_image" }}
+{{ else if .Params.twitter_image -}}
+  {{ $image = .Params.twitter_image | absURL }}
+  {{ $cardType = "summary_large_image" }}
+{{ else -}}
+  {{ $images := .Resources.ByType "image" }}
+  {{ if $images -}}
+    {{ $firstImage := index $images 0 }}
+    {{ $image = $firstImage.Permalink }}
+    {{ $cardType = "summary_large_image" }}
+  {{ else -}}
+    {{ if site.Params.twitter_image -}}
+      {{ $image = site.Params.twitter_image | absURL }}
+      {{ $cardType = "summary_large_image" }}
+    {{ else if site.Params.og_image -}}
+      {{ $image = site.Params.og_image | absURL }}
+      {{ $cardType = "summary_large_image" }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="{{ $cardType }}">
+{{ with site.Params.twitter_username -}}
+<meta name="twitter:site" content="@{{ . }}">
+<meta name="twitter:creator" content="@{{ . }}">
+{{- end }}
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ .Description | default site.Params.description | default "Love Your Work!" }}">
+{{ with $image -}}
+<meta name="twitter:image" content="{{ . }}">
+<meta name="twitter:image:alt" content="{{ $.Title }}">
+{{- end }}

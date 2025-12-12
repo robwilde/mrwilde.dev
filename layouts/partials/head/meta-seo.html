@@ -1,0 +1,29 @@
+{{- /* Canonical URL */ -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* RSS Feed Links */ -}}
+{{ with .OutputFormats.Get "rss" -}}
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }} - RSS Feed" href="{{ .Permalink }}">
+{{- end }}
+{{ if eq .Type "blog" -}}
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }} - Blog Feed" href="{{ "blog/index.xml" | absURL }}">
+{{- end }}
+
+{{- /* Author Meta */ -}}
+{{ if .Params.authors -}}
+  {{ range first 1 .Params.authors -}}
+<meta name="author" content="{{ . }}">
+  {{- end }}
+{{ else -}}
+<meta name="author" content="{{ site.Params.author | default site.Title }}">
+{{- end }}
+
+{{- /* Language */ -}}
+<meta name="language" content="{{ site.LanguageCode }}">
+
+{{- /* Robots */ -}}
+{{ if .Params.noindex -}}
+<meta name="robots" content="noindex, nofollow">
+{{ else -}}
+<meta name="robots" content="index, follow">
+{{- end }}

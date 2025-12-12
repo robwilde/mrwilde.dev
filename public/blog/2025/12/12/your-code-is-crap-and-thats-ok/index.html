@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-au"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Except the truth that your code is 💩"><link rel="canonical" href="http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/">
+<link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="http://localhost:1313/blog/index.xml"><meta name="author" content="Robert Wilde">
+<meta name="language" content="en-au"><meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Mr Wilde">
+<meta property="og:title" content="Your code is Crap and that&#39;s OK">
+<meta property="og:description" content="Except the truth that your code is 💩">
+<meta property="og:url" content="http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/">
+<meta property="og:locale" content="en-au"><meta property="og:type" content="article">
+<meta property="article:published_time" content="2025-12-12T00:00:00&#43;11:00">
+<meta property="article:modified_time" content="2025-12-12T00:00:00&#43;11:00">
+<meta property="article:author" content="Robert Wilde">
+<meta property="article:tag" content="Better Dev"><meta property="article:tag" content="Clean Code"><meta property="article:tag" content="Development">
+  
+
+  
+    
+  
+
+<meta property="og:image" content="http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/this-shot-of-jurassic-park-1993.png">
+<meta property="og:image:secure_url" content="http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/this-shot-of-jurassic-park-1993.png">
+<meta property="og:image:alt" content="Your code is Crap and that&#39;s OK">
+
+
+  
+    
+    
+  
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mrwilde">
+<meta name="twitter:creator" content="@mrwilde">
+<meta name="twitter:title" content="Your code is Crap and that&#39;s OK">
+<meta name="twitter:description" content="Except the truth that your code is 💩">
+<meta name="twitter:image" content="http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/this-shot-of-jurassic-park-1993.png">
+<meta name="twitter:image:alt" content="Your code is Crap and that&#39;s OK">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0f172a">
+<meta name="msapplication-TileColor" content="#0f172a">
+
+
+
+<meta name="ICBM" content="-27.4705, 153.0260">
+<meta name="geo.position" content="-27.4705;153.0260">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane">
+
+<title>Your code is Crap and that&#39;s OK | Mr Wilde</title>
+
+
+      <link rel="stylesheet" href="/css/tailwind.css" type="text/css">
+
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="http://localhost:1313/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
+      <p>Love Your Work!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  
+  <div class="flex flex-col pt-8 gap-10">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl max-sm:text-2xl font-bold">Your code is Crap and that&#39;s OK</h2>
+      
+      <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
+        <p>📅 Friday, Dec 12, 2025</p>
+        <p>⏰ 00:00:00</p>
+        
+          <p>🔄 Friday, Dec 12, 2025 00:00:00</p>
+        
+        <p>📖 Reading time: 2 min</p>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <div class="py-1">📝</div>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/authors/robert-wilde'
+      class="border border-orange-400 p-1 hover:bg-orange-400 focus:bg-orange-400 text-center focus:text-color-white">
+      Robert Wilde
+    </a>
+  
+</div>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <p class="py-1">🏷️</p>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/tags/better-dev'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Better Dev</a>
+  
+    <a href='/tags/clean-code'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Clean Code</a>
+  
+    <a href='/tags/development'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Development</a>
+  
+</div>
+      </div>
+      <hr />
+      <div class="flex flex-col gap-10">
+        <div class="prose prose-invert max-w-full">
+          <h2 id="a-fundamental-truth-all-developers-must-acknowledge--your-code-is-">A fundamental truth all developers must acknowledge – &ldquo;your code is 💩..&rdquo;</h2>
+<p>This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no
+client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I
+have some oceanfront property to sell you.</p>
+<p>The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our
+systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute
+perfection. The key is to accept this truth and, as the immortal words of Dory suggest, &ldquo;Just keep swimming.&rdquo;</p>
+<p>If you encounter project owners or lead developers who insist, &ldquo;It was working just fine yesterday,&rdquo; or &ldquo;That code works
+in another environment, so it should work here,&rdquo; it&rsquo;s time to reconsider your position. You can try to guide them with
+diagrams, reports, and detailed explanations of the issues, but often they will cling to the belief that their code is
+flawless. You can lead a horse to water but no matter what happens, they won&rsquo;t believe it&rsquo;s water and die of thirst
+before admitting it.</p>
+<p><img src="this-shot-of-jurassic-park-1993.png" alt="this-shot-of-jurassic-park-1993.png"></p>
+<p>Just be happy your code is 💩 but not all 💩 stinks. Like the book says &ldquo;Every body 💩&rdquo; and it&rsquo;s OK.</p>
+
+          <hr />
+        </div>
+        <div>
+          
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.url = "http:\/\/localhost:1313\/blog\/2025\/12\/12\/your-code-is-crap-and-thats-ok\/";
+    this.page.identifier = "your-code-is-crap"; 
+    };
+    (function () { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mrwilde-dev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+  
+
+  </div>
+  
+      <script type="text/javascript" src="/js/navbar.js"></script>
+
+  <script id="dsq-count-scr" src="//mrwilde-dev.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>
