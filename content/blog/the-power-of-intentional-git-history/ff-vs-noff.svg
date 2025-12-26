@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc" text-anchor="middle">Fast-Forward vs No-Fast-Forward Merge</text>
+  
+  <!-- Left side: Fast-Forward -->
+  <text x="200" y="70" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#94a3b8" text-anchor="middle">git merge feature</text>
+  <text x="200" y="90" font-family="system-ui, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">(default: fast-forward)</text>
+  
+  <!-- FF: Before -->
+  <text x="60" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Before:</text>
+  
+  <!-- FF Before: dev branch -->
+  <circle cx="80" cy="160" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="92" y1="160" x2="118" y2="160" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="130" cy="160" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <text x="130" y="145" font-family="monospace" font-size="10" fill="#60a5fa" text-anchor="middle">dev</text>
+  
+  <!-- FF Before: feature branch -->
+  <line x1="130" y1="160" x2="155" y2="185" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="170" cy="200" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <line x1="182" y1="200" x2="208" y2="200" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="220" cy="200" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <line x1="232" y1="200" x2="258" y2="200" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="270" cy="200" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <text x="270" y="225" font-family="monospace" font-size="10" fill="#4ade80" text-anchor="middle">feature</text>
+  
+  <!-- FF: After -->
+  <text x="60" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">After:</text>
+  
+  <!-- FF After: linear history -->
+  <circle cx="80" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="92" y1="310" x2="118" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="130" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="142" y1="310" x2="168" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="180" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="192" y1="310" x2="218" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="230" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="242" y1="310" x2="268" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="280" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <text x="280" y="335" font-family="monospace" font-size="10" fill="#60a5fa" text-anchor="middle">dev</text>
+  
+  <!-- FF: Warning -->
+  <text x="200" y="375" font-family="system-ui, sans-serif" font-size="11" fill="#f87171" text-anchor="middle">⚠ Feature branch history is lost</text>
+  
+  <!-- Divider -->
+  <line x1="400" y1="60" x2="400" y2="390" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
+  
+  <!-- Right side: No-Fast-Forward -->
+  <text x="600" y="70" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="#94a3b8" text-anchor="middle">git merge --no-ff feature</text>
+  <text x="600" y="90" font-family="system-ui, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">(explicit merge commit)</text>
+  
+  <!-- NOFF: Before -->
+  <text x="460" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Before:</text>
+  
+  <!-- NOFF Before: dev branch -->
+  <circle cx="480" cy="160" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="492" y1="160" x2="518" y2="160" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="530" cy="160" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <text x="530" y="145" font-family="monospace" font-size="10" fill="#60a5fa" text-anchor="middle">dev</text>
+  
+  <!-- NOFF Before: feature branch -->
+  <line x1="530" y1="160" x2="555" y2="185" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="570" cy="200" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <line x1="582" y1="200" x2="608" y2="200" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="620" cy="200" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <line x1="632" y1="200" x2="658" y2="200" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="670" cy="200" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <text x="670" y="225" font-family="monospace" font-size="10" fill="#4ade80" text-anchor="middle">feature</text>
+  
+  <!-- NOFF: After -->
+  <text x="460" y="280" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">After:</text>
+  
+  <!-- NOFF After: dev branch with merge commit -->
+  <circle cx="480" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  <line x1="492" y1="310" x2="518" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="530" cy="310" r="12" fill="#3b82f6" stroke="#60a5fa" stroke-width="2"/>
+  
+  <!-- NOFF After: feature branch preserved -->
+  <line x1="530" y1="310" x2="555" y2="335" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="570" cy="350" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <line x1="582" y1="350" x2="608" y2="350" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="620" cy="350" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  <line x1="632" y1="350" x2="658" y2="350" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="670" cy="350" r="12" fill="#22c55e" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- NOFF After: merge commit -->
+  <line x1="542" y1="310" x2="708" y2="310" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="670" y1="350" x2="695" y2="325" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="720" cy="310" r="14" fill="#a855f7" stroke="#c084fc" stroke-width="2"/>
+  <text x="720" y="314" font-family="system-ui, sans-serif" font-size="10" fill="#fff" text-anchor="middle">M</text>
+  <text x="720" y="295" font-family="monospace" font-size="10" fill="#60a5fa" text-anchor="middle">dev</text>
+  
+  <!-- NOFF: Success -->
+  <text x="600" y="385" font-family="system-ui, sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">✓ Feature branch history preserved</text>
+</svg>

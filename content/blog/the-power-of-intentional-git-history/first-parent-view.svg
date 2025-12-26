@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <!-- Background -->
+  <rect width="800" height="350" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc" text-anchor="middle">Viewing Your History: Full vs First-Parent</text>
+  
+  <!-- Left: Full history -->
+  <rect x="20" y="50" width="370" height="280" rx="8" fill="#1e293b"/>
+  <text x="205" y="75" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">git log --oneline --graph</text>
+  
+  <!-- Terminal content - full history -->
+  <text x="35" y="100" font-family="monospace" font-size="10" fill="#94a3b8">*   <tspan fill="#a855f7">e4f2a1b</tspan> Merge branch 't1.11-rate-limiting'</text>
+  <text x="35" y="116" font-family="monospace" font-size="10" fill="#64748b">|\</text>
+  <text x="35" y="132" font-family="monospace" font-size="10" fill="#94a3b8">| * <tspan fill="#22c55e">a8c3d2e</tspan> test: add rate limiting tests</text>
+  <text x="35" y="148" font-family="monospace" font-size="10" fill="#94a3b8">| * <tspan fill="#22c55e">f1b4e5a</tspan> feat: add rate limit config</text>
+  <text x="35" y="164" font-family="monospace" font-size="10" fill="#64748b">|/</text>
+  <text x="35" y="180" font-family="monospace" font-size="10" fill="#94a3b8">*   <tspan fill="#a855f7">b2d4c6f</tspan> Merge branch 't1.10-error-handling'</text>
+  <text x="35" y="196" font-family="monospace" font-size="10" fill="#64748b">|\</text>
+  <text x="35" y="212" font-family="monospace" font-size="10" fill="#94a3b8">| * <tspan fill="#22c55e">c5e7f8a</tspan> feat: add custom JSON errors</text>
+  <text x="35" y="228" font-family="monospace" font-size="10" fill="#94a3b8">| * <tspan fill="#22c55e">d9a1b3c</tspan> feat: standardized error codes</text>
+  <text x="35" y="244" font-family="monospace" font-size="10" fill="#94a3b8">| * <tspan fill="#22c55e">e2c4d6f</tspan> feat: domain API exceptions</text>
+  <text x="35" y="260" font-family="monospace" font-size="10" fill="#64748b">|/</text>
+  <text x="35" y="276" font-family="monospace" font-size="10" fill="#94a3b8">*   <tspan fill="#a855f7">f8a2c4e</tspan> Merge branch 't1.9-api-versioning'</text>
+  <text x="35" y="292" font-family="monospace" font-size="10" fill="#64748b">...</text>
+  
+  <text x="205" y="320" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Every commit visible — great for debugging</text>
+  
+  <!-- Right: First-parent only -->
+  <rect x="410" y="50" width="370" height="280" rx="8" fill="#1e293b"/>
+  <text x="595" y="75" font-family="monospace" font-size="12" fill="#60a5fa" text-anchor="middle">git log --first-parent --oneline</text>
+  
+  <!-- Terminal content - first parent -->
+  <text x="425" y="100" font-family="monospace" font-size="10" fill="#94a3b8"><tspan fill="#a855f7">e4f2a1b</tspan> Merge branch 't1.11-rate-limiting'</text>
+  <text x="425" y="130" font-family="monospace" font-size="10" fill="#94a3b8"><tspan fill="#a855f7">b2d4c6f</tspan> Merge branch 't1.10-error-handling'</text>
+  <text x="425" y="160" font-family="monospace" font-size="10" fill="#94a3b8"><tspan fill="#a855f7">f8a2c4e</tspan> Merge branch 't1.9-api-versioning'</text>
+  <text x="425" y="190" font-family="monospace" font-size="10" fill="#94a3b8"><tspan fill="#a855f7">a1c3e5g</tspan> Merge branch 't1.8-base-api'</text>
+  <text x="425" y="220" font-family="monospace" font-size="10" fill="#94a3b8"><tspan fill="#a855f7">b4d6f8h</tspan> Merge branch 't1.7-permissions'</text>
+  <text x="425" y="250" font-family="monospace" font-size="10" fill="#94a3b8"><tspan fill="#3b82f6">c7e9a1i</tspan> Initial dev setup</text>
+  
+  <text x="595" y="320" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">High-level timeline — great for overview</text>
+  
+  <!-- Arrows/callouts -->
+  <text x="400" y="180" font-family="system-ui, sans-serif" font-size="20" fill="#4ade80" text-anchor="middle">→</text>
+</svg>
