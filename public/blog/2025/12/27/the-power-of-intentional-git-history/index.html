@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-au"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A two-stage merge strategy that gives developers the history they need while keeping releases clean."><link rel="canonical" href="http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/">
+<link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="http://localhost:1313/blog/index.xml"><meta name="author" content="Robert Wilde">
+<meta name="language" content="en-au"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
+<meta property="og:title" content="The Power of Intentional Git History">
+<meta property="og:description" content="A two-stage merge strategy that gives developers the history they need while keeping releases clean.">
+<meta property="og:url" content="http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/">
+<meta property="og:locale" content="en-au"><meta property="og:type" content="article">
+<meta property="article:published_time" content="2025-12-27T00:00:00&#43;11:00">
+<meta property="article:modified_time" content="2025-12-27T00:00:00&#43;11:00">
+<meta property="article:author" content="Robert Wilde">
+<meta property="article:tag" content="Git"><meta property="article:tag" content="Development"><meta property="article:tag" content="Workflow"><meta property="article:tag" content="Version Control">
+  
+
+  
+    
+  
+
+<meta property="og:image" content="http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.svg">
+<meta property="og:image:secure_url" content="http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.svg">
+<meta property="og:image:alt" content="The Power of Intentional Git History">
+
+  
+    
+    
+  
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mrwilde">
+<meta name="twitter:creator" content="@mrwilde">
+<meta name="twitter:title" content="The Power of Intentional Git History">
+<meta name="twitter:description" content="A two-stage merge strategy that gives developers the history they need while keeping releases clean.">
+<meta name="twitter:image" content="http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.svg">
+<meta name="twitter:image:alt" content="The Power of Intentional Git History"><link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0f172a">
+<meta name="msapplication-TileColor" content="#0f172a">
+
+
+<meta name="ICBM" content="-27.4705, 153.0260">
+<meta name="geo.position" content="-27.4705;153.0260">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane">
+
+<title>The Power of Intentional Git History | Mr Wilde</title>
+
+
+      <link rel="stylesheet" href="/css/tailwind.css" type="text/css">
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="http://localhost:1313/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Nayan Seth</a>
+      <p>Think Good! Do Good!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  
+  <div class="flex flex-col pt-8 gap-10">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl max-sm:text-2xl font-bold">The Power of Intentional Git History</h2>
+      
+      <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
+        <p>📅 Saturday, Dec 27, 2025</p>
+        <p>⏰ 00:00:00</p>
+        
+          <p>🔄 Saturday, Dec 27, 2025 00:00:00</p>
+        
+        <p>📖 Reading time: 6 min</p>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <div class="py-1">📝</div>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/authors/robert-wilde'
+      class="border border-orange-400 p-1 hover:bg-orange-400 focus:bg-orange-400 text-center focus:text-color-white">
+      Robert Wilde
+    </a>
+  
+</div>
+      </div>
+      
+      <div class="flex flex-row gap-2 flex-nowrap">
+        <p class="py-1">🏷️</p>
+<div class="flex flex-wrap gap-2">
+  
+    <a href='/tags/git'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Git</a>
+  
+    <a href='/tags/development'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Development</a>
+  
+    <a href='/tags/workflow'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Workflow</a>
+  
+    <a href='/tags/version-control'
+    class="border border-sky-400 p-1 hover:bg-sky-400 focus:bg-sky-400 text-center">Version Control</a>
+  
+</div>
+      </div>
+      <hr />
+      <div class="flex flex-col gap-10">
+        <div class="prose prose-invert max-w-full">
+          <p>I recently started a new project and decided to try something different with my Git workflow. Instead of accepting
+whatever history happens to emerge from my merges, I&rsquo;m being intentional about <em>what history I want to keep and where</em>.</p>
+<p>The result? A <code>dev</code> branch that tells the full story of how features were built, and a <code>main</code> branch that reads like a
+clean changelog. Here&rsquo;s what I&rsquo;ve learned so far.</p>
+<h2 id="the-problem-with-default-merges">The Problem with Default Merges</h2>
+<p>If you&rsquo;ve worked on any codebase for a while, you&rsquo;ve probably experienced the frustration of trying to understand <em>why</em>
+something was done a certain way. You run <code>git log</code>, and you&rsquo;re faced with either a confusing tangle of commits from
+multiple features interleaved together, or a completely linear history where the context of grouped work has been lost.</p>
+<p>Git&rsquo;s default merge behaviour (fast-forward when possible) prioritises a &ldquo;clean&rdquo; linear history. But cleaning isn&rsquo;t always
+useful. When something breaks in production at 2am, and you need to understand what changed, you want context. You want
+to see that these five commits were all part of implementing rate limiting, not scattered randomly among database
+migrations and CSS fixes.</p>
+<h2 id="the-strategy-different-histories-for-different-purposes">The Strategy: Different Histories for Different Purposes</h2>
+<p>Here&rsquo;s the approach I&rsquo;m experimenting with:</p>
+<p><strong>Feature → Dev: Use <code>--no-ff</code> (no fast-forward)</strong>
+Every feature branch merge creates an explicit merge commit, preserving the &ldquo;bubble&rdquo; of commits that made up that
+feature.</p>
+<p><strong>Dev → Main: Use squash merge</strong>
+When a phase or milestone is complete, squash everything into a single commit on <code>main</code>. One commit per release, clean
+and simple.</p>
+<p>The key insight is that these two branches serve different audiences. The <code>dev</code> branch is for developers who need to
+debug, understand context, and trace the evolution of features. The <code>main</code> branch is for releases, deployments, and
+anyone who just needs to know &ldquo;what shipped.&rdquo;</p>
+<p><img src="./ff-vs-noff.svg" alt="Fast-forward vs no-fast-forward comparison"></p>
+<h2 id="what-no-ff-actually-does">What &ndash;no-ff Actually Does</h2>
+<p>When you merge a feature branch with <code>git merge --no-ff feature-branch</code>, Git creates a merge commit even if it could
+technically just move the branch pointer forward. This merge commit has two parents: the previous <code>dev</code> commit and the
+last commit of your feature branch.</p>
+<p>The visual result in your Git history is that distinctive &ldquo;bubble&rdquo; or &ldquo;railroad track&rdquo; pattern. Each feature branch
+remains visible as a separate track that diverges from and rejoins the main line.</p>
+<p>Here&rsquo;s what this looks like in practice with my current project:</p>
+<pre tabindex="0"><code>*   Merge branch &#39;t1.11-rate-limiting&#39; into dev
+|\
+| * test: add tests for API rate limiting
+| * feat: add configuration for API rate limiting
+| * feat: add rate limiting middleware to API routes
+|/
+*   Merge branch &#39;t1.10-error-handling&#39; into dev
+|\
+| * feat: add custom JSON error handling for API exceptions
+| * feat: enhance error response methods
+| * feat: introduce domain-specific API exceptions
+| * feat: introduce standardized error code enumeration
+|/
+*   Merge branch &#39;t1.9-api-versioning&#39; into dev
+</code></pre><p>Each feature is clearly bounded. I can see exactly which commits belong to rate limiting, which belong to error
+handling, and so on.</p>
+<h2 id="the-power-of-first-parent">The Power of &ndash;first-parent</h2>
+<p>Here&rsquo;s where it gets really useful. When I want a high-level view of what&rsquo;s been integrated (without all the individual
+commits), I can run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log --first-parent --oneline
+</span></span></code></pre></div><p>This shows only the merge commits, effectively giving me a timeline of features:</p>
+<pre tabindex="0"><code>e4f2a1b Merge branch &#39;t1.11-rate-limiting&#39; into dev
+b2d4c6f Merge branch &#39;t1.10-error-handling&#39; into dev
+f8a2c4e Merge branch &#39;t1.9-api-versioning&#39; into dev
+a1c3e5g Merge branch &#39;t1.8-base-api&#39; into dev
+</code></pre><p>It&rsquo;s like having two views of the same history: zoom out for the overview, zoom in for the details.</p>
+<p><img src="./first-parent-view.svg" alt="First-parent view comparison"></p>
+<h2 id="squashing-to-main-clean-releases">Squashing to Main: Clean Releases</h2>
+<p>At the end of each project phase (in my case, tied to milestone deliverables), I merge <code>dev</code> into <code>main</code> with a squash:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+</span></span><span style="display:flex;"><span>git merge --squash dev
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Phase 1: Foundation &amp; Core Infrastructure&#34;</span>
+</span></span></code></pre></div><p>This collapses all the detailed history into a single commit on <code>main</code>. The result is that <code>main</code> has one commit per
+phase/release, making it trivially easy to see what shipped when, and to roll back an entire release if needed.</p>
+<p><img src="./full-workflow.svg" alt="Full workflow diagram"></p>
+<p>The developers still have access to all the detailed history on <code>dev</code>. Nothing is lost. It&rsquo;s just organised.</p>
+<h2 id="easy-feature-reverts">Easy Feature Reverts</h2>
+<p>One benefit I hadn&rsquo;t fully appreciated until I started using this approach: reverting a feature is straightforward.
+Because each feature merge is a single commit (with two parents), you can revert the entire feature with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git revert -m <span style="color:#ae81ff">1</span> &lt;merge-commit-sha&gt;
+</span></span></code></pre></div><p>Compare this to trying to revert a fast-forward merge, where you&rsquo;d need to identify and revert each commit
+that was part of the feature. At 2am, that&rsquo;s not a game I want to play.</p>
+<h2 id="the-trade-offs">The Trade-offs</h2>
+<p>I want to be honest about the downsides because this approach isn&rsquo;t free:</p>
+<p><strong>More commits overall.</strong> Every merge adds a commit. If you have dozens of features, that&rsquo;s dozens of additional merge
+commits on <code>dev</code>. In practice, I haven&rsquo;t found this to be a problem, but it&rsquo;s worth noting.</p>
+<p><strong>Visual complexity.</strong> The &ldquo;railroad track&rdquo; graph can look intimidating at first. Tools like GitKraken or the Git graph
+in your IDE help, but it&rsquo;s definitely more complex than a straight line.</p>
+<p><strong>Team discipline is required.</strong> This only works if everyone on the team uses <code>--no-ff</code> consistently. One person doing
+fast-forward merges breaks the pattern. You can enforce this with Git config or CI checks.</p>
+<p><strong>Overhead for tiny changes.</strong> For a single-commit typo fix, a merge commit feels like overkill. I&rsquo;m still working out
+where to draw the line on this.</p>
+<h2 id="making-it-stick">Making It Stick</h2>
+<p>To make <code>--no-ff</code> the default for merges into <code>dev</code>, you can set up your Git config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Make --no-ff the default for all merges</span>
+</span></span><span style="display:flex;"><span>git config merge.ff false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># But keep fast-forward for pulls (to avoid noise)</span>
+</span></span><span style="display:flex;"><span>git config pull.ff only
+</span></span></code></pre></div><p>Or if you&rsquo;re using a GUI like GitKraken, there&rsquo;s usually a setting to control merge behaviour.</p>
+<h2 id="early-verdict">Early Verdict</h2>
+<p>I&rsquo;m only a few weeks into using this approach, but I&rsquo;m genuinely impressed with how readable the history has become.
+When I look at my Git graph, I can immediately see &ldquo;oh, that&rsquo;s when I added rate limiting&rdquo; without scanning through
+individual commits.</p>
+<p>The squash-to-main strategy means I&rsquo;ll have a clean record of what shipped in each phase, which is particularly useful
+for client work where I&rsquo;m invoicing per milestone.</p>
+<p>Is this the One True Git Workflow? Probably not. But for a project with clear phases and a need for both detailed
+developer history and clean releases, it&rsquo;s working well so far.</p>
+<p>I&rsquo;ll report back once I&rsquo;ve lived with it longer.</p>
+<hr>
+<p><em>Got a different approach to Git history? I&rsquo;d love to hear about it. Find me on <a href="https://www.linkedin.com/in/robertewilde/">LinkedIn</a> or leave a
+comment below.</em></p>
+
+          <hr />
+        </div>
+        <div>
+          
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.url = "http:\/\/localhost:1313\/blog\/2025\/12\/27\/the-power-of-intentional-git-history\/";
+    this.page.identifier = "intentional-git-history"; 
+    };
+    (function () { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mrwilde-dev.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+  
+
+  </div>
+  
+      <script type="text/javascript" src="/js/navbar.js"></script>
+
+  <script id="dsq-count-scr" src="//nayanseth.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>

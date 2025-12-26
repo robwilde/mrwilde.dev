@@ -6,8 +6,22 @@
     <description>Recent content in Development on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
-    <lastBuildDate>Sat, 02 Aug 2025 00:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Power of Intentional Git History</title>
+      <link>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</guid>
+      <description>&lt;p&gt;I recently started a new project and decided to try something different with my Git workflow. Instead of accepting&#xA;whatever history happens to emerge from my merges, I&amp;rsquo;m being intentional about &lt;em&gt;what history I want to keep and where&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The result? A &lt;code&gt;dev&lt;/code&gt; branch that tells the full story of how features were built, and a &lt;code&gt;main&lt;/code&gt; branch that reads like a&#xA;clean changelog. Here&amp;rsquo;s what I&amp;rsquo;ve learned so far.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Your code is Crap and that&#39;s OK</title>
+      <link>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
+      <description>&lt;h2 id=&#34;a-fundamental-truth-all-developers-must-acknowledge--your-code-is-&#34;&gt;A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no&#xA;client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I&#xA;have some oceanfront property to sell you.&lt;/p&gt;&#xA;&lt;p&gt;The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our&#xA;systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute&#xA;perfection. The key is to accept this truth and, as the immortal words of Dory suggest, &amp;ldquo;Just keep swimming.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building My First MCP Server: Scratching That Obsidian Itch</title>
       <link>http://localhost:1313/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>

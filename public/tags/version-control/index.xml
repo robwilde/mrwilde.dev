@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Version Control on Mr Wilde</title>
+    <link>http://localhost:1313/tags/version-control/</link>
+    <description>Recent content in Version Control on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/version-control/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Power of Intentional Git History</title>
+      <link>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</guid>
+      <description>&lt;p&gt;I recently started a new project and decided to try something different with my Git workflow. Instead of accepting&#xA;whatever history happens to emerge from my merges, I&amp;rsquo;m being intentional about &lt;em&gt;what history I want to keep and where&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The result? A &lt;code&gt;dev&lt;/code&gt; branch that tells the full story of how features were built, and a &lt;code&gt;main&lt;/code&gt; branch that reads like a&#xA;clean changelog. Here&amp;rsquo;s what I&amp;rsquo;ve learned so far.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
