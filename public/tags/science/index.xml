@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Science on Mr Wilde</title>
-    <link>http://localhost:1313/tags/science/</link>
+    <link>https://mrwilde.dev/tags/science/</link>
     <description>Recent content in Science on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/science/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mrwilde.dev/tags/science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thorium is the new GOLD</title>
-      <link>http://localhost:1313/blog/2016/06/03/thorium-is-the-new-gold/</link>
+      <link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/blog/2016/06/03/thorium-is-the-new-gold/</guid>
+      <guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;    &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/jjM9E6d42-M?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;My Favourite videos on YouTube now are everything from &lt;a href=&#34;https://twitter.com/kirksorensen&#34;&gt;@kirksorensen&lt;/a&gt;,&#xA;by &lt;a href=&#34;https://twitter.com/gordonmcdowell&#34;&gt;@gordonmcdowell&lt;/a&gt;, talking about Thorium and Liquid Fluoride Thorium Reactor.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://youtu.be/YVSmf_qmkbg&#34;&gt;Watch the LFTR explanation on YouTube&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;    &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/YVSmf_qmkbg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.&lt;/p&gt;</description>
     </item>
   </channel>

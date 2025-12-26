@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hardware on Mr Wilde</title>
-    <link>http://localhost:1313/tags/hardware/</link>
+    <link>https://mrwilde.dev/tags/hardware/</link>
     <description>Recent content in Hardware on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Fri, 07 Oct 2016 00:00:00 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mrwilde.dev/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to build a budget PC</title>
-      <link>http://localhost:1313/blog/2016/10/07/how-to-build-a-budget-pc/</link>
+      <link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
+      <guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
       <description>&lt;p&gt;If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from &lt;a href=&#34;https://twitter.com/paulhardware?lang=en&#34;&gt;@paulshardware&lt;/a&gt; has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.&lt;/p&gt;&#xA;&lt;p&gt;Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD. It is the basics for a PC, perfectly suited if you are looking to upgrade your current PC. There is a list at the start of software and peripherals, monitor, keyboard, mouse, not included in the build.&lt;/p&gt;</description>
     </item>
   </channel>

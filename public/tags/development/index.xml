@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Mr Wilde</title>
-    <link>http://localhost:1313/tags/development/</link>
+    <link>https://mrwilde.dev/tags/development/</link>
     <description>Recent content in Development on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mrwilde.dev/tags/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Power of Intentional Git History</title>
-      <link>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</link>
+      <link>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</guid>
+      <guid>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</guid>
       <description>&lt;p&gt;I recently started a new project and decided to try something different with my Git workflow. Instead of accepting&#xA;whatever history happens to emerge from my merges, I&amp;rsquo;m being intentional about &lt;em&gt;what history I want to keep and where&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The result? A &lt;code&gt;dev&lt;/code&gt; branch that tells the full story of how features were built, and a &lt;code&gt;main&lt;/code&gt; branch that reads like a&#xA;clean changelog. Here&amp;rsquo;s what I&amp;rsquo;ve learned so far.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Your code is Crap and that&#39;s OK</title>
-      <link>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
+      <link>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
       <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
+      <guid>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
       <description>&lt;h2 id=&#34;a-fundamental-truth-all-developers-must-acknowledge--your-code-is-&#34;&gt;A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no&#xA;client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I&#xA;have some oceanfront property to sell you.&lt;/p&gt;&#xA;&lt;p&gt;The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our&#xA;systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute&#xA;perfection. The key is to accept this truth and, as the immortal words of Dory suggest, &amp;ldquo;Just keep swimming.&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building My First MCP Server: Scratching That Obsidian Itch</title>
-      <link>http://localhost:1313/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
+      <link>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid>
+      <guid>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;claude-code-mcp-obsidian.png&#34; alt=&#34;Claude Code to Obsidian MCP&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;finally-an-idea-worth-building&#34;&gt;Finally, an Idea Worth Building&lt;/h2&gt;&#xA;&lt;p&gt;After months of hearing about Model Context Protocol (MCP) servers and thinking &amp;ldquo;that&amp;rsquo;s cool, but what would I actually build?&amp;rdquo;, I finally had my moment. Like many developers, there&amp;rsquo;s no better motivation to work on a project than &lt;strong&gt;scratching your own itch&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Mine was simple: I kept losing valuable Claude Code responses. Those perfectly crafted solutions, detailed explanations, and code snippets would disappear into the void of my terminal&amp;rsquo;s scrollback buffer. Meanwhile, my Obsidian vault sat there, begging to become the permanent home for this knowledge.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI as a Development Tool: Enhancing, Not Replacing</title>
-      <link>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
       <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
       <description>&lt;h2 id=&#34;tools-define-our-trade&#34;&gt;Tools Define Our Trade&lt;/h2&gt;&#xA;&lt;p&gt;Throughout my career, including experience in construction, I&amp;rsquo;ve learned that &lt;strong&gt;tools are crucial&lt;/strong&gt;. Yet, developers&#xA;often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when&#xA;PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we&#xA;leverage it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;reducing-development-arrogance&#34;&gt;Reducing Development Arrogance&lt;/h2&gt;&#xA;&lt;p&gt;One unexpected benefit of working with AI tools is reducing my own &lt;strong&gt;development arrogance&lt;/strong&gt;. As a contractor, I&amp;rsquo;ve&#xA;encountered numerous approaches to writing code:&lt;/p&gt;</description>
     </item>
   </channel>

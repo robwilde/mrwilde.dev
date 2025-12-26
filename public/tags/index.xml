@@ -2,339 +2,283 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mr Wilde</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://mrwilde.dev/tags/</link>
     <description>Recent content in Tags on Mr Wilde</description>
     <generator>Hugo</generator>
     <language>en-au</language>
     <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mrwilde.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
-      <link>http://localhost:1313/tags/development/</link>
+      <link>https://mrwilde.dev/tags/development/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/development/</guid>
+      <guid>https://mrwilde.dev/tags/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>https://mrwilde.dev/tags/git/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>https://mrwilde.dev/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Version Control</title>
-      <link>http://localhost:1313/tags/version-control/</link>
+      <link>https://mrwilde.dev/tags/version-control/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/version-control/</guid>
+      <guid>https://mrwilde.dev/tags/version-control/</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>http://localhost:1313/tags/workflow/</link>
+      <link>https://mrwilde.dev/tags/workflow/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/workflow/</guid>
+      <guid>https://mrwilde.dev/tags/workflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Better Dev</title>
-      <link>http://localhost:1313/tags/better-dev/</link>
+      <link>https://mrwilde.dev/tags/better-dev/</link>
       <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/better-dev/</guid>
+      <guid>https://mrwilde.dev/tags/better-dev/</guid>
       <description></description>
     </item>
     <item>
       <title>Clean Code</title>
-      <link>http://localhost:1313/tags/clean-code/</link>
+      <link>https://mrwilde.dev/tags/clean-code/</link>
       <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/clean-code/</guid>
+      <guid>https://mrwilde.dev/tags/clean-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Better Developer</title>
-      <link>http://localhost:1313/tags/better-developer/</link>
+      <link>https://mrwilde.dev/tags/better-developer/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/better-developer/</guid>
+      <guid>https://mrwilde.dev/tags/better-developer/</guid>
       <description></description>
     </item>
     <item>
       <title>Guide</title>
-      <link>http://localhost:1313/tags/guide/</link>
+      <link>https://mrwilde.dev/tags/guide/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/guide/</guid>
+      <guid>https://mrwilde.dev/tags/guide/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Engineering</title>
-      <link>http://localhost:1313/tags/software-engineering/</link>
+      <link>https://mrwilde.dev/tags/software-engineering/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/software-engineering/</guid>
+      <guid>https://mrwilde.dev/tags/software-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Technical Leadership</title>
-      <link>http://localhost:1313/tags/technical-leadership/</link>
+      <link>https://mrwilde.dev/tags/technical-leadership/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/technical-leadership/</guid>
+      <guid>https://mrwilde.dev/tags/technical-leadership/</guid>
       <description></description>
     </item>
     <item>
       <title>AI Tools</title>
-      <link>http://localhost:1313/tags/ai-tools/</link>
+      <link>https://mrwilde.dev/tags/ai-tools/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/ai-tools/</guid>
+      <guid>https://mrwilde.dev/tags/ai-tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Claude</title>
-      <link>http://localhost:1313/tags/claude/</link>
+      <link>https://mrwilde.dev/tags/claude/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/claude/</guid>
+      <guid>https://mrwilde.dev/tags/claude/</guid>
       <description></description>
     </item>
     <item>
       <title>MCP</title>
-      <link>http://localhost:1313/tags/mcp/</link>
+      <link>https://mrwilde.dev/tags/mcp/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/mcp/</guid>
+      <guid>https://mrwilde.dev/tags/mcp/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>http://localhost:1313/tags/obsidian/</link>
+      <link>https://mrwilde.dev/tags/obsidian/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/obsidian/</guid>
+      <guid>https://mrwilde.dev/tags/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://mrwilde.dev/tags/python/</link>
       <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://mrwilde.dev/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Cicd</title>
-      <link>http://localhost:1313/tags/cicd/</link>
+      <link>https://mrwilde.dev/tags/cicd/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/cicd/</guid>
+      <guid>https://mrwilde.dev/tags/cicd/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://mrwilde.dev/tags/devops/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://mrwilde.dev/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://mrwilde.dev/tags/docker/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://mrwilde.dev/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Github-Actions</title>
-      <link>http://localhost:1313/tags/github-actions/</link>
+      <link>https://mrwilde.dev/tags/github-actions/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/github-actions/</guid>
+      <guid>https://mrwilde.dev/tags/github-actions/</guid>
       <description></description>
     </item>
     <item>
       <title>Letsencrypt</title>
-      <link>http://localhost:1313/tags/letsencrypt/</link>
+      <link>https://mrwilde.dev/tags/letsencrypt/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/letsencrypt/</guid>
+      <guid>https://mrwilde.dev/tags/letsencrypt/</guid>
       <description></description>
     </item>
     <item>
       <title>Nginx</title>
-      <link>http://localhost:1313/tags/nginx/</link>
+      <link>https://mrwilde.dev/tags/nginx/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/nginx/</guid>
+      <guid>https://mrwilde.dev/tags/nginx/</guid>
       <description></description>
     </item>
     <item>
       <title>Retype</title>
-      <link>http://localhost:1313/tags/retype/</link>
+      <link>https://mrwilde.dev/tags/retype/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/retype/</guid>
+      <guid>https://mrwilde.dev/tags/retype/</guid>
       <description></description>
     </item>
     <item>
       <title>DeveloperProductivity</title>
-      <link>http://localhost:1313/tags/developerproductivity/</link>
+      <link>https://mrwilde.dev/tags/developerproductivity/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/developerproductivity/</guid>
+      <guid>https://mrwilde.dev/tags/developerproductivity/</guid>
       <description></description>
     </item>
     <item>
       <title>SoftwareEngineering</title>
-      <link>http://localhost:1313/tags/softwareengineering/</link>
+      <link>https://mrwilde.dev/tags/softwareengineering/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/softwareengineering/</guid>
+      <guid>https://mrwilde.dev/tags/softwareengineering/</guid>
       <description></description>
     </item>
     <item>
       <title>TechnicalLeadership</title>
-      <link>http://localhost:1313/tags/technicalleadership/</link>
+      <link>https://mrwilde.dev/tags/technicalleadership/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/technicalleadership/</guid>
+      <guid>https://mrwilde.dev/tags/technicalleadership/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
+      <link>https://mrwilde.dev/tags/ai/</link>
       <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Another Tag</title>
-      <link>http://localhost:1313/tags/another-tag/</link>
-      <pubDate>Mon, 01 Apr 2024 19:01:48 +0530</pubDate>
-      <guid>http://localhost:1313/tags/another-tag/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Demo</title>
-      <link>http://localhost:1313/tags/demo/</link>
-      <pubDate>Mon, 01 Apr 2024 19:01:48 +0530</pubDate>
-      <guid>http://localhost:1313/tags/demo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Example</title>
-      <link>http://localhost:1313/tags/example/</link>
-      <pubDate>Mon, 01 Apr 2024 19:01:48 +0530</pubDate>
-      <guid>http://localhost:1313/tags/example/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
-      <pubDate>Mon, 01 Apr 2024 19:01:48 +0530</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Template</title>
-      <link>http://localhost:1313/tags/template/</link>
-      <pubDate>Mon, 01 Apr 2024 19:01:48 +0530</pubDate>
-      <guid>http://localhost:1313/tags/template/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>http://localhost:1313/tags/css/</link>
-      <pubDate>Sat, 30 Mar 2024 19:25:10 +0530</pubDate>
-      <guid>http://localhost:1313/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Testing</title>
-      <link>http://localhost:1313/tags/testing/</link>
-      <pubDate>Sat, 30 Mar 2024 19:25:10 +0530</pubDate>
-      <guid>http://localhost:1313/tags/testing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pagination</title>
-      <link>http://localhost:1313/tags/pagination/</link>
-      <pubDate>Wed, 28 Feb 2024 23:12:51 +0530</pubDate>
-      <guid>http://localhost:1313/tags/pagination/</guid>
+      <guid>https://mrwilde.dev/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Dev</title>
-      <link>http://localhost:1313/tags/dev/</link>
+      <link>https://mrwilde.dev/tags/dev/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/dev/</guid>
+      <guid>https://mrwilde.dev/tags/dev/</guid>
       <description></description>
     </item>
     <item>
       <title>Dev-Environment</title>
-      <link>http://localhost:1313/tags/dev-environment/</link>
+      <link>https://mrwilde.dev/tags/dev-environment/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/dev-environment/</guid>
+      <guid>https://mrwilde.dev/tags/dev-environment/</guid>
       <description></description>
     </item>
     <item>
       <title>Helpers</title>
-      <link>http://localhost:1313/tags/helpers/</link>
+      <link>https://mrwilde.dev/tags/helpers/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/helpers/</guid>
+      <guid>https://mrwilde.dev/tags/helpers/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tags/tools/</link>
+      <link>https://mrwilde.dev/tags/tools/</link>
       <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/tools/</guid>
+      <guid>https://mrwilde.dev/tags/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Cli</title>
-      <link>http://localhost:1313/tags/cli/</link>
+      <link>https://mrwilde.dev/tags/cli/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/cli/</guid>
+      <guid>https://mrwilde.dev/tags/cli/</guid>
       <description></description>
     </item>
     <item>
       <title>Wordpress</title>
-      <link>http://localhost:1313/tags/wordpress/</link>
+      <link>https://mrwilde.dev/tags/wordpress/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/wordpress/</guid>
+      <guid>https://mrwilde.dev/tags/wordpress/</guid>
       <description></description>
     </item>
     <item>
       <title>Computers</title>
-      <link>http://localhost:1313/tags/computers/</link>
+      <link>https://mrwilde.dev/tags/computers/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/computers/</guid>
+      <guid>https://mrwilde.dev/tags/computers/</guid>
       <description></description>
     </item>
     <item>
       <title>Hardware</title>
-      <link>http://localhost:1313/tags/hardware/</link>
+      <link>https://mrwilde.dev/tags/hardware/</link>
       <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
-      <guid>http://localhost:1313/tags/hardware/</guid>
+      <guid>https://mrwilde.dev/tags/hardware/</guid>
       <description></description>
     </item>
     <item>
       <title>Energy</title>
-      <link>http://localhost:1313/tags/energy/</link>
+      <link>https://mrwilde.dev/tags/energy/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/energy/</guid>
+      <guid>https://mrwilde.dev/tags/energy/</guid>
       <description></description>
     </item>
     <item>
       <title>Science</title>
-      <link>http://localhost:1313/tags/science/</link>
+      <link>https://mrwilde.dev/tags/science/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/science/</guid>
+      <guid>https://mrwilde.dev/tags/science/</guid>
       <description></description>
     </item>
     <item>
       <title>Thorium</title>
-      <link>http://localhost:1313/tags/thorium/</link>
+      <link>https://mrwilde.dev/tags/thorium/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/thorium/</guid>
+      <guid>https://mrwilde.dev/tags/thorium/</guid>
       <description></description>
     </item>
     <item>
       <title>Public-Speaking</title>
-      <link>http://localhost:1313/tags/public-speaking/</link>
+      <link>https://mrwilde.dev/tags/public-speaking/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/public-speaking/</guid>
+      <guid>https://mrwilde.dev/tags/public-speaking/</guid>
       <description></description>
     </item>
     <item>
       <title>Talks</title>
-      <link>http://localhost:1313/tags/talks/</link>
+      <link>https://mrwilde.dev/tags/talks/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
-      <guid>http://localhost:1313/tags/talks/</guid>
+      <guid>https://mrwilde.dev/tags/talks/</guid>
       <description></description>
     </item>
   </channel>

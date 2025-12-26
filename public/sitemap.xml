@@ -2,231 +2,180 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://mrwilde.dev/authors/</loc>
     <lastmod>2025-12-27T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/development/</loc>
+    <loc>https://mrwilde.dev/tags/development/</loc>
     <lastmod>2025-12-27T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
+    <loc>https://mrwilde.dev/tags/git/</loc>
     <lastmod>2025-12-27T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/12/27/the-power-of-intentional-git-history/</loc>
+    <loc>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</loc>
     <lastmod>2025-12-27T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/version-control/</loc>
+    <loc>https://mrwilde.dev/tags/version-control/</loc>
     <lastmod>2025-12-27T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/workflow/</loc>
+    <loc>https://mrwilde.dev/tags/workflow/</loc>
     <lastmod>2025-12-27T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/better-dev/</loc>
+    <loc>https://mrwilde.dev/tags/better-dev/</loc>
     <lastmod>2025-12-12T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/clean-code/</loc>
+    <loc>https://mrwilde.dev/tags/clean-code/</loc>
     <lastmod>2025-12-12T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/12/12/your-code-is-crap-and-thats-ok/</loc>
+    <loc>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</loc>
     <lastmod>2025-12-12T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/better-developer/</loc>
+    <loc>https://mrwilde.dev/tags/better-developer/</loc>
     <lastmod>2025-10-17T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/guide/</loc>
+    <loc>https://mrwilde.dev/tags/guide/</loc>
     <lastmod>2025-10-17T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</loc>
+    <loc>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</loc>
     <lastmod>2025-10-17T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/software-engineering/</loc>
+    <loc>https://mrwilde.dev/tags/software-engineering/</loc>
     <lastmod>2025-10-17T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/technical-leadership/</loc>
+    <loc>https://mrwilde.dev/tags/technical-leadership/</loc>
     <lastmod>2025-10-17T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai-tools/</loc>
+    <loc>https://mrwilde.dev/tags/ai-tools/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</loc>
+    <loc>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/claude/</loc>
+    <loc>https://mrwilde.dev/tags/claude/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mcp/</loc>
+    <loc>https://mrwilde.dev/tags/mcp/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/obsidian/</loc>
+    <loc>https://mrwilde.dev/tags/obsidian/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://mrwilde.dev/tags/python/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cicd/</loc>
+    <loc>https://mrwilde.dev/tags/cicd/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/devops/</loc>
+    <loc>https://mrwilde.dev/tags/devops/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://mrwilde.dev/tags/docker/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/github-actions/</loc>
+    <loc>https://mrwilde.dev/tags/github-actions/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</loc>
+    <loc>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/letsencrypt/</loc>
+    <loc>https://mrwilde.dev/tags/letsencrypt/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nginx/</loc>
+    <loc>https://mrwilde.dev/tags/nginx/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/retype/</loc>
+    <loc>https://mrwilde.dev/tags/retype/</loc>
     <lastmod>2025-07-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/developerproductivity/</loc>
+    <loc>https://mrwilde.dev/tags/developerproductivity/</loc>
     <lastmod>2025-07-01T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/07/01/reducing-cognitive-load/</loc>
+    <loc>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</loc>
     <lastmod>2025-07-01T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/softwareengineering/</loc>
+    <loc>https://mrwilde.dev/tags/softwareengineering/</loc>
     <lastmod>2025-07-01T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/technicalleadership/</loc>
+    <loc>https://mrwilde.dev/tags/technicalleadership/</loc>
     <lastmod>2025-07-01T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://mrwilde.dev/tags/ai/</loc>
     <lastmod>2025-06-19T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</loc>
+    <loc>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</loc>
     <lastmod>2025-06-19T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/another-tag/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/author-3/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/author-4/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/author-5/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/demo/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/example/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/john-doe/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2024/04/01/markdown-template/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/template/</loc>
-    <lastmod>2024-04-01T19:01:48+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2024/03/30/this-is-a-very-big-post-title-to-test-the-css-of-this-theme/</loc>
-    <lastmod>2024-03-30T19:25:10+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/css/</loc>
-    <lastmod>2024-03-30T19:25:10+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/testing/</loc>
-    <lastmod>2024-03-30T19:25:10+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about.html</loc>
+    <loc>https://mrwilde.dev/about.html</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://mrwilde.dev/blog/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://mrwilde.dev/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/nayan-seth/</loc>
+    <loc>https://mrwilde.dev/authors/nayan-seth/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/robert-wilde/</loc>
+    <loc>https://mrwilde.dev/authors/robert-wilde/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://mrwilde.dev/tags/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2024/02/28/feb-post-3/</loc>
-    <lastmod>2024-02-28T23:12:51+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pagination/</loc>
-    <lastmod>2024-02-28T23:12:51+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2024/02/28/feb-post-2/</loc>
-    <lastmod>2024-02-28T23:10:50+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2024/02/28/feb-post-1/</loc>
-    <lastmod>2024-02-28T23:09:47+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/2022/01/05/alf-your-little-bash-alias-friend/</loc>
+    <loc>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</loc>
     <lastmod>2022-01-05T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dev/</loc>
+    <loc>https://mrwilde.dev/tags/dev/</loc>
     <lastmod>2022-01-05T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dev-environment/</loc>
+    <loc>https://mrwilde.dev/tags/dev-environment/</loc>
     <lastmod>2022-01-05T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/helpers/</loc>
+    <loc>https://mrwilde.dev/tags/helpers/</loc>
     <lastmod>2022-01-05T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tools/</loc>
+    <loc>https://mrwilde.dev/tags/tools/</loc>
     <lastmod>2022-01-05T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cli/</loc>
+    <loc>https://mrwilde.dev/tags/cli/</loc>
     <lastmod>2018-03-08T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</loc>
+    <loc>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</loc>
     <lastmod>2018-03-08T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wordpress/</loc>
+    <loc>https://mrwilde.dev/tags/wordpress/</loc>
     <lastmod>2018-03-08T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/computers/</loc>
+    <loc>https://mrwilde.dev/tags/computers/</loc>
     <lastmod>2016-10-07T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hardware/</loc>
+    <loc>https://mrwilde.dev/tags/hardware/</loc>
     <lastmod>2016-10-07T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2016/10/07/how-to-build-a-budget-pc/</loc>
+    <loc>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</loc>
     <lastmod>2016-10-07T00:00:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/energy/</loc>
+    <loc>https://mrwilde.dev/tags/energy/</loc>
     <lastmod>2016-06-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/science/</loc>
+    <loc>https://mrwilde.dev/tags/science/</loc>
     <lastmod>2016-06-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/thorium/</loc>
+    <loc>https://mrwilde.dev/tags/thorium/</loc>
     <lastmod>2016-06-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2016/06/03/thorium-is-the-new-gold/</loc>
+    <loc>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</loc>
     <lastmod>2016-06-03T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/public-speaking/</loc>
+    <loc>https://mrwilde.dev/tags/public-speaking/</loc>
     <lastmod>2016-04-09T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/talks/</loc>
+    <loc>https://mrwilde.dev/tags/talks/</loc>
     <lastmod>2016-04-09T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</loc>
+    <loc>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</loc>
     <lastmod>2016-04-09T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/1/01/01/</loc>
+    <loc>https://mrwilde.dev/blog/1/01/01/</loc>
   </url>
 </urlset>
