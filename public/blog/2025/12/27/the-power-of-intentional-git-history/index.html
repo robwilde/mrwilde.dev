@@ -22,8 +22,8 @@
     
   
 
-<meta property="og:image" content="https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.svg">
-<meta property="og:image:secure_url" content="https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.svg">
+<meta property="og:image" content="https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.png">
+<meta property="og:image:secure_url" content="https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.png">
 <meta property="og:image:alt" content="The Power of Intentional Git History">
 
   
@@ -36,7 +36,7 @@
 <meta name="twitter:creator" content="@mrwilde">
 <meta name="twitter:title" content="The Power of Intentional Git History">
 <meta name="twitter:description" content="A two-stage merge strategy that gives developers the history they need while keeping releases clean.">
-<meta name="twitter:image" content="https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.svg">
+<meta name="twitter:image" content="https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/ff-vs-noff.png">
 <meta name="twitter:image:alt" content="The Power of Intentional Git History"><link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -215,7 +215,7 @@ handling, and so on.</p>
 <h2 id="the-power-of-first-parent">The Power of &ndash;first-parent</h2>
 <p>Here&rsquo;s where it gets really useful. When I want a high-level view of what&rsquo;s been integrated (without all the individual
 commits), I can run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log --first-parent --oneline
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log --first-parent --oneline
 </span></span></code></pre></div><p>This shows only the merge commits, effectively giving me a timeline of features:</p>
 <pre tabindex="0"><code>e4f2a1b Merge branch &#39;t1.11-rate-limiting&#39; into dev
 b2d4c6f Merge branch &#39;t1.10-error-handling&#39; into dev
@@ -225,7 +225,7 @@ a1c3e5g Merge branch &#39;t1.8-base-api&#39; into dev
 <p><img src="./first-parent-view.svg" alt="First-parent view comparison"></p>
 <h2 id="squashing-to-main-clean-releases">Squashing to Main: Clean Releases</h2>
 <p>At the end of each project phase (in my case, tied to milestone deliverables), I merge <code>dev</code> into <code>main</code> with a squash:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
 </span></span><span style="display:flex;"><span>git merge --squash dev
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Phase 1: Foundation &amp; Core Infrastructure&#34;</span>
 </span></span></code></pre></div><p>This collapses all the detailed history into a single commit on <code>main</code>. The result is that <code>main</code> has one commit per
@@ -235,7 +235,7 @@ phase/release, making it trivially easy to see what shipped when, and to roll ba
 <h2 id="easy-feature-reverts">Easy Feature Reverts</h2>
 <p>One benefit I hadn&rsquo;t fully appreciated until I started using this approach: reverting a feature is straightforward.
 Because each feature merge is a single commit (with two parents), you can revert the entire feature with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git revert -m <span style="color:#ae81ff">1</span> &lt;merge-commit-sha&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git revert -m <span style="color:#ae81ff">1</span> &lt;merge-commit-sha&gt;
 </span></span></code></pre></div><p>Compare this to trying to revert a fast-forward merge, where you&rsquo;d need to identify and revert each commit
 that was part of the feature. At 2am, that&rsquo;s not a game I want to play.</p>
 <h2 id="the-trade-offs">The Trade-offs</h2>
@@ -250,7 +250,7 @@ fast-forward merges breaks the pattern. You can enforce this with Git config or 
 where to draw the line on this.</p>
 <h2 id="making-it-stick">Making It Stick</h2>
 <p>To make <code>--no-ff</code> the default for merges into <code>dev</code>, you can set up your Git config:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Make --no-ff the default for all merges</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Make --no-ff the default for all merges</span>
 </span></span><span style="display:flex;"><span>git config merge.ff false
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># But keep fast-forward for pulls (to avoid noise)</span>
@@ -296,7 +296,7 @@ comment below.</em></p>
     <div class="footer flex items-center justify-center">
   <div class="py-4">
   <footer>
-    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+    <p class="whitespace-nowrap">© 2026. All rights reserved.</p>
   </footer>
 </div>
 </div>
