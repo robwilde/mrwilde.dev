@@ -93,7 +93,7 @@ ignoreFiles = [
 [[menus.main]]
   identifier = "health"
   name = "Health"
-  url = "/health/"
+  url = "/tags/health/"
   weight = 35
 
 [[menus.main]]
