@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quantified-Self on Mr Wilde</title><link>https://mrwilde.dev/tags/quantified-self/</link><description>Recent content in Quantified-Self on Mr Wilde</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 28 Mar 2026 00:00:00 +1100</lastBuildDate><atom:link href="https://mrwilde.dev/tags/quantified-self/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing the Health Dashboard</title><link>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</link><pubDate>Sat, 28 Mar 2026 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</guid><description>&lt;h2 id="why-this-exists"&gt;Why This Exists&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;ve been tracking macros and glucose readings for a while now, but it&amp;rsquo;s always been scattered — a photo here, a reading there, data spread across apps with no single picture. So I built something to fix that.&lt;/p&gt;
-&lt;p&gt;This section of the site is an &lt;strong&gt;automated health dashboard&lt;/strong&gt;. Every week, my data gets pulled together, formatted into a report, and published here. No manual effort once it&amp;rsquo;s running. The goal is simple: &lt;strong&gt;public accountability&lt;/strong&gt; and a single place to see trends over time.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantified-Self on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/quantified-self/</link>
+    <description>Recent content in Quantified-Self on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +1100</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/quantified-self/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing the Health Dashboard</title>
+      <link>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</guid>
+      <description>&lt;h2 id=&#34;why-this-exists&#34;&gt;Why This Exists&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been tracking macros and glucose readings for a while now, but it&amp;rsquo;s always been scattered — a photo here, a reading there, data spread across apps with no single picture. So I built something to fix that.&lt;/p&gt;&#xA;&lt;p&gt;This section of the site is an &lt;strong&gt;automated health dashboard&lt;/strong&gt;. Every week, my data gets pulled together, formatted into a report, and published here. No manual effort once it&amp;rsquo;s running. The goal is simple: &lt;strong&gt;public accountability&lt;/strong&gt; and a single place to see trends over time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,83 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Health on Mr Wilde</title><link>https://mrwilde.dev/tags/health/</link><description>Recent content in Health on Mr Wilde</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Mon, 06 Apr 2026 00:00:00 +1000</lastBuildDate><atom:link href="https://mrwilde.dev/tags/health/index.xml" rel="self" type="application/rss+xml"/><item><title>Health Week: March 31 — April 06, 2026</title><link>https://mrwilde.dev/health/2026-04-06-weekly-update/</link><pubDate>Mon, 06 Apr 2026 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/health/2026-04-06-weekly-update/</guid><description>&lt;h2 id="sleep"&gt;Sleep&lt;/h2&gt;
-&lt;p&gt;No sleep data available this week.&lt;/p&gt;
-&lt;h2 id="activity"&gt;Activity&lt;/h2&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Metric&lt;/th&gt;
- &lt;th&gt;This Week&lt;/th&gt;
- &lt;th&gt;Previous Week&lt;/th&gt;
- &lt;th&gt;Trend&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;Active Minutes&lt;/td&gt;
- &lt;td&gt;483.0 min&lt;/td&gt;
- &lt;td&gt;—&lt;/td&gt;
- &lt;td&gt;—&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="body-composition"&gt;Body Composition&lt;/h2&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Metric&lt;/th&gt;
- &lt;th&gt;This Week&lt;/th&gt;
- &lt;th&gt;Previous Week&lt;/th&gt;
- &lt;th&gt;Trend&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;Avg Fasted Glucose&lt;/td&gt;
- &lt;td&gt;~5.0 mmol/L&lt;/td&gt;
- &lt;td&gt;~5.9 mmol/L&lt;/td&gt;
- &lt;td&gt;-0.9 mmol/L&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Avg Ketones&lt;/td&gt;
- &lt;td&gt;~1.9 mmol/L&lt;/td&gt;
- &lt;td&gt;~1.2 mmol/L&lt;/td&gt;
- &lt;td&gt;+0.7 mmol/L&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Weight&lt;/td&gt;
- &lt;td&gt;133.6 kg&lt;/td&gt;
- &lt;td&gt;136.8 kg&lt;/td&gt;
- &lt;td&gt;-1.6 kg&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="nutrition"&gt;Nutrition&lt;/h2&gt;
-&lt;p&gt;No nutrition data available this week.&lt;/p&gt;
-&lt;h2 id="productivity"&gt;Productivity&lt;/h2&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Metric&lt;/th&gt;
- &lt;th&gt;This Week&lt;/th&gt;
- &lt;th&gt;Previous Week&lt;/th&gt;
- &lt;th&gt;Trend&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;Productive Time&lt;/td&gt;
- &lt;td&gt;5,476.0 min&lt;/td&gt;
- &lt;td&gt;2,401.0 min&lt;/td&gt;
- &lt;td&gt;+3,075.0 min&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Neutral Time&lt;/td&gt;
- &lt;td&gt;3.0 min&lt;/td&gt;
- &lt;td&gt;—&lt;/td&gt;
- &lt;td&gt;—&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="weekly-reflection"&gt;Weekly Reflection&lt;/h2&gt;
-&lt;p&gt;First real data post from the automated pipeline — finally got the plumbing working. The headline this week is body composition: weight dropped 1.6kg to 133.6kg and ketones are trending up nicely at ~1.9 mmol/L. Glucose is coming down too, averaging 5.0 fasted vs 5.9 the week before. The keto approach is clearly kicking in.&lt;/p&gt;</description></item><item><title>Introducing the Health Dashboard</title><link>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</link><pubDate>Sat, 28 Mar 2026 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</guid><description>&lt;h2 id="why-this-exists"&gt;Why This Exists&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;ve been tracking macros and glucose readings for a while now, but it&amp;rsquo;s always been scattered — a photo here, a reading there, data spread across apps with no single picture. So I built something to fix that.&lt;/p&gt;
-&lt;p&gt;This section of the site is an &lt;strong&gt;automated health dashboard&lt;/strong&gt;. Every week, my data gets pulled together, formatted into a report, and published here. No manual effort once it&amp;rsquo;s running. The goal is simple: &lt;strong&gt;public accountability&lt;/strong&gt; and a single place to see trends over time.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Health on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/health/</link>
+    <description>Recent content in Health on Mr Wilde</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/health/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Health Week: March 31 — April 06, 2026</title>
+      <link>https://mrwilde.dev/health/2026-04-06-weekly-update/</link>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/health/2026-04-06-weekly-update/</guid>
+      <description>&lt;h2 id=&#34;sleep&#34;&gt;Sleep&lt;/h2&gt;&#xA;&lt;p&gt;No sleep data available this week.&lt;/p&gt;&#xA;&lt;h2 id=&#34;activity&#34;&gt;Activity&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Metric&lt;/th&gt;&#xA;          &lt;th&gt;This Week&lt;/th&gt;&#xA;          &lt;th&gt;Previous Week&lt;/th&gt;&#xA;          &lt;th&gt;Trend&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Active Minutes&lt;/td&gt;&#xA;          &lt;td&gt;483.0 min&lt;/td&gt;&#xA;          &lt;td&gt;—&lt;/td&gt;&#xA;          &lt;td&gt;—&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;body-composition&#34;&gt;Body Composition&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Metric&lt;/th&gt;&#xA;          &lt;th&gt;This Week&lt;/th&gt;&#xA;          &lt;th&gt;Previous Week&lt;/th&gt;&#xA;          &lt;th&gt;Trend&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Avg Fasted Glucose&lt;/td&gt;&#xA;          &lt;td&gt;~5.0 mmol/L&lt;/td&gt;&#xA;          &lt;td&gt;~5.9 mmol/L&lt;/td&gt;&#xA;          &lt;td&gt;-0.9 mmol/L&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Avg Ketones&lt;/td&gt;&#xA;          &lt;td&gt;~1.9 mmol/L&lt;/td&gt;&#xA;          &lt;td&gt;~1.2 mmol/L&lt;/td&gt;&#xA;          &lt;td&gt;+0.7 mmol/L&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Weight&lt;/td&gt;&#xA;          &lt;td&gt;133.6 kg&lt;/td&gt;&#xA;          &lt;td&gt;136.8 kg&lt;/td&gt;&#xA;          &lt;td&gt;-1.6 kg&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;nutrition&#34;&gt;Nutrition&lt;/h2&gt;&#xA;&lt;p&gt;No nutrition data available this week.&lt;/p&gt;&#xA;&lt;h2 id=&#34;productivity&#34;&gt;Productivity&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Metric&lt;/th&gt;&#xA;          &lt;th&gt;This Week&lt;/th&gt;&#xA;          &lt;th&gt;Previous Week&lt;/th&gt;&#xA;          &lt;th&gt;Trend&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Productive Time&lt;/td&gt;&#xA;          &lt;td&gt;5,476.0 min&lt;/td&gt;&#xA;          &lt;td&gt;2,401.0 min&lt;/td&gt;&#xA;          &lt;td&gt;+3,075.0 min&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Neutral Time&lt;/td&gt;&#xA;          &lt;td&gt;3.0 min&lt;/td&gt;&#xA;          &lt;td&gt;—&lt;/td&gt;&#xA;          &lt;td&gt;—&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;weekly-reflection&#34;&gt;Weekly Reflection&lt;/h2&gt;&#xA;&lt;p&gt;First real data post from the automated pipeline — finally got the plumbing working. The headline this week is body composition: weight dropped 1.6kg to 133.6kg and ketones are trending up nicely at ~1.9 mmol/L. Glucose is coming down too, averaging 5.0 fasted vs 5.9 the week before. The keto approach is clearly kicking in.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introducing the Health Dashboard</title>
+      <link>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</guid>
+      <description>&lt;h2 id=&#34;why-this-exists&#34;&gt;Why This Exists&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been tracking macros and glucose readings for a while now, but it&amp;rsquo;s always been scattered — a photo here, a reading there, data spread across apps with no single picture. So I built something to fix that.&lt;/p&gt;&#xA;&lt;p&gt;This section of the site is an &lt;strong&gt;automated health dashboard&lt;/strong&gt;. Every week, my data gets pulled together, formatted into a report, and published here. No manual effort once it&amp;rsquo;s running. The goal is simple: &lt;strong&gt;public accountability&lt;/strong&gt; and a single place to see trends over time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
