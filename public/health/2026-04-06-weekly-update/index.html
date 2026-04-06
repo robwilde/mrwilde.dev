@@ -310,7 +310,128 @@
 </script>
 
 <h2 id="nutrition">Nutrition</h2>
-<p>No nutrition data available this week.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Meals</th>
+<th>Protein</th>
+<th>Carbs</th>
+<th>Fat</th>
+<th>Calories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-03-31</td>
+<td>1</td>
+<td>~7.0g</td>
+<td>~29.0g</td>
+<td>~7.0g</td>
+<td>~200.0 kcal</td>
+</tr>
+<tr>
+<td>2026-04-01</td>
+<td>4</td>
+<td>~121.9g</td>
+<td>~62.5g</td>
+<td>~123.0g</td>
+<td>~1911.0 kcal</td>
+</tr>
+<tr>
+<td>2026-04-02</td>
+<td>1</td>
+<td>~13.6g</td>
+<td>~15.0g</td>
+<td>~12.2g</td>
+<td>~230.0 kcal</td>
+</tr>
+<tr>
+<td>2026-04-03</td>
+<td>3</td>
+<td>~90.9g</td>
+<td>~24.9g</td>
+<td>~135.3g</td>
+<td>~1727.0 kcal</td>
+</tr>
+<tr>
+<td>2026-04-04</td>
+<td>1</td>
+<td>~32.1g</td>
+<td>~10.2g</td>
+<td>~11.7g</td>
+<td>~276.0 kcal</td>
+</tr>
+<tr>
+<td>2026-04-06</td>
+<td>3</td>
+<td>~129.0g</td>
+<td>~24.0g</td>
+<td>~131.0g</td>
+<td>~1889.0 kcal</td>
+</tr>
+<tr>
+<td><strong>Weekly Avg</strong></td>
+<td></td>
+<td><strong>~65.8g</strong></td>
+<td><strong>~27.6g</strong></td>
+<td><strong>~70.0g</strong></td>
+<td><strong>~1039.0 kcal</strong></td>
+</tr>
+</tbody>
+</table>
+<p>13 meals logged this week.</p>
+<h3 id="daily-macro-breakdown">Daily Macro Breakdown</h3>
+
+
+
+
+<div style="margin: 2rem 0;">
+  <canvas id="chart-macro-breakdown" height="300"></canvas>
+</div>
+
+<script>
+(function() {
+  var ctx = document.getElementById('chart-macro-breakdown').getContext('2d');
+  var data = 
+{"labels": ["03-16", "03-17", "03-18", "03-19", "03-20", "03-21", "03-23", "03-24", "03-25", "03-26", "03-27", "03-28", "03-29", "03-30", "03-31", "04-01", "04-02", "04-03", "04-04", "04-06"], "datasets": [{"label": "Protein (g)", "data": [35.0, 34.6, 67.0, 37.7, 144.3, 47.0, 80.2, 26.2, 40.0, 95.0, 61.2, 45.9, 57.5, 57.5, 7.0, 121.9, 13.6, 90.9, 32.1, 129.0], "backgroundColor": "#ef4444"}, {"label": "Carbs (g)", "data": [21.0, 13.7, 3.0, 3.2, 38.4, 4.0, 24.1, 61.6, 2.0, 3.0, 37.6, 90.8, 2.5, 2.5, 29.0, 62.5, 15.0, 24.9, 10.2, 24.0], "backgroundColor": "#f59e0b"}, {"label": "Fat (g)", "data": [77.0, 20.0, 46.0, 43.7, 208.5, 55.0, 60.3, 23.0, 40.0, 95.0, 89.2, 47.6, 55.0, 55.0, 7.0, 123.0, 12.2, 135.3, 11.7, 131.0], "backgroundColor": "#3b82f6"}]}
+;
+  var config = {
+    type: 'bar',
+    data: data,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#e2e8f0'
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            color: '#94a3b8'
+          }
+        },
+        y: {
+          stacked: true,
+          ticks: {
+            color: '#94a3b8'
+          },
+          grid: {
+            color: '#334155'
+          }
+        }
+      }
+    }
+  };
+  new Chart(ctx, config);
+})();
+</script>
+
 <h2 id="productivity">Productivity</h2>
 <table>
 <thead>
