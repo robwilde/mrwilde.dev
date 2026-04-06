@@ -23,3 +23,8 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 
 {{ partialCached "head/css.html" . }}
+
+{{- /* Chart.js — loaded in head so shortcodes can use it inline */ -}}
+{{ if or (in .Params.tags "health") (eq .Section "health") }}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{{ end }}
