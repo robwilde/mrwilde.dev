@@ -4,7 +4,7 @@
     <title>Clean Code on Mr Wilde</title>
     <link>https://mrwilde.dev/tags/clean-code/</link>
     <description>Recent content in Clean Code on Mr Wilde</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
     <lastBuildDate>Fri, 12 Dec 2025 00:00:00 +1100</lastBuildDate>
     <atom:link href="https://mrwilde.dev/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
       <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
       <guid>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
-      <description>&lt;h2 id=&#34;a-fundamental-truth-all-developers-must-acknowledge--your-code-is-&#34;&gt;A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no&#xA;client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I&#xA;have some oceanfront property to sell you.&lt;/p&gt;&#xA;&lt;p&gt;The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our&#xA;systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute&#xA;perfection. The key is to accept this truth and, as the immortal words of Dory suggest, &amp;ldquo;Just keep swimming.&amp;rdquo;&lt;/p&gt;</description>
+      <description>A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo; This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I have some oceanfront property to sell you.&#xA;The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute perfection.</description>
     </item>
   </channel>
 </rss>

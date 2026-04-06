@@ -38,6 +38,7 @@ git push                      # Push to GitHub
   - Single markdown files: `content/blog/post-name.md`
   - Page bundles with assets: `content/blog/post-name/index.md`
 - **Authors** are defined in `content/authors/<name>/_index.md`
+- **Health pages** go in `content/health/` — auto-generated weekly health summaries
 - **Tags** are auto-generated from post front matter
 
 ## Blog Post Front Matter
@@ -64,3 +65,4 @@ description: Brief description for SEO and previews.
 - **Third-party JS**: Place scripts in `layouts/partials/third_party_js/`
 - **Hugo extended** is required (min version 0.116.0) for Tailwind CSS processing
 - Permalink format: `/blog/:year/:month/:day/:title/`
+- **Automated publishing**: The HealthBot `blog-publisher` skill auto-commits and pushes weekly health summary posts. Dokploy MCP tools are available for triggering deploys programmatically

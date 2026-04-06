@@ -27,6 +27,23 @@ No sleep data available this week.
 | Avg Fasted Glucose | ~5.0 mmol/L | ~5.9 mmol/L | -0.9 mmol/L |
 | Avg Ketones | ~1.9 mmol/L | ~1.2 mmol/L | +0.7 mmol/L |
 | Weight | 133.6 kg | 136.8 kg | -1.6 kg |
+| Total Change (from start) | -6.6 kg | Started at 140.2 kg | 133.6 kg current |
+
+
+
+### Weight Trend
+
+{{< chart id="weight-trend" type="line" height="300" >}}
+{"labels": ["03-17", "03-18", "03-19", "03-22", "03-23", "03-26", "04-01", "04-05"], "datasets": [{"label": "Weight (kg)", "data": [140.2, 138.1, 139.3, 141.1, 139.0, 136.8, 135.2, 133.6], "borderColor": "#22c55e", "backgroundColor": "rgba(34,197,94,0.1)", "fill": true, "tension": 0.3}]}
+{{< /chart >}}
+
+
+
+### Glucose & Ketone Trends
+
+{{< chart id="glucose-ketone-trend" type="line" height="300" >}}
+{"labels": ["03-17", "03-18", "03-19", "03-28", "03-29", "03-30", "03-31", "04-01", "04-03", "04-04", "04-06"], "datasets": [{"label": "Glucose (mmol/L)", "data": [6.0, 5.4, 6.1, 6.1, 5.3, null, 5.0, null, null, null, null], "borderColor": "#f59e0b", "spanGaps": true, "tension": 0.3}, {"label": "Ketones (mmol/L)", "data": [null, null, null, 1.6, 1.0, 1.0, null, 1.1, 2.4, 2.0, 2.7], "borderColor": "#8b5cf6", "spanGaps": true, "tension": 0.3}]}
+{{< /chart >}}
 
 
 
@@ -44,11 +61,3 @@ No nutrition data available this week.
 
 
 
-
-## Weekly Reflection
-
-First real data post from the automated pipeline — finally got the plumbing working. The headline this week is body composition: weight dropped 1.6kg to 133.6kg and ketones are trending up nicely at ~1.9 mmol/L. Glucose is coming down too, averaging 5.0 fasted vs 5.9 the week before. The keto approach is clearly kicking in.
-
-Sleep data isn't flowing yet — still sorting out the Aurora ring connection to Exist.io. Nutrition logging through NutriBot was also just wired into the database this week, so that'll start showing up from here. The productive minutes number looks inflated (5,476 min = ~91 hours) which might be a RescueTime calibration issue worth investigating.
-
-Main goal for next week: get the sleep data connected and start logging meals consistently so the full picture comes together. The system's running now — just need to feed it.

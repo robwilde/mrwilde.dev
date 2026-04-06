@@ -41,7 +41,7 @@
 <title>Hosting my Retype blog with CI/CD | Mr Wilde</title>
 
 
-        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/tailwind.min.9e64dfbae35dbfe316803d2cd527efd87943dc52e152a147629916f0f10f3a53.css" type="text/css" integrity="sha256-nmTfuuNdv&#43;MWgD0s1Sfv2HlD3FLhUqFHYpkW8PEPOlM=" crossorigin="anonymous">
 </head>
 
 <body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
@@ -186,10 +186,10 @@
 <h2 id="docker-configuration">Docker Configuration</h2>
 <h3 id="simplified-dockerfile-with-github-actions-build">Simplified Dockerfile with GitHub Actions Build</h3>
 <p>After optimizing the build process, the final Dockerfile became much simpler by leveraging GitHub Actions to handle the Retype build:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">nginx:alpine</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">COPY</span> public/ /usr/share/nginx/html/public/<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">COPY</span> deploy/nginx-standalone.conf /etc/nginx/nginx.conf<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">EXPOSE</span> <span style="color:#e6db74">80</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> nginx:alpine</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> public/ /usr/share/nginx/html/public/<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> deploy/nginx-standalone.conf /etc/nginx/nginx.conf<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 80</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><p>This approach:</p>
 <ul>
 <li>Eliminates the multi-stage build complexity</li>
@@ -199,19 +199,19 @@
 </ul>
 <h3 id="nginx-configuration">Nginx Configuration</h3>
 <p>The nginx config needed to handle both HTTP and HTTPS while supporting Let&rsquo;s Encrypt validation:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">server_name</span> <span style="color:#e6db74">mrwilde.dev</span> <span style="color:#e6db74">www.mrwilde.dev</span> <span style="color:#e6db74">_</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">index</span> <span style="color:#e6db74">index.html</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Let&#39;s Encrypt challenge
-</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/.well-known/acme-challenge/</span> {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/.well-known/acme-challenge/</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">root</span> <span style="color:#e6db74">/var/www/certbot</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Serve content normally
-</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">try_files</span> $uri $uri/ <span style="color:#e6db74">/index.html</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
@@ -233,7 +233,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="github-actions-cicd-pipeline">GitHub Actions CI/CD Pipeline</h2>
 <p>The key breakthrough was using the official Retype build action before creating the Docker image. This automated workflow triggers on pushes to develop, main, and master branches:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and Push Docker Image</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and Push Docker Image</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
@@ -264,7 +264,7 @@
 </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Copy Retype output to public directory</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mkdir -p public
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        cp -r &#34;${{ steps.build.outputs.retype-output-path }}&#34;/* public/</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        cp -r &#34;${{ steps.build.outputs.retype-output-path }}&#34;/* public/</span>        
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Docker Buildx</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">docker/setup-buildx-action@v3</span>
@@ -284,7 +284,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=ref,event=branch
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=ref,event=pr
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=sha,prefix=sha-
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=raw,value=latest,enable={{is_default_branch}}</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          type=raw,value=latest,enable={{is_default_branch}}</span>          
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build and push Docker image</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">docker/build-push-action@v5</span>
@@ -299,7 +299,7 @@
 </span></span></code></pre></div><p>The critical insight was that the <code>retypeapp/action-build@latest</code> action outputs to a dynamic path accessible via <code>steps.build.outputs.retype-output-path</code>, which we then copy to the expected <code>public/</code> directory for Docker to use.</p>
 <h2 id="docker-compose-orchestration">Docker Compose Orchestration</h2>
 <p>The docker-compose.yml needed to handle both the web server and certificate management:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">mrwilde-website</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">mrwilde/mrwilde-retype:develop</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
@@ -360,10 +360,10 @@
 <p><strong>Problem</strong>: Docker build failed with &ldquo;<code>/public</code>: not found&rdquo; even though the Retype action was running successfully</p>
 <p><strong>Root Cause</strong>: The <code>retypeapp/action-build@latest</code> action outputs to a dynamic path, not the expected <code>public/</code> directory</p>
 <p><strong>Solution</strong>: Used the action&rsquo;s output variable <code>steps.build.outputs.retype-output-path</code> to copy the built files to the correct location:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Copy Retype output to public directory</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Copy Retype output to public directory</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    mkdir -p public
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    cp -r &#34;${{ steps.build.outputs.retype-output-path }}&#34;/* public/</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    cp -r &#34;${{ steps.build.outputs.retype-output-path }}&#34;/* public/</span>    
 </span></span></code></pre></div><p>This required updating the nginx configuration to use <code>/usr/share/nginx/html/public</code> as the document root.</p>
 <h2 id="key-learnings">Key Learnings</h2>
 <h3 id="openmediavault-constraints">OpenMediaVault Constraints</h3>
@@ -462,6 +462,12 @@
 
   <script id="dsq-count-scr" src="//mrwilde-dev.disqus.com/count.js" async></script>
   
+  
+    
+
+  
+
+
 </body>
 
 </html>

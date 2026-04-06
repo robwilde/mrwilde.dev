@@ -1,0 +1,47 @@
+{{ $id := .Get "id" }}
+{{ $type := .Get "type" | default "line" }}
+{{ $height := .Get "height" | default "300" }}
+
+<div style="margin: 2rem 0;">
+  <canvas id="{{ $id }}" height="{{ $height }}"></canvas>
+</div>
+
+<script>
+(function() {
+  var ctx = document.getElementById('{{ $id }}').getContext('2d');
+  var data = {{ .Inner }};
+  var config = {
+    type: '{{ $type }}',
+    data: data,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#e2e8f0'
+          }
+        }
+      },
+      scales: {
+        x: {
+          {{ if eq $type "bar" }}stacked: true,{{ end }}
+          ticks: {
+            color: '#94a3b8'
+          }
+        },
+        y: {
+          {{ if eq $type "bar" }}stacked: true,{{ end }}
+          ticks: {
+            color: '#94a3b8'
+          },
+          grid: {
+            color: '#334155'
+          }
+        }
+      }
+    }
+  };
+  new Chart(ctx, config);
+})();
+</script>

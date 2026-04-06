@@ -1,0 +1,3 @@
+{{ if or (in .Params.tags "health") (eq .Section "health") }}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{{ end }}

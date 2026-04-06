@@ -1,0 +1,5 @@
+{{ range (readDir "layouts/partials/third_party_js") }}
+  {{ if strings.HasSuffix .Name ".html" }}
+    {{ partial (printf "third_party_js/%s" .Name) $ }}
+  {{ end }}
+{{ end }}
