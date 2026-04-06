@@ -1,0 +1,145 @@
+<h1>The Power of Intentional Git History</h1>
+
+<p>I recently started a new project and decided to try something different with my Git workflow. Instead of accepting whatever history happens to emerge from my merges, I'm being intentional about <em>what history I want to keep and where</em>.</p>
+
+<p>The result? A <code>dev</code> branch that tells the full story of how features were built, and a <code>main</code> branch that reads like a clean changelog. Here's what I've learned so far.</p>
+
+<hr>
+
+<h2>The Problem with Default Merges</h2>
+
+<p>If you've worked on any codebase for a while, you've probably experienced the frustration of trying to understand <em>why</em> something was done a certain way. You run <code>git log</code>, and you're faced with either a confusing tangle of commits from multiple features interleaved together, or a completely linear history where the context of grouped work has been lost.</p>
+
+<p>Git's default merge behaviour (fast-forward when possible) prioritises a "clean" linear history. But cleaning isn't always useful. When something breaks in production at 2am, and you need to understand what changed, you want context. You want to see that these five commits were all part of implementing rate limiting, not scattered randomly among database migrations and CSS fixes.</p>
+
+<hr>
+
+<h2>The Strategy: Different Histories for Different Purposes</h2>
+
+<p>Here's the approach I'm experimenting with:</p>
+
+<p><strong>Feature → Dev: Use <code>--no-ff</code> (no fast-forward)</strong><br>
+Every feature branch merge creates an explicit merge commit, preserving the "bubble" of commits that made up that feature.</p>
+
+<p><strong>Dev → Main: Use squash merge</strong><br>
+When a phase or milestone is complete, squash everything into a single commit on <code>main</code>. One commit per release, clean and simple.</p>
+
+<p>The key insight is that these two branches serve different audiences. The <code>dev</code> branch is for developers who need to debug, understand context, and trace the evolution of features. The <code>main</code> branch is for releases, deployments, and anyone who just needs to know "what shipped."</p>
+
+<p><em>[INSERT IMAGE: ff-vs-noff.svg - Fast-forward vs no-fast-forward comparison]</em></p>
+
+<hr>
+
+<h2>What --no-ff Actually Does</h2>
+
+<p>When you merge a feature branch with <code>git merge --no-ff feature-branch</code>, Git creates a merge commit even if it could technically just move the branch pointer forward. This merge commit has two parents: the previous <code>dev</code> commit and the last commit of your feature branch.</p>
+
+<p>The visual result in your Git history is that distinctive "bubble" or "railroad track" pattern. Each feature branch remains visible as a separate track that diverges from and rejoins the main line.</p>
+
+<p>Here's what this looks like in practice with my current project:</p>
+
+<pre><code>*   Merge branch 't1.11-rate-limiting' into dev
+|\
+| * test: add tests for API rate limiting
+| * feat: add configuration for API rate limiting
+| * feat: add rate limiting middleware to API routes
+|/
+*   Merge branch 't1.10-error-handling' into dev
+|\
+| * feat: add custom JSON error handling for API exceptions
+| * feat: enhance error response methods
+| * feat: introduce domain-specific API exceptions
+| * feat: introduce standardized error code enumeration
+|/
+*   Merge branch 't1.9-api-versioning' into dev</code></pre>
+
+<p>Each feature is clearly bounded. I can see exactly which commits belong to rate limiting, which belong to error handling, and so on.</p>
+
+<hr>
+
+<h2>The Power of --first-parent</h2>
+
+<p>Here's where it gets really useful. When I want a high-level view of what's been integrated (without all the individual commits), I can run:</p>
+
+<pre><code>git log --first-parent --oneline</code></pre>
+
+<p>This shows only the merge commits, effectively giving me a timeline of features:</p>
+
+<pre><code>e4f2a1b Merge branch 't1.11-rate-limiting' into dev
+b2d4c6f Merge branch 't1.10-error-handling' into dev
+f8a2c4e Merge branch 't1.9-api-versioning' into dev
+a1c3e5g Merge branch 't1.8-base-api' into dev</code></pre>
+
+<p>It's like having two views of the same history: zoom out for the overview, zoom in for the details.</p>
+
+<p><em>[INSERT IMAGE: first-parent-view.svg - First-parent view comparison]</em></p>
+
+<hr>
+
+<h2>Squashing to Main: Clean Releases</h2>
+
+<p>At the end of each project phase (in my case, tied to milestone deliverables), I merge <code>dev</code> into <code>main</code> with a squash:</p>
+
+<pre><code>git checkout main
+git merge --squash dev
+git commit -m "Phase 1: Foundation &amp; Core Infrastructure"</code></pre>
+
+<p>This collapses all the detailed history into a single commit on <code>main</code>. The result is that <code>main</code> has one commit per phase/release, making it trivially easy to see what shipped when, and to roll back an entire release if needed.</p>
+
+<p><em>[INSERT IMAGE: full-workflow.svg - Full workflow diagram]</em></p>
+
+<p>The developers still have access to all the detailed history on <code>dev</code>. Nothing is lost. It's just organised.</p>
+
+<hr>
+
+<h2>Easy Feature Reverts</h2>
+
+<p>One benefit I hadn't fully appreciated until I started using this approach: reverting a feature is straightforward. Because each feature merge is a single commit (with two parents), you can revert the entire feature with:</p>
+
+<pre><code>git revert -m 1 &lt;merge-commit-sha&gt;</code></pre>
+
+<p>Compare this to trying to revert a fast-forward merge, where you'd need to identify and revert each commit that was part of the feature. At 2am, that's not a game I want to play.</p>
+
+<hr>
+
+<h2>The Trade-offs</h2>
+
+<p>I want to be honest about the downsides because this approach isn't free:</p>
+
+<p><strong>More commits overall.</strong> Every merge adds a commit. If you have dozens of features, that's dozens of additional merge commits on <code>dev</code>. In practice, I haven't found this to be a problem, but it's worth noting.</p>
+
+<p><strong>Visual complexity.</strong> The "railroad track" graph can look intimidating at first. Tools like GitKraken or the Git graph in your IDE help, but it's definitely more complex than a straight line.</p>
+
+<p><strong>Team discipline is required.</strong> This only works if everyone on the team uses <code>--no-ff</code> consistently. One person doing fast-forward merges breaks the pattern. You can enforce this with Git config or CI checks.</p>
+
+<p><strong>Overhead for tiny changes.</strong> For a single-commit typo fix, a merge commit feels like overkill. I'm still working out where to draw the line on this.</p>
+
+<hr>
+
+<h2>Making It Stick</h2>
+
+<p>To make <code>--no-ff</code> the default for merges into <code>dev</code>, you can set up your Git config:</p>
+
+<pre><code># Make --no-ff the default for all merges
+git config merge.ff false
+
+# But keep fast-forward for pulls (to avoid noise)
+git config pull.ff only</code></pre>
+
+<p>Or if you're using a GUI like GitKraken, there's usually a setting to control merge behaviour.</p>
+
+<hr>
+
+<h2>Early Verdict</h2>
+
+<p>I'm only a few weeks into using this approach, but I'm genuinely impressed with how readable the history has become. When I look at my Git graph, I can immediately see "oh, that's when I added rate limiting" without scanning through individual commits.</p>
+
+<p>The squash-to-main strategy means I'll have a clean record of what shipped in each phase, which is particularly useful for client work where I'm invoicing per milestone.</p>
+
+<p>Is this the One True Git Workflow? Probably not. But for a project with clear phases and a need for both detailed developer history and clean releases, it's working well so far.</p>
+
+<p>I'll report back once I've lived with it longer.</p>
+
+<hr>
+
+<p><em>Got a different approach to Git history? I'd love to hear about it. Find me on <a href="https://www.linkedin.com/in/robertewilde/">LinkedIn</a> or leave a comment below.</em></p>

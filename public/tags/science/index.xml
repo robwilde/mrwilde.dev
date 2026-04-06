@@ -1,19 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Science on Mr Wilde</title>
-    <link>https://mrwilde.dev/tags/science/</link>
-    <description>Recent content in Science on Mr Wilde</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-au</language>
-    <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +1000</lastBuildDate>
-    <atom:link href="https://mrwilde.dev/tags/science/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Thorium is the new GOLD</title>
-      <link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link>
-      <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
-      <guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid>
-      <description>My Favourite videos on YouTube now are everything from @kirksorensen, by @gordonmcdowell, talking about Thorium and Liquid Fluoride Thorium Reactor.&#xA;Watch the LFTR explanation on YouTube&#xA;Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.&#xA;This doc I found from 2007, outlines not only is Australia the largest deposit of Thorium on the planet, but we also have 489,000 Tonnes. Thorium in Australia</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Science on Mr Wilde</title><link>https://mrwilde.dev/tags/science/</link><description>Recent content in Science on Mr Wilde</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Fri, 03 Jun 2016 00:00:00 +1000</lastBuildDate><atom:link href="https://mrwilde.dev/tags/science/index.xml" rel="self" type="application/rss+xml"/><item><title>Thorium is the new GOLD</title><link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link><pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid><description>&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jjM9E6d42-M?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;My Favourite videos on YouTube now are everything from &lt;a href="https://twitter.com/kirksorensen"&gt;@kirksorensen&lt;/a&gt;,
+by &lt;a href="https://twitter.com/gordonmcdowell"&gt;@gordonmcdowell&lt;/a&gt;, talking about Thorium and Liquid Fluoride Thorium Reactor.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/YVSmf_qmkbg"&gt;Watch the LFTR explanation on YouTube&lt;/a&gt;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YVSmf_qmkbg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.&lt;/p&gt;</description></item></channel></rss>
