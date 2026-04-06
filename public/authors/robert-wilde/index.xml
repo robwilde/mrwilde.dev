@@ -1,18 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Robert Wilde on Mr Wilde</title><link>https://mrwilde.dev/authors/robert-wilde/</link><description>Recent content in Robert Wilde on Mr Wilde</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Sat, 28 Mar 2026 00:00:00 +1100</lastBuildDate><atom:link href="https://mrwilde.dev/authors/robert-wilde/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing the Health Dashboard</title><link>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</link><pubDate>Sat, 28 Mar 2026 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</guid><description>Why This Exists I&amp;rsquo;ve been tracking macros and glucose readings for a while now, but it&amp;rsquo;s always been scattered — a photo here, a reading there, data spread across apps with no single picture. So I built something to fix that.
-This section of the site is an automated health dashboard. Every week, my data gets pulled together, formatted into a report, and published here. No manual effort once it&amp;rsquo;s running.</description></item><item><title>The Power of Intentional Git History</title><link>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</link><pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</guid><description>I recently started a new project and decided to try something different with my Git workflow. Instead of accepting whatever history happens to emerge from my merges, I&amp;rsquo;m being intentional about what history I want to keep and where.
-The result? A dev branch that tells the full story of how features were built, and a main branch that reads like a clean changelog. Here&amp;rsquo;s what I&amp;rsquo;ve learned so far.</description></item><item><title>Your code is Crap and that's OK</title><link>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link><pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid><description>A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo; This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I have some oceanfront property to sell you.
-The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute perfection.</description></item><item><title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title><link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link><pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid><description>A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from happening again
-The Setup I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at the top:
-&amp;ldquo;You are not required to code the full solution before the interview.</description></item><item><title>Building My First MCP Server: Scratching That Obsidian Itch</title><link>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link><pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid><description>Finally, an Idea Worth Building After months of hearing about Model Context Protocol (MCP) servers and thinking &amp;ldquo;that&amp;rsquo;s cool, but what would I actually build?&amp;rdquo;, I finally had my moment. Like many developers, there&amp;rsquo;s no better motivation to work on a project than scratching your own itch.
-Mine was simple: I kept losing valuable Claude Code responses. Those perfectly crafted solutions, detailed explanations, and code snippets would disappear into the void of my terminal&amp;rsquo;s scrollback buffer.</description></item><item><title>Hosting my Retype blog with CI/CD</title><link>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</link><pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</guid><description>Setting up a modern CI/CD pipeline for a static site generator might seem straightforward, but real-world deployment often presents unexpected challenges. Here&amp;rsquo;s my journey deploying a Retype blog with Docker, GitHub Actions, and Let&amp;rsquo;s Encrypt SSL certificates on my home OpenMediaVault server.
-The Vision I wanted to achieve three key goals:
-Linux compatibility: Update the Dockerfile to use npm instead of .NET SDK Automatic updates: Configure Docker to pull from GitHub repository on rebuild HTTPS support: Production-ready SSL certificates with Let&amp;rsquo;s Encrypt Architecture Overview The final solution consists of:</description></item><item><title>Reducing Cognitive Load</title><link>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</link><pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</guid><description>Today I completed an API endpoint that a colleague needed to integrate with their system. Rather than simply sending over the endpoint URL and waiting for the inevitable questions, I took a different approach.
-I prepared a comprehensive package that included a POSTMAN collection with pre-configured diagnostics, a fully populated example request with actual data including signature and delivery images, and a sample of the generated PDF output.
-The entire process took me perhaps ten additional minutes.</description></item><item><title>AI as a Development Tool: Enhancing, Not Replacing</title><link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link><pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid><description>Tools Define Our Trade Throughout my career, including experience in construction, I&amp;rsquo;ve learned that tools are crucial. Yet, developers often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we leverage it.
-Reducing Development Arrogance One unexpected benefit of working with AI tools is reducing my own development arrogance.</description></item><item><title>Alf - Your Little Bash Alias Friend</title><link>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</link><pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid><description>Alf — Your Little Bash Alias Friend Create aliases by using a config file. Create aliases for sub-commands (for example, g s for git status). Synchronize your aliases across hosts or users by uploading your config file to GitHub. Does not alter anything in your system except for creating the ~/.bash_aliases file, which is normally already sourced by your login process. Works with bash and zsh. github link</description></item><item><title>What is WP-CLI and what can it do for you?</title><link>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</link><pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</guid><description>So what is WP-CLI? WP-CLI or the WordPress Command Line Interface is a PHP based tool that allows you to manage your WordPress site via SSH (Secure Shell) interface.
-In simpler terms, it is the back-door to your website. WP-Admin is the GUI or Graphical User interface gives you something nice to look at, with buttons and colours that can be accessed via a web page. WP-CLI drops the GUI and works with simple commands, providing more control and speed.</description></item><item><title>How to build a budget PC</title><link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link><pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid><description>If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from @paulshardware has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.
-Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD.</description></item><item><title>Thorium is the new GOLD</title><link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link><pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid><description>My Favourite videos on YouTube now are everything from @kirksorensen, by @gordonmcdowell, talking about Thorium and Liquid Fluoride Thorium Reactor.
-Watch the LFTR explanation on YouTube
-Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.
-This doc I found from 2007, outlines not only is Australia the largest deposit of Thorium on the planet, but we also have 489,000 Tonnes. Thorium in Australia</description></item><item><title>This one time at WordCamp - I was the person Speaking</title><link>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</link><pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</guid><description>It is all done, finished, over and kaput. WordCampSC has come and gone and what a fantastic weekend. If I were only there as an attendee, I would still have learnt so much and been glad to have gone, but I was speaking for the first time.
-Did it go as planned? HELL NO! Part of the live demo material did not play out as rehearsed, several hours a day leading up to the event, and every time I looked into the crowd all I could see were the faces of, what appeared to be, very confused people.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robert Wilde on Mr Wilde</title>
+    <link>https://mrwilde.dev/authors/robert-wilde/</link>
+    <description>Recent content in Robert Wilde on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +1100</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/authors/robert-wilde/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing the Health Dashboard</title>
+      <link>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/health/2026-03-28-introducing-health-dashboard/</guid>
+      <description>Why This Exists I&amp;rsquo;ve been tracking macros and glucose readings for a while now, but it&amp;rsquo;s always been scattered — a photo here, a reading there, data spread across apps with no single picture. So I built something to fix that.&#xA;This section of the site is an automated health dashboard. Every week, my data gets pulled together, formatted into a report, and published here. No manual effort once it&amp;rsquo;s running.</description>
+    </item>
+    <item>
+      <title>The Power of Intentional Git History</title>
+      <link>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/12/27/the-power-of-intentional-git-history/</guid>
+      <description>I recently started a new project and decided to try something different with my Git workflow. Instead of accepting whatever history happens to emerge from my merges, I&amp;rsquo;m being intentional about what history I want to keep and where.&#xA;The result? A dev branch that tells the full story of how features were built, and a main branch that reads like a clean changelog. Here&amp;rsquo;s what I&amp;rsquo;ve learned so far.</description>
+    </item>
+    <item>
+      <title>Your code is Crap and that&#39;s OK</title>
+      <link>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/12/12/your-code-is-crap-and-thats-ok/</guid>
+      <description>A fundamental truth all developers must acknowledge – &amp;ldquo;your code is 💩..&amp;rdquo; This may sound harsh, but consider this: have you ever worked on a project that functions flawlessly, with no bugs, no client complaints, and every feature seamlessly integrating as if crafted by a precision machine? If you have, then I have some oceanfront property to sell you.&#xA;The reality is that perfection in coding does not exist. While we can strive for it and work diligently to improve our systems, any complex project with numerous moving parts that undergoes constant changes will never achieve absolute perfection.</description>
+    </item>
+    <item>
+      <title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title>
+      <link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid>
+      <description>A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from happening again&#xA;The Setup I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at the top:&#xA;&amp;ldquo;You are not required to code the full solution before the interview.</description>
+    </item>
+    <item>
+      <title>Building My First MCP Server: Scratching That Obsidian Itch</title>
+      <link>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</guid>
+      <description>Finally, an Idea Worth Building After months of hearing about Model Context Protocol (MCP) servers and thinking &amp;ldquo;that&amp;rsquo;s cool, but what would I actually build?&amp;rdquo;, I finally had my moment. Like many developers, there&amp;rsquo;s no better motivation to work on a project than scratching your own itch.&#xA;Mine was simple: I kept losing valuable Claude Code responses. Those perfectly crafted solutions, detailed explanations, and code snippets would disappear into the void of my terminal&amp;rsquo;s scrollback buffer.</description>
+    </item>
+    <item>
+      <title>Hosting my Retype blog with CI/CD</title>
+      <link>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/</guid>
+      <description>Setting up a modern CI/CD pipeline for a static site generator might seem straightforward, but real-world deployment often presents unexpected challenges. Here&amp;rsquo;s my journey deploying a Retype blog with Docker, GitHub Actions, and Let&amp;rsquo;s Encrypt SSL certificates on my home OpenMediaVault server.&#xA;The Vision I wanted to achieve three key goals:&#xA;Linux compatibility: Update the Dockerfile to use npm instead of .NET SDK Automatic updates: Configure Docker to pull from GitHub repository on rebuild HTTPS support: Production-ready SSL certificates with Let&amp;rsquo;s Encrypt Architecture Overview The final solution consists of:</description>
+    </item>
+    <item>
+      <title>Reducing Cognitive Load</title>
+      <link>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/07/01/reducing-cognitive-load/</guid>
+      <description>Today I completed an API endpoint that a colleague needed to integrate with their system. Rather than simply sending over the endpoint URL and waiting for the inevitable questions, I took a different approach.&#xA;I prepared a comprehensive package that included a POSTMAN collection with pre-configured diagnostics, a fully populated example request with actual data including signature and delivery images, and a sample of the generated PDF output.&#xA;The entire process took me perhaps ten additional minutes.</description>
+    </item>
+    <item>
+      <title>AI as a Development Tool: Enhancing, Not Replacing</title>
+      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <description>Tools Define Our Trade Throughout my career, including experience in construction, I&amp;rsquo;ve learned that tools are crucial. Yet, developers often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we leverage it.&#xA;Reducing Development Arrogance One unexpected benefit of working with AI tools is reducing my own development arrogance.</description>
+    </item>
+    <item>
+      <title>Alf - Your Little Bash Alias Friend</title>
+      <link>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid>
+      <description>Alf — Your Little Bash Alias Friend Create aliases by using a config file. Create aliases for sub-commands (for example, g s for git status). Synchronize your aliases across hosts or users by uploading your config file to GitHub. Does not alter anything in your system except for creating the ~/.bash_aliases file, which is normally already sourced by your login process. Works with bash and zsh. github link</description>
+    </item>
+    <item>
+      <title>What is WP-CLI and what can it do for you?</title>
+      <link>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2018/03/08/what-is-wp-cli-and-what-can-it-do-for-you/</guid>
+      <description>So what is WP-CLI? WP-CLI or the WordPress Command Line Interface is a PHP based tool that allows you to manage your WordPress site via SSH (Secure Shell) interface.&#xA;In simpler terms, it is the back-door to your website. WP-Admin is the GUI or Graphical User interface gives you something nice to look at, with buttons and colours that can be accessed via a web page. WP-CLI drops the GUI and works with simple commands, providing more control and speed.</description>
+    </item>
+    <item>
+      <title>How to build a budget PC</title>
+      <link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link>
+      <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
+      <description>If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from @paulshardware has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.&#xA;Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD.</description>
+    </item>
+    <item>
+      <title>Thorium is the new GOLD</title>
+      <link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid>
+      <description>My Favourite videos on YouTube now are everything from @kirksorensen, by @gordonmcdowell, talking about Thorium and Liquid Fluoride Thorium Reactor.&#xA;Watch the LFTR explanation on YouTube&#xA;Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.&#xA;This doc I found from 2007, outlines not only is Australia the largest deposit of Thorium on the planet, but we also have 489,000 Tonnes. Thorium in Australia</description>
+    </item>
+    <item>
+      <title>This one time at WordCamp - I was the person Speaking</title>
+      <link>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2016/04/09/this-one-time-at-wordcamp-i-was-the-person-speaking/</guid>
+      <description>It is all done, finished, over and kaput. WordCampSC has come and gone and what a fantastic weekend. If I were only there as an attendee, I would still have learnt so much and been glad to have gone, but I was speaking for the first time.&#xA;Did it go as planned? HELL NO! Part of the live demo material did not play out as rehearsed, several hours a day leading up to the event, and every time I looked into the crowd all I could see were the faces of, what appeared to be, very confused people.</description>
+    </item>
+  </channel>
+</rss>

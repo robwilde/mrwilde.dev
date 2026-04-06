@@ -1,5 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guide on Mr Wilde</title><link>https://mrwilde.dev/tags/guide/</link><description>Recent content in Guide on Mr Wilde</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Fri, 17 Oct 2025 00:00:00 +1100</lastBuildDate><atom:link href="https://mrwilde.dev/tags/guide/index.xml" rel="self" type="application/rss+xml"/><item><title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title><link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link><pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid><description>A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from happening again
-The Setup I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at the top:
-&amp;ldquo;You are not required to code the full solution before the interview.</description></item><item><title>AI as a Development Tool: Enhancing, Not Replacing</title><link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link><pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid><description>Tools Define Our Trade Throughout my career, including experience in construction, I&amp;rsquo;ve learned that tools are crucial. Yet, developers often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we leverage it.
-Reducing Development Arrogance One unexpected benefit of working with AI tools is reducing my own development arrogance.</description></item><item><title>How to build a budget PC</title><link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link><pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid><description>If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from @paulshardware has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.
-Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guide on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/guide/</link>
+    <description>Recent content in Guide on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +1100</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Failed a Technical Interview by Doing Too Much (And Built a Framework to Never Do It Again)</title>
+      <link>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/10/17/how-i-failed-a-technical-interview-by-doing-too-much-and-built-a-framework-to-never-do-it-again/</guid>
+      <description>A post-mortem on how cognitive bias sabotaged my preparation, and the systematic approach I built to prevent it from happening again&#xA;The Setup I was excited about the opportunity. It checked all my boxes: fully remote position, contract work with competitive compensation, and genuine opportunities for growth. They sent me a technical challenge with a clear instruction right at the top:&#xA;&amp;ldquo;You are not required to code the full solution before the interview.</description>
+    </item>
+    <item>
+      <title>AI as a Development Tool: Enhancing, Not Replacing</title>
+      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <description>Tools Define Our Trade Throughout my career, including experience in construction, I&amp;rsquo;ve learned that tools are crucial. Yet, developers often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we leverage it.&#xA;Reducing Development Arrogance One unexpected benefit of working with AI tools is reducing my own development arrogance.</description>
+    </item>
+    <item>
+      <title>How to build a budget PC</title>
+      <link>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</link>
+      <pubDate>Fri, 07 Oct 2016 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</guid>
+      <description>If you have been thinking about building a PC and don&amp;rsquo;t have a large budget then Paul from @paulshardware has just done an awesome guide on the parts and how to put it together. He goes into great detail about the components, what they do, what they come with and how they are all connected.&#xA;Remember Paul&amp;rsquo;s pricing is US based so times by about 1.4, and you will get closer to AUD.</description>
+    </item>
+  </channel>
+</rss>

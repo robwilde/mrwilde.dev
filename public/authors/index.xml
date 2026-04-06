@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Authors on Mr Wilde</title><link>https://mrwilde.dev/authors/</link><description>Recent content in Authors on Mr Wilde</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Thu, 28 Mar 2024 15:00:00 +0000</lastBuildDate><atom:link href="https://mrwilde.dev/authors/index.xml" rel="self" type="application/rss+xml"/><item><title>Nayan Seth</title><link>https://mrwilde.dev/authors/nayan-seth/</link><pubDate>Thu, 28 Mar 2024 15:00:00 +0000</pubDate><guid>https://mrwilde.dev/authors/nayan-seth/</guid><description/></item><item><title>Robert Wilde</title><link>https://mrwilde.dev/authors/robert-wilde/</link><pubDate>Thu, 28 Mar 2024 15:00:00 +0000</pubDate><guid>https://mrwilde.dev/authors/robert-wilde/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Mr Wilde</title>
+    <link>https://mrwilde.dev/authors/</link>
+    <description>Recent content in Authors on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HealthBot</title>
+      <link>https://mrwilde.dev/authors/healthbot/</link>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/authors/healthbot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nayan Seth</title>
+      <link>https://mrwilde.dev/authors/nayan-seth/</link>
+      <pubDate>Thu, 28 Mar 2024 15:00:00 +0000</pubDate>
+      <guid>https://mrwilde.dev/authors/nayan-seth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Robert Wilde</title>
+      <link>https://mrwilde.dev/authors/robert-wilde/</link>
+      <pubDate>Thu, 28 Mar 2024 15:00:00 +0000</pubDate>
+      <guid>https://mrwilde.dev/authors/robert-wilde/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

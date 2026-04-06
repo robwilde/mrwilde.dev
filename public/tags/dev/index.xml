@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dev on Mr Wilde</title><link>https://mrwilde.dev/tags/dev/</link><description>Recent content in Dev on Mr Wilde</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Wed, 05 Jan 2022 00:00:00 +1100</lastBuildDate><atom:link href="https://mrwilde.dev/tags/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Alf - Your Little Bash Alias Friend</title><link>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</link><pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate><guid>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid><description>Alf — Your Little Bash Alias Friend Create aliases by using a config file. Create aliases for sub-commands (for example, g s for git status). Synchronize your aliases across hosts or users by uploading your config file to GitHub. Does not alter anything in your system except for creating the ~/.bash_aliases file, which is normally already sourced by your login process. Works with bash and zsh. github link</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/dev/</link>
+    <description>Recent content in Dev on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +1100</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alf - Your Little Bash Alias Friend</title>
+      <link>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</link>
+      <pubDate>Wed, 05 Jan 2022 00:00:00 +1100</pubDate>
+      <guid>https://mrwilde.dev/blog/2022/01/05/alf-your-little-bash-alias-friend/</guid>
+      <description>Alf — Your Little Bash Alias Friend Create aliases by using a config file. Create aliases for sub-commands (for example, g s for git status). Synchronize your aliases across hosts or users by uploading your config file to GitHub. Does not alter anything in your system except for creating the ~/.bash_aliases file, which is normally already sourced by your login process. Works with bash and zsh. github link</description>
+    </item>
+  </channel>
+</rss>

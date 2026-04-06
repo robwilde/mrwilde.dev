@@ -2,15 +2,15 @@
 <html lang="en-au"
   dir="ltr">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content=""><link rel="canonical" href="http://localhost:1313/blog/2024/04/01/markdown-template/">
-<link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="http://localhost:1313/blog/index.xml"><meta name="author" content="Nayan Seth">
+<meta name="description" content=""><link rel="canonical" href="https://mrwilde.dev/blog/2024/04/01/markdown-template/">
+<link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="https://mrwilde.dev/blog/index.xml"><meta name="author" content="Nayan Seth">
 <meta name="language" content="en-au"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
 <meta property="og:title" content="Markdown Template">
 <meta property="og:description" content="All the nerd stuff from Mr Wilde&#39;s brain, if you can handle it.">
-<meta property="og:url" content="http://localhost:1313/blog/2024/04/01/markdown-template/">
+<meta property="og:url" content="https://mrwilde.dev/blog/2024/04/01/markdown-template/">
 <meta property="og:locale" content="en-au"><meta property="og:type" content="article">
 <meta property="article:published_time" content="2024-04-01T19:01:48&#43;05:30">
 <meta property="article:modified_time" content="2024-04-01T19:01:48&#43;05:30">
@@ -44,7 +44,7 @@
 <title>Markdown Template | Mr Wilde</title>
 
 
-      <link rel="stylesheet" href="/css/tailwind.css" type="text/css">
+        <link rel="stylesheet" href="/css/tailwind.min.9e64dfbae35dbfe316803d2cd527efd87943dc52e152a147629916f0f10f3a53.css" type="text/css" integrity="sha256-nmTfuuNdv&#43;MWgD0s1Sfv2HlD3FLhUqFHYpkW8PEPOlM=" crossorigin="anonymous">
 </head>
 
 <body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
@@ -65,7 +65,7 @@
   
   
     <div class="flex flex-col gap-1">
-      <a href="http://localhost:1313/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
+      <a href="https://mrwilde.dev/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Mr Wilde</a>
       
         <p>All the nerd stuff from Mr Wilde&#39;s brain, if you can handle it.</p>
       
@@ -81,6 +81,10 @@
 
   <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
     <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags/health/">Health</a>
   </li>
 
   <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
@@ -179,7 +183,7 @@
       <div class="flex flex-col gap-10">
         <div class="prose prose-invert max-w-full">
           <h2 id="svg-testing">SVG Testing</h2>
-<h2 id="hahahugoshortcode21s0hbhb-svg-shortcode-test">
+<h2 id="hahahugoshortcode16s0hbhb-svg-shortcode-test">
 
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="32" viewBox="-45 -30 90 60" fill="#2C2C6F" class="inline-block align-middle">
@@ -362,56 +366,56 @@ line 3 of code
 <p>Block code &ldquo;fences&rdquo;</p>
 <pre tabindex="0"><code>Sample text here...
 </code></pre><p>Syntax highlighting</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">bar</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">bar</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">bar</span><span style="color:#f92672">++</span>;
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foo</span>(<span style="color:#ae81ff">5</span>));
 </span></span></code></pre></div><h2 id="tables">Tables</h2>
 <table>
-  <thead>
-      <tr>
-          <th>Option</th>
-          <th>Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>data</td>
-          <td>path to data files to supply the data that will be passed into templates.</td>
-      </tr>
-      <tr>
-          <td>engine</td>
-          <td>engine to be used for processing templates. Handlebars is the default.</td>
-      </tr>
-      <tr>
-          <td>ext</td>
-          <td>extension to be used for dest files.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
 </table>
 <p>Right aligned columns</p>
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: right">Option</th>
-          <th style="text-align: right">Description</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: right">data</td>
-          <td style="text-align: right">path to data files to supply the data that will be passed into templates.</td>
-      </tr>
-      <tr>
-          <td style="text-align: right">engine</td>
-          <td style="text-align: right">engine to be used for processing templates. Handlebars is the default.</td>
-      </tr>
-      <tr>
-          <td style="text-align: right">ext</td>
-          <td style="text-align: right">extension to be used for dest files.</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th style="text-align:right">Option</th>
+<th style="text-align:right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">data</td>
+<td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td style="text-align:right">engine</td>
+<td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td style="text-align:right">ext</td>
+<td style="text-align:right">extension to be used for dest files.</td>
+</tr>
+</tbody>
 </table>
 <h2 id="links">Links</h2>
 <p><a href="http://dev.nodeca.com">link text</a></p>
@@ -426,27 +430,27 @@ line 3 of code
 <h2 id="plugins">Plugins</h2>
 <p>The killer feature of <code>markdown-it</code> is very effective support of
 <a href="https://www.npmjs.org/browse/keyword/markdown-it-plugin">syntax plugins</a>.</p>
-<h3 id="emojies"><a href="https://github.com/markdown-it/markdown-it-emoji">Emojies</a></h3>
+<h3 id="emojieshttpsgithubcommarkdown-itmarkdown-it-emoji"><a href="https://github.com/markdown-it/markdown-it-emoji">Emojies</a></h3>
 <blockquote>
 <p>Classic markup: :wink: :cry: :laughing: :yum:</p>
 <p>Shortcuts (emoticons): :-) :-( 8-) ;)</p>
 </blockquote>
 <p>see <a href="https://github.com/markdown-it/markdown-it-emoji#change-output">how to change output</a> with twemoji.</p>
-<h3 id="subscript--superscript"><a href="https://github.com/markdown-it/markdown-it-sub">Subscript</a> / <a href="https://github.com/markdown-it/markdown-it-sup">Superscript</a></h3>
+<h3 id="subscripthttpsgithubcommarkdown-itmarkdown-it-sub--superscripthttpsgithubcommarkdown-itmarkdown-it-sup"><a href="https://github.com/markdown-it/markdown-it-sub">Subscript</a> / <a href="https://github.com/markdown-it/markdown-it-sup">Superscript</a></h3>
 <ul>
 <li>19^th^</li>
-<li>H<del>2</del>O</li>
+<li>H~2~O</li>
 </ul>
-<h3 id="ins"><a href="https://github.com/markdown-it/markdown-it-ins">&lt;ins&gt;</a></h3>
+<h3 id="inshttpsgithubcommarkdown-itmarkdown-it-ins"><a href="https://github.com/markdown-it/markdown-it-ins">&lt;ins&gt;</a></h3>
 <p>++Inserted text++</p>
-<h3 id="mark"><a href="https://github.com/markdown-it/markdown-it-mark">&lt;mark&gt;</a></h3>
+<h3 id="markhttpsgithubcommarkdown-itmarkdown-it-mark"><a href="https://github.com/markdown-it/markdown-it-mark">&lt;mark&gt;</a></h3>
 <p>==Marked text==</p>
-<h3 id="footnotes"><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
+<h3 id="footnoteshttpsgithubcommarkdown-itmarkdown-it-footnote"><a href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h3>
 <p>Footnote 1 link<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>Footnote 2 link<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <p>Inline footnote^[Text of inline footnote] definition.</p>
 <p>Duplicated footnote reference<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
-<h3 id="definition-lists"><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
+<h3 id="definition-listshttpsgithubcommarkdown-itmarkdown-it-deflist"><a href="https://github.com/markdown-it/markdown-it-deflist">Definition lists</a></h3>
 <dl>
 <dt>Term 1</dt>
 <dd>
@@ -467,11 +471,11 @@ with lazy continuation.</p>
 <p>Term 2
 ~ Definition 2a
 ~ Definition 2b</p>
-<h3 id="abbreviations"><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h3>
+<h3 id="abbreviationshttpsgithubcommarkdown-itmarkdown-it-abbr"><a href="https://github.com/markdown-it/markdown-it-abbr">Abbreviations</a></h3>
 <p>This is HTML abbreviation example.</p>
 <p>It converts &ldquo;HTML&rdquo;, but keep intact partial entries like &ldquo;xxxHTMLyyy&rdquo; and so on.</p>
 <p>*[HTML]: Hyper Text Markup Language</p>
-<h3 id="custom-containers"><a href="https://github.com/markdown-it/markdown-it-container">Custom containers</a></h3>
+<h3 id="custom-containershttpsgithubcommarkdown-itmarkdown-it-container"><a href="https://github.com/markdown-it/markdown-it-container">Custom containers</a></h3>
 <p>::: warning
 <em>here be dragons</em>
 :::</p>
@@ -496,7 +500,7 @@ with lazy continuation.</p>
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-    this.page.url = "http:\/\/localhost:1313\/blog\/2024\/04\/01\/markdown-template\/";
+    this.page.url = "https:\/\/mrwilde.dev\/blog\/2024\/04\/01\/markdown-template\/";
     this.page.identifier = "markdown-template"; 
     };
     (function () { 
@@ -524,7 +528,7 @@ with lazy continuation.</p>
 
   </div>
   
-      <script type="text/javascript" src="/js/navbar.js"></script>
+        <script type="text/javascript" src="/js/navbar.min.a2e7a3db4f1b58e7616cfd31a099340a207d5b99d96df87f525f17c604e184c1.js" integrity="sha256-ouej208bWOdhbP0xoJk0CiB9W5nZbfh/Ul8XxgThhME=" crossorigin="anonymous"></script>
 
   <script id="dsq-count-scr" src="//nayanseth.disqus.com/count.js" async></script>
   

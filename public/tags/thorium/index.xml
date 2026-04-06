@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Thorium on Mr Wilde</title><link>https://mrwilde.dev/tags/thorium/</link><description>Recent content in Thorium on Mr Wilde</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Fri, 03 Jun 2016 00:00:00 +1000</lastBuildDate><atom:link href="https://mrwilde.dev/tags/thorium/index.xml" rel="self" type="application/rss+xml"/><item><title>Thorium is the new GOLD</title><link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link><pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid><description>My Favourite videos on YouTube now are everything from @kirksorensen, by @gordonmcdowell, talking about Thorium and Liquid Fluoride Thorium Reactor.
-Watch the LFTR explanation on YouTube
-Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.
-This doc I found from 2007, outlines not only is Australia the largest deposit of Thorium on the planet, but we also have 489,000 Tonnes. Thorium in Australia</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thorium on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/thorium/</link>
+    <description>Recent content in Thorium on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/thorium/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thorium is the new GOLD</title>
+      <link>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2016/06/03/thorium-is-the-new-gold/</guid>
+      <description>My Favourite videos on YouTube now are everything from @kirksorensen, by @gordonmcdowell, talking about Thorium and Liquid Fluoride Thorium Reactor.&#xA;Watch the LFTR explanation on YouTube&#xA;Right at the start, Kirk outlines an estimated $1000,000,000 return from 1 Tonne of Thorium.&#xA;This doc I found from 2007, outlines not only is Australia the largest deposit of Thorium on the planet, but we also have 489,000 Tonnes. Thorium in Australia</description>
+    </item>
+  </channel>
+</rss>

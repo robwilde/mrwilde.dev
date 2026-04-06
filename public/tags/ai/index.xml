@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Mr Wilde</title><link>https://mrwilde.dev/tags/ai/</link><description>Recent content in AI on Mr Wilde</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Thu, 19 Jun 2025 00:00:00 +1000</lastBuildDate><atom:link href="https://mrwilde.dev/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>AI as a Development Tool: Enhancing, Not Replacing</title><link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link><pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate><guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid><description>Tools Define Our Trade Throughout my career, including experience in construction, I&amp;rsquo;ve learned that tools are crucial. Yet, developers often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we leverage it.
-Reducing Development Arrogance One unexpected benefit of working with AI tools is reducing my own development arrogance.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/ai/</link>
+    <description>Recent content in AI on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Thu, 19 Jun 2025 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI as a Development Tool: Enhancing, Not Replacing</title>
+      <link>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2025/06/19/ai-as-a-development-tool-enhancing-not-replacing/</guid>
+      <description>Tools Define Our Trade Throughout my career, including experience in construction, I&amp;rsquo;ve learned that tools are crucial. Yet, developers often have strong, sometimes puzzling preferences. Why do some developers prefer VS Code for PHP development when PHPStorm provides comprehensive, purpose-built functionality? The answer lies not in the tool itself, but in how we leverage it.&#xA;Reducing Development Arrogance One unexpected benefit of working with AI tools is reducing my own development arrogance.</description>
+    </item>
+  </channel>
+</rss>
