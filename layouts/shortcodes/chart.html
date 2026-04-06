@@ -9,7 +9,7 @@
 <script>
 (function() {
   var ctx = document.getElementById('{{ $id }}').getContext('2d');
-  var data = {{ .Inner }};
+  var data = {{ .Inner | safeJS }};
   var config = {
     type: '{{ $type }}',
     data: data,
