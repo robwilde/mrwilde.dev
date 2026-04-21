@@ -2,22 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mrwilde.dev/authors/</loc>
+    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/health/</loc>
+    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
+  </url><url>
     <loc>https://mrwilde.dev/health/</loc>
     <lastmod>2026-04-20T00:00:00+10:00</lastmod>
   </url><url>
-    <loc>https://mrwilde.dev/authors/</loc>
-    <lastmod>2026-04-13T00:00:00+10:00</lastmod>
-  </url><url>
-    <loc>https://mrwilde.dev/tags/health/</loc>
-    <lastmod>2026-04-13T00:00:00+10:00</lastmod>
-  </url><url>
-    <loc>https://mrwilde.dev/health/2026-04-13-weekly-update/</loc>
-    <lastmod>2026-04-13T00:00:00+10:00</lastmod>
+    <loc>https://mrwilde.dev/health/2026-04-20-weekly-update/</loc>
+    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/authors/healthbot/</loc>
-    <lastmod>2026-04-13T00:00:00+10:00</lastmod>
+    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/tags/weekly-update/</loc>
+    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/health/2026-04-13-weekly-update/</loc>
     <lastmod>2026-04-13T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/health/2026-04-06-weekly-update/</loc>

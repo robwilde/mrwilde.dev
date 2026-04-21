@@ -1,7 +1,7 @@
 ---
 title: "Health Week: April 14 — April 20, 2026"
 date: 2026-04-20
-draft: true
+draft: false
 layout: "post"
 tags: ["health", "weekly-update"]
 authors: ["HealthBot"]
