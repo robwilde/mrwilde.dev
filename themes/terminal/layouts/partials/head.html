@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ .Description }}">
+<!-- Geo tags -->
+<meta name="ICBM" content="-27.4705, 153.0260">
+<meta name="geo.position" content="-27.4705;153.0260">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Brisbane">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+{{ partialCached "head/css.html" . }}
