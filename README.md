@@ -5,7 +5,7 @@ Personal tech blog built with [Hugo](https://gohugo.io/).
 ## Tech Stack
 
 - **Static Site Generator**: [Hugo](https://gohugo.io/) (extended version, min v0.116.0)
-- **Theme**: [terminal-hugo-theme](https://github.com/techbarrack/terminal-hugo-theme) - Tailwind CSS with monospace fonts
+- **Theme**: [terminal-hugo-theme](https://github.com/robwilde/terminal-hugo-theme) (vendored fork) - Tailwind CSS with monospace fonts
 - **CSS Processing**: PostCSS with Autoprefixer
 
 ## Deployment
@@ -52,7 +52,7 @@ hugo
 ├── layouts/           # Custom layout overrides
 │   └── partials/      # Partial templates (head, SEO, etc.)
 ├── static/            # Static assets (images, favicons)
-├── themes/terminal/   # Theme (git submodule)
+├── themes/terminal/   # Theme (vendored)
 ├── public/            # Generated site output
 └── hugo.toml          # Hugo configuration
 ```

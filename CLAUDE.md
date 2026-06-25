@@ -59,7 +59,7 @@ description: Brief description for SEO and previews.
 
 ## Architecture Notes
 
-- **Theme**: Git submodule at `themes/terminal` - avoid modifying theme files directly
+- **Theme**: Vendored at `themes/terminal` (fork of the abandoned `techbarrack/terminal-hugo-theme`); edit directly. Project `layouts/` still override theme files per-path.
 - **Layout overrides**: Custom layouts go in `layouts/` to override theme defaults
 - **Shortcodes**: Custom shortcodes in `layouts/_shortcodes/` (e.g., `youtube.html`)
 - **Third-party JS**: Place scripts in `layouts/partials/third_party_js/`
