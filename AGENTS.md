@@ -24,7 +24,7 @@ flowchart LR
   TW[npx tailwindcss in theme] -->|prebuilt tailwind.css| T
   H --> P[public/ committed]
   P -->|git push main| G[GitHub]
-  G -->|manual deploy| D[Dokploy + nginx]
+  G -->|webhook auto-deploy| D[Dokploy + nginx]
   HB[External HealthBot] -->|weekly draft| C
 ```
 
@@ -146,13 +146,16 @@ posts are `draft: true`. A plain `hugo` build does **not** regenerate Tailwind.
 ## Deployment
 
 `public/` **must be committed** — Dokploy serves prebuilt files with no build step.
+Dokploy **auto-deploys on push to `main`** (GitHub webhook; app `buildType: static`,
+`watchPaths: /public`) — the old "trigger in the Dokploy UI" step is no longer needed.
 
 ```bash
-hugo                          # build
+# STOP any running `hugo server` first — it writes localhost URLs + a livereload
+# script into public/, which would auto-deploy to production on the next push.
+hugo                          # clean production build
 git add content/ public/      # stage source AND built output
 git commit -m "Add new post"
-git push                      # push to main
-# then trigger deploy in the Dokploy UI
+git push                      # push to main → Dokploy auto-deploys via webhook
 ```
 
 Note: committed `public/` accumulates stale fingerprinted assets

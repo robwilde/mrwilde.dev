@@ -21,15 +21,15 @@ hugo new blog/my-post-name.md
 
 ## Deployment Workflow
 
-The site is hosted via Dokploy (self-managed server). **The `public/` folder must be committed** because Dokploy serves pre-built output without running Hugo.
+The site is hosted via Dokploy (self-managed server). **The `public/` folder must be committed** because Dokploy serves pre-built output without running Hugo. Dokploy **auto-deploys on every push to `main`** (GitHub webhook, watches `/public`) — no manual UI trigger needed.
 
 ```bash
-# Full publish workflow
-hugo                          # Build the site
-git add content/ public/      # Stage source AND built output
+# Full publish workflow — STOP any running `hugo server` first
+# (a dev server writes localhost URLs + a livereload script into public/)
+hugo                          # clean production build → public/
+git add content/ public/      # stage source AND built output
 git commit -m "Add new post"
-git push                      # Push to GitHub
-# Then trigger deploy in Dokploy UI
+git push                      # push to main → Dokploy auto-deploys
 ```
 
 ## Content Structure

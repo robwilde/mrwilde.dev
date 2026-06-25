@@ -14,10 +14,9 @@ The site is hosted on a self-managed server via [Dokploy](https://dokploy.com/) 
 
 **Current workflow:**
 1. Write/edit content in `content/`
-2. Build locally with `hugo`
+2. Build locally with `hugo` (stop any running `hugo server` first — it injects localhost/dev output into `public/`)
 3. Commit both source files AND the `public/` folder
-4. Push to `main` branch
-5. Trigger deploy in Dokploy UI
+4. Push to `main` — Dokploy auto-deploys via GitHub webhook (no manual trigger needed)
 
 **Important:** The `public/` folder must be committed because Dokploy serves the pre-built output directly without running a build step.
 
