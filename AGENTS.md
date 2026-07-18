@@ -58,15 +58,16 @@ flowchart LR
 npm install                                          # PostCSS deps (see Tooling note)
 
 hugo server --buildDrafts --disableFastRender -w     # dev server, live reload
-hugo                                                 # production build → public/
+hugo --cleanDestinationDir                           # production build → public/ (see Deployment)
 hugo new blog/my-post-name.md                        # scaffold a new post
 
 # Rebuild Tailwind ONLY when utility classes change (run inside the theme):
 cd themes/terminal && npm install && npm run prod    # → assets/css/tailwind.css
 ```
 
-`--buildDrafts` is required locally because all `content/health/*-weekly-update.md`
-posts are `draft: true`. A plain `hugo` build does **not** regenerate Tailwind.
+`--buildDrafts` is for **local preview only** (all `content/health/*-weekly-update.md`
+posts are `draft: true`); production builds **plain** (no `--buildDrafts`) so drafts stay
+unpublished. No `hugo` build regenerates Tailwind (see the CSS pipeline above).
 
 ## Code Conventions & Common Patterns
 
