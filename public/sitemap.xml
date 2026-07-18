@@ -2,13 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mrwilde.dev/health/</loc>
-    <lastmod>2026-07-12T00:00:00+10:00</lastmod>
-  </url><url>
     <loc>https://mrwilde.dev/authors/</loc>
-    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/hardware/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/msi/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/pc-building/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/rgb/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/signalrgb/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/troubleshooting/</loc>
+    <lastmod>2026-07-18T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/tags/health/</loc>
+    <lastmod>2026-04-20T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/health/</loc>
     <lastmod>2026-04-20T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/health/2026-04-20-weekly-update/</loc>
@@ -174,9 +195,6 @@
     <lastmod>2018-03-08T00:00:00+11:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/tags/computers/</loc>
-    <lastmod>2016-10-07T00:00:00+11:00</lastmod>
-  </url><url>
-    <loc>https://mrwilde.dev/tags/hardware/</loc>
     <lastmod>2016-10-07T00:00:00+11:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/blog/2016/10/07/how-to-build-a-budget-pc/</loc>

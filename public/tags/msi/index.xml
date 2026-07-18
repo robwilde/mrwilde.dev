@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>MSI on Mr Wilde</title>
+		<link>https://mrwilde.dev/tags/msi/</link>
+		<description>Recent content in MSI on Mr Wilde</description>
+		<generator>Hugo</generator>
+		<language>en-au</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 18 Jul 2026 00:00:00 +1000</lastBuildDate>
+		
+			<atom:link href="https://mrwilde.dev/tags/msi/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Four Bugs Deep: Getting SignalRGB to Control ARGB on an MSI Z790</title>
+				<link>https://mrwilde.dev/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/</link>
+				<pubDate>Sat, 18 Jul 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/</guid>
+				<description>&lt;p&gt;Let me tell you about the time I lost an entire Saturday to RGB lighting.&lt;/p&gt;&#xA;&lt;p&gt;Not to a hard technical problem. Not to broken hardware. To &lt;em&gt;lighting control software&lt;/em&gt;. Specifically, getting SignalRGB to drive the ARGB headers on an MSI PRO Z790-P WIFI DDR4. Spoiler: it wasn&amp;rsquo;t one problem. It was &lt;strong&gt;four separate problems stacked on top of each other&lt;/strong&gt;, each one masking the next. Every time I fixed something, the symptoms stayed identical, which is exactly the kind of thing that makes you question your sanity.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
