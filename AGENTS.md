@@ -24,7 +24,7 @@ flowchart LR
   TW[npx tailwindcss in theme] -->|prebuilt tailwind.css| T
   H --> P[public/ committed]
   P -->|git push main| G[GitHub]
-  G -->|webhook auto-deploy| D[Dokploy + nginx]
+  G -.->|webhook broken: deploy manually via dokploy-mcp| D[Dokploy + nginx]
   HB[External HealthBot] -->|weekly draft| C
 ```
 
@@ -145,18 +145,31 @@ posts are `draft: true`. A plain `hugo` build does **not** regenerate Tailwind.
 
 ## Deployment
 
-`public/` **must be committed** — Dokploy serves prebuilt files with no build step.
-Dokploy **auto-deploys on push to `main`** (GitHub webhook; app `buildType: static`,
-`watchPaths: /public`) — the old "trigger in the Dokploy UI" step is no longer needed.
+`public/` **must be committed**: Dokploy serves prebuilt files with no build step
+(app `MrWilde.dev`, `applicationId wb7Ed-dnU3a9-683O8Qdu`, `buildType: static`,
+branch `main`, `buildPath`/`watchPaths: /public`).
+
+**Auto-deploy is currently BROKEN.** Despite Dokploy `autoDeploy: true`, the GitHub
+webhook does not fire for normal pushes, so a plain `git push` does NOT update the
+live site. The only deploys that land are the external HealthBot's, because it
+triggers Dokploy explicitly via the `dokploy-mcp` MCP server. Until the webhook is
+repaired, after pushing you MUST trigger a deploy yourself with the `dokploy-mcp`
+`application-deploy` tool (`applicationId: wb7Ed-dnU3a9-683O8Qdu`), then verify the
+live site itself (fresh `last-modified`, new URLs return 200), not just a `done` status.
 
 ```bash
-# STOP any running `hugo server` first — it writes localhost URLs + a livereload
-# script into public/, which would auto-deploy to production on the next push.
-hugo                          # clean production build
+# STOP any running `hugo server` first: it bakes localhost URLs + a livereload
+# script into public/, which must never be committed.
+hugo --cleanDestinationDir    # clean production build (plain, NO --buildDrafts)
 git add content/ public/      # stage source AND built output
 git commit -m "Add new post"
-git push                      # push to main → Dokploy auto-deploys via webhook
+git push                      # push to main (does NOT auto-deploy right now)
+# then: dokploy-mcp application-deploy (applicationId wb7Ed-dnU3a9-683O8Qdu), verify live
 ```
 
-Note: committed `public/` accumulates stale fingerprinted assets
-(`public/css/`, `public/js/`) since Hugo does not purge `publishDir` by default.
+Production is a **plain** build (no `--buildDrafts`), so `content/health/*-weekly-update.md`
+(`draft: true`) stays unpublished; do not publish drafts unless explicitly asked.
+Always build with `--cleanDestinationDir`: Hugo does not purge `publishDir`, so
+without it, deleted/renamed pages, orphaned `draft: true` health pages, and stale
+fingerprinted assets linger in `public/` and get served (draft health URLs would
+become directly reachable).
