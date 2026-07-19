@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-au"
+<html lang="en"
   dir="ltr">
 
 <head>
@@ -7,11 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="My MSI Z790&#39;s ARGB headers ignored SignalRGB completely. Turns out it wasn&#39;t one problem. It was four separate problems stacked on top of each other. Here&#39;s the full debug story and the checklist so you don&#39;t lose a Saturday like I did."><link rel="canonical" href="https://mrwilde.dev/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/">
 <link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="https://mrwilde.dev/blog/index.xml"><meta name="author" content="Robert Wilde">
-<meta name="language" content="en-au"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
+<meta name="language" content="en"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
 <meta property="og:title" content="Four Bugs Deep: Getting SignalRGB to Control ARGB on an MSI Z790">
 <meta property="og:description" content="My MSI Z790&#39;s ARGB headers ignored SignalRGB completely. Turns out it wasn&#39;t one problem. It was four separate problems stacked on top of each other. Here&#39;s the full debug story and the checklist so you don&#39;t lose a Saturday like I did.">
 <meta property="og:url" content="https://mrwilde.dev/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/">
-<meta property="og:locale" content="en-au"><meta property="og:type" content="article">
+<meta property="og:locale" content="en"><meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-07-18T00:00:00&#43;10:00">
 <meta property="article:modified_time" content="2026-07-18T00:00:00&#43;10:00">
 <meta property="article:author" content="Robert Wilde">
@@ -52,7 +52,7 @@
 <title>Four Bugs Deep: Getting SignalRGB to Control ARGB on an MSI Z790 | Mr Wilde</title>
 
 
-        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/tailwind.min.9e64dfbae35dbfe316803d2cd527efd87943dc52e152a147629916f0f10f3a53.css" type="text/css" integrity="sha256-nmTfuuNdv&#43;MWgD0s1Sfv2HlD3FLhUqFHYpkW8PEPOlM=" crossorigin="anonymous">
 </head>
 
 <body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
@@ -187,18 +187,18 @@
 </ul>
 <p>Everything worked in MSI Mystic Light. But Mystic Light is, to put it kindly, terrible, so I installed SignalRGB. The Corsair RAM lit up immediately. The motherboard showed up as a device. And the ARGB headers? Absolutely nothing. Fans dark, GPU block dark.</p>
 <p>Here&rsquo;s the first thing worth knowing: <strong>the RAM working proves nothing about your headers.</strong> Corsair RGB RAM is driven over SMBus, completely bypassing the motherboard&rsquo;s ARGB controller. It&rsquo;s a different code path. Don&rsquo;t let it fool you into thinking &ldquo;the app works, so it must be my wiring.&rdquo;</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/01-jrainbow-wrong-fans.png"
-			alt="SignalRGB Components page showing JRainbow 1 and 2 configured with Lian Li SL120 Infinity fans"><figcaption>
-			<p>SignalRGB shows the headers — but it has no idea what&rsquo;s actually connected, and neither did I. Those are the wrong fans (SL120 Infinity instead of my AL120 V2s).</p>
-		</figcaption>
+<figure><img src="01-jrainbow-wrong-fans.png"
+         alt="SignalRGB Components page showing JRainbow 1 and 2 configured with Lian Li SL120 Infinity fans"/><figcaption>
+            <p>SignalRGB shows the headers — but it has no idea what&rsquo;s actually connected, and neither did I. Those are the wrong fans (SL120 Infinity instead of my AL120 V2s).</p>
+        </figcaption>
 </figure>
 
 <h2 id="problem-1-msis-software-was-still-holding-the-controller">Problem 1: MSI&rsquo;s software was still holding the controller</h2>
 <p>Even after switching to SignalRGB, MSI Center / Mystic Light&rsquo;s SDK keeps its claws in the ARGB controller. Two programs writing to one chip means the loser gets nothing, and SignalRGB was the loser.</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/08-device-conflict-check.png"
-			alt="SignalRGB device information panel listing potential conflicts: LedKeeper.exe, Dragon Center, DCv2.exe, LightKeeperService.exe"><figcaption>
-			<p>SignalRGB&rsquo;s Inspector knows exactly who the usual suspects are. &lsquo;Running Conflicts: None&rsquo; is what you want to see.</p>
-		</figcaption>
+<figure><img src="08-device-conflict-check.png"
+         alt="SignalRGB device information panel listing potential conflicts: LedKeeper.exe, Dragon Center, DCv2.exe, LightKeeperService.exe"/><figcaption>
+            <p>SignalRGB&rsquo;s Inspector knows exactly who the usual suspects are. &lsquo;Running Conflicts: None&rsquo; is what you want to see.</p>
+        </figcaption>
 </figure>
 
 <p><strong>Fix:</strong> the official MSI Center Uninstall Tool (search &ldquo;CleanCenterMaster&rdquo;) with the <strong>Clean</strong> option. Not a regular uninstall. The removal tool. Then check the BIOS still has <strong>EZ LED Control</strong> enabled, because the cleanup can touch it.</p>
@@ -209,18 +209,18 @@
 <p><strong>The fix is a full power drain:</strong> shut down, flip the PSU switch off, hold the case power button for 30-60 seconds, wait a few minutes, then boot. The standby rail has to actually drain.</p>
 <p>I flipped the PSU back on and the lights came up instantly. That moment was equal parts relief and rage.</p>
 <p>Diagnostic worth remembering: with EZ LED enabled, your headers should light up at <strong>cold boot</strong>, before any OS. Lights at boot but not in Windows = software problem. No lights even at boot = latched controller (drain it) or genuinely dead hardware.</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/02-pulse-red-icon.png"
-			alt="SignalRGB JRainbow 1 channel with red pulse icon highlighted, single Lian Li AL120 component configured"><figcaption>
-			<p>The red icon that sent me down a rabbit hole. It&rsquo;s not an error — channel 1 pulses red, channel 2 pulses blue. Now you know.</p>
-		</figcaption>
+<figure><img src="02-pulse-red-icon.png"
+         alt="SignalRGB JRainbow 1 channel with red pulse icon highlighted, single Lian Li AL120 component configured"/><figcaption>
+            <p>The red icon that sent me down a rabbit hole. It&rsquo;s not an error — channel 1 pulses red, channel 2 pulses blue. Now you know.</p>
+        </figcaption>
 </figure>
 
 <h2 id="problem-3-three-apps-fighting-over-one-chip">Problem 3: three apps fighting over one chip</h2>
 <p>With the controller un-wedged I got greedy and tried running SignalRGB&rsquo;s MSI Bridge alongside Mystic Light. Result: flickering, effects randomly swapping between SignalRGB and Mystic&rsquo;s last scene, and pulsing one fan lighting up the GPU block on a <em>different header</em>. Chaos.</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/04-two-control-paths.png"
-			alt="SignalRGB Other Devices page showing both MSI PRO Z790-P motherboard and MSI Bridge Service controller tiles"><figcaption>
-			<p>Two control paths to one chip. This screenshot IS the flickering.</p>
-		</figcaption>
+<figure><img src="04-two-control-paths.png"
+         alt="SignalRGB Other Devices page showing both MSI PRO Z790-P motherboard and MSI Bridge Service controller tiles"/><figcaption>
+            <p>Two control paths to one chip. This screenshot IS the flickering.</p>
+        </figcaption>
 </figure>
 
 <p>The lesson is boring but absolute: <strong>one writer per chip.</strong> Pick SignalRGB&rsquo;s direct plugin OR the Mystic Light bridge. Never both, and never with a third path enabled. I ran the MSI cleanup again, disabled the bridge add-on in SignalRGB, and went direct-only.</p>
@@ -228,17 +228,17 @@
 <h2 id="problem-4-the-actual-villain-was-partner-permissions">Problem 4: the actual villain was Partner Permissions</h2>
 <p>Here&rsquo;s the fix that ended it, and it&rsquo;s buried where you&rsquo;d never look.</p>
 <p>At some point, Mystic Light had offered me a link to install SignalRGB (<code>Install_SignalRgb_Msi.exe</code>, MSI&rsquo;s co-branded installer). That installer registered my motherboard as <strong>partner-controlled</strong> inside SignalRGB. And that permission survived <em>everything</em>: the MSI cleanup tool, uninstalling SignalRGB, reinstalling the standard version. Every layer looked healthy. The logs showed the HID device opening, config packets sent, EZ LED confirmed. But SignalRGB was politely declining to drive the board because, as far as it knew, Mystic Light owned it.</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/05-mystic-sync-prompt.png"
-			alt="MSI Mystic Light greyed out with prompt asking &#39;Would you like your device to be out of third-party software sync mode?&#39;"><figcaption>
-			<p>Mystic Light locked out because SignalRGB holds the board. Whatever you do, don&rsquo;t click Yes — that&rsquo;s the &rsquo;take it all back&rsquo; button.</p>
-		</figcaption>
+<figure><img src="05-mystic-sync-prompt.png"
+         alt="MSI Mystic Light greyed out with prompt asking &#39;Would you like your device to be out of third-party software sync mode?&#39;"/><figcaption>
+            <p>Mystic Light locked out because SignalRGB holds the board. Whatever you do, don&rsquo;t click Yes — that&rsquo;s the &rsquo;take it all back&rsquo; button.</p>
+        </figcaption>
 </figure>
 
 <p><strong>Fix:</strong> in SignalRGB go to <strong>Devices → your motherboard → Settings → Disable the device</strong>. A warning banner appears with a <strong>Partner Permissions</strong> link. Open it, grant SignalRGB control of the MSI motherboard (and your Lian Li devices, if SignalRGB lists them under partner control too), re-enable the device. Done.</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/06-partner-permissions-banner.png"
-			alt="SignalRGB Device Disabled warning banner with Enable button and Partner Permissions link"><figcaption>
-			<p>The single most useful banner in SignalRGB, and you only see it by disabling the device. &lsquo;If a partner application previously took control&rsquo; — why yes, yes it did.</p>
-		</figcaption>
+<figure><img src="06-partner-permissions-banner.png"
+         alt="SignalRGB Device Disabled warning banner with Enable button and Partner Permissions link"/><figcaption>
+            <p>The single most useful banner in SignalRGB, and you only see it by disabling the device. &lsquo;If a partner application previously took control&rsquo; — why yes, yes it did.</p>
+        </figcaption>
 </figure>
 
 <p>Fans lit. GPU block lit. Individually addressable, exactly as advertised. The EK block on the 3070 needed a custom 60-LED strip component; the Lian Li fans had proper AL120 entries. Four RAM sticks, two fans, one water block, all dancing in sync.</p>
@@ -255,17 +255,17 @@
 <li><strong>Test with Forced Colour</strong> (device Lighting tab). It bypasses effects and canvas entirely, so it&rsquo;s the definitive &ldquo;is anything reaching the header&rdquo; test.</li>
 <li>Still dead? <strong>BIOS update</strong> (MSI ships LED controller firmware inside BIOS updates), and after that, a <strong>dedicated ARGB controller</strong> (~$30-40) that bypasses the motherboard headers entirely. Honestly the option I&rsquo;d consider from the start next time.</li>
 </ol>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/03-forced-colour-test.png"
-			alt="SignalRGB Lighting tab with Lighting Mode set to Forced and Forced Color set to white"><figcaption>
-			<p>The definitive test: Forced mode, white, 100% brightness. Bypasses effects, layouts and canvas — if this doesn&rsquo;t light your headers, config isn&rsquo;t your problem.</p>
-		</figcaption>
+<figure><img src="03-forced-colour-test.png"
+         alt="SignalRGB Lighting tab with Lighting Mode set to Forced and Forced Color set to white"/><figcaption>
+            <p>The definitive test: Forced mode, white, 100% brightness. Bypasses effects, layouts and canvas — if this doesn&rsquo;t light your headers, config isn&rsquo;t your problem.</p>
+        </figcaption>
 </figure>
 
 <p><strong>Bonus symptom:</strong> if the Components tab disappears entirely from the motherboard device, check Partner Permissions first, then update your BIOS — MSI ships LED controller firmware inside BIOS updates.</p>
-<figure><img src="/blog/2026/07/18/four-bugs-deep-getting-signalrgb-to-control-argb-on-an-msi-z790/07-missing-components-tab.png"
-			alt="SignalRGB motherboard device page showing only Lighting, Settings and Inspector tabs — Components tab missing"><figcaption>
-			<p>When the Components tab simply doesn&rsquo;t exist. Not a rendering bug — the plugin couldn&rsquo;t read the controller&rsquo;s capabilities.</p>
-		</figcaption>
+<figure><img src="07-missing-components-tab.png"
+         alt="SignalRGB motherboard device page showing only Lighting, Settings and Inspector tabs — Components tab missing"/><figcaption>
+            <p>When the Components tab simply doesn&rsquo;t exist. Not a rendering bug — the plugin couldn&rsquo;t read the controller&rsquo;s capabilities.</p>
+        </figcaption>
 </figure>
 
 <h2 id="a-few-facts-that-would-have-saved-me-hours">A few facts that would have saved me hours</h2>
