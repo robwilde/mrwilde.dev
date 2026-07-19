@@ -32,21 +32,19 @@
 
 {{- /* Determine og:image - check multiple sources */ -}}
 {{ $image := "" }}
-{{- /* 1. Check for explicit image in front matter */ -}}
-{{ if .Params.image -}}
-  {{ $image = .Params.image | absURL }}
-{{ else if .Params.featured_image -}}
-  {{ $image = .Params.featured_image | absURL }}
-{{ else if .Params.og_image -}}
-  {{ $image = .Params.og_image | absURL }}
-{{- /* 2. Check for images in page bundle */ -}}
+{{ $imgParam := or .Params.image .Params.featured_image .Params.og_image }}
+{{ if $imgParam -}}
+  {{ with .Resources.Get $imgParam -}}
+    {{ $image = .Permalink }}
+  {{ else -}}
+    {{ $image = $imgParam | absURL }}
+  {{- end }}
 {{ else -}}
   {{ $images := .Resources.ByType "image" }}
   {{ if $images -}}
     {{ $firstImage := index $images 0 }}
     {{ $image = $firstImage.Permalink }}
   {{ else -}}
-    {{- /* 3. Fallback to site default og image */ -}}
     {{ if site.Params.og_image -}}
       {{ $image = site.Params.og_image | absURL }}
     {{ else if site.Params.logo -}}

@@ -3,15 +3,13 @@
 {{ $cardType := "summary" }}
 {{ $image := "" }}
 
-{{- /* Check for images - same logic as Open Graph */ -}}
-{{ if .Params.image -}}
-  {{ $image = .Params.image | absURL }}
-  {{ $cardType = "summary_large_image" }}
-{{ else if .Params.featured_image -}}
-  {{ $image = .Params.featured_image | absURL }}
-  {{ $cardType = "summary_large_image" }}
-{{ else if .Params.twitter_image -}}
-  {{ $image = .Params.twitter_image | absURL }}
+{{ $imgParam := or .Params.image .Params.featured_image .Params.twitter_image }}
+{{ if $imgParam -}}
+  {{ with .Resources.Get $imgParam -}}
+    {{ $image = .Permalink }}
+  {{ else -}}
+    {{ $image = $imgParam | absURL }}
+  {{- end }}
   {{ $cardType = "summary_large_image" }}
 {{ else -}}
   {{ $images := .Resources.ByType "image" }}
