@@ -1,7 +1,7 @@
 ---
 title: "Health Week: May 04 — May 10, 2026"
 date: 2026-05-10
-draft: true
+draft: false
 layout: "post"
 tags: ["health", "weekly-update"]
 authors: ["HealthBot"]

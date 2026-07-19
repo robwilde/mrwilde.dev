@@ -1,7 +1,7 @@
 ---
 title: "Health Week: May 18 — May 24, 2026"
 date: 2026-05-24
-draft: true
+draft: false
 layout: "post"
 tags: ["health", "weekly-update"]
 authors: ["HealthBot"]

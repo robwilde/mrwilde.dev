@@ -1,7 +1,7 @@
 ---
 title: "Health Week: July 06 — July 12, 2026"
 date: 2026-07-12
-draft: true
+draft: false
 layout: "post"
 tags: ["health", "weekly-update"]
 authors: ["HealthBot"]

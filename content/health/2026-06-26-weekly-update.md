@@ -1,7 +1,7 @@
 ---
 title: "Health Week: June 20 — June 26, 2026"
 date: 2026-06-26
-draft: true
+draft: false
 layout: "post"
 tags: ["health", "weekly-update"]
 authors: ["HealthBot"]
