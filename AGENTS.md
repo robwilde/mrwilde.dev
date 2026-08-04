@@ -155,16 +155,29 @@ Tailwind (see the CSS pipeline above).
 (app `MrWilde.dev`, `applicationId wb7Ed-dnU3a9-683O8Qdu`, `buildType: static`,
 branch `main`, `buildPath`/`watchPaths: /public`).
 
-**Deploy trigger — verify, don't assume.** Dokploy has `autoDeploy: true`,
-`triggerType: push`, and `watchPaths: ["/public"]`. Push-triggered deploys *do* land:
-the deployment log shows pushes deploying 3–4 s after their commit. **But `watchPaths`
-means a push touching only source (`content/`, `layouts/`) and not `public/` never
-deploys — silently, with no error.** That is the usual cause of an apparently "broken"
-webhook: the fix is to rebuild `public/` and commit it, not to chase the webhook.
-After pushing, confirm the live site actually changed (fresh `last-modified`, new URLs
-return 200); if no deploy appears within ~30 s, trigger one with the `dokploy-mcp`
-`application-deploy` tool (`applicationId: wb7Ed-dnU3a9-683O8Qdu`) — a `done` status
-alone is not proof.
+**Auto-deploy is BROKEN — you MUST trigger every deploy manually.** Confirmed
+empirically on 2026-08-04: commit `98f60d4` changed 199 files under `public/` and was
+pushed to `main`; 80 s later the live site still served the previous build
+(`last-modified` unchanged). A `dokploy-mcp` `application-deploy` call then landed it in
+~10 s. Dokploy reports `autoDeploy: true` / `triggerType: push`, and the repo has **no
+repo-level webhooks at all** (verified with an `admin:repo_hook` token) because Dokploy
+integrates via GitHub App `2115297` — whose delivery log is not readable from here.
+Beware the deployment history: it shows deploys landing 3–4 s after each commit, which
+looks like a working webhook but is the external HealthBot explicitly calling
+`application-deploy` right after it pushes.
+
+So after every push: trigger `dokploy-mcp` `application-deploy`
+(`applicationId: wb7Ed-dnU3a9-683O8Qdu`), then verify the **live site** — fresh
+`last-modified` and new URLs returning 200. A `done` status is not proof.
+
+Second gotcha: `watchPaths: ["/public"]`. Even once the webhook is repaired, a push
+that changes only source (`content/`, `layouts/`) and not `public/` will never deploy.
+Rebuild and commit `public/` — that is the fix, not chasing the webhook.
+
+Third gotcha: pushing needs the repo-owner account. `gh` is logged into both
+`rob-ee-wilde` (usually active, **403 on this repo**) and `robwilde` (the owner). Git
+auths through `gh auth git-credential`, so it follows the active account — run
+`gh auth switch --user robwilde` before `git push`.
 
 ```bash
 # Always run `hugo server` with -M so it never writes public/. If it ever ran without
@@ -172,7 +185,7 @@ alone is not proof.
 hugo --cleanDestinationDir    # clean production build (plain, NO --buildDrafts)
 git add content/ public/      # stage source AND built output
 git commit -m "Add new post"
-git push                      # push to main; auto-deploys only if public/ changed
+git push                      # push to main (needs `gh auth switch --user robwilde`)
 # then: dokploy-mcp application-deploy (applicationId wb7Ed-dnU3a9-683O8Qdu), verify live
 ```
 
