@@ -57,7 +57,7 @@ flowchart LR
 ```bash
 npm install                                          # PostCSS deps (see Tooling note)
 
-hugo server --buildDrafts --disableFastRender -w     # dev server, live reload
+hugo server -M --buildDrafts --disableFastRender -w   # dev server, live reload
 hugo --cleanDestinationDir                           # production build → public/ (see Deployment)
 hugo new blog/my-post-name.md                        # scaffold a new post
 
@@ -65,9 +65,14 @@ hugo new blog/my-post-name.md                        # scaffold a new post
 cd themes/terminal && npm install && npm run prod    # → assets/css/tailwind.css
 ```
 
-`--buildDrafts` is for **local preview only** (all `content/health/*-weekly-update.md`
-posts are `draft: true`); production builds **plain** (no `--buildDrafts`) so drafts stay
-unpublished. No `hugo` build regenerates Tailwind (see the CSS pipeline above).
+**Always pass `-M` (`--renderToMemory`) to `hugo server`.** Without it, Hugo 0.163.3
+renders the dev build straight into `public/`, baking `localhost:1313` URLs into ~200
+files and livereload scripts into ~92 — which must never be committed. With `-M`,
+`public/` is never touched.
+
+`--buildDrafts` is for **local preview only**; production builds **plain** (no
+`--buildDrafts`) so `draft: true` posts stay unpublished. No `hugo` build regenerates
+Tailwind (see the CSS pipeline above).
 
 ## Code Conventions & Common Patterns
 
@@ -150,26 +155,29 @@ unpublished. No `hugo` build regenerates Tailwind (see the CSS pipeline above).
 (app `MrWilde.dev`, `applicationId wb7Ed-dnU3a9-683O8Qdu`, `buildType: static`,
 branch `main`, `buildPath`/`watchPaths: /public`).
 
-**Auto-deploy is currently BROKEN.** Despite Dokploy `autoDeploy: true`, the GitHub
-webhook does not fire for normal pushes, so a plain `git push` does NOT update the
-live site. The only deploys that land are the external HealthBot's, because it
-triggers Dokploy explicitly via the `dokploy-mcp` MCP server. Until the webhook is
-repaired, after pushing you MUST trigger a deploy yourself with the `dokploy-mcp`
-`application-deploy` tool (`applicationId: wb7Ed-dnU3a9-683O8Qdu`), then verify the
-live site itself (fresh `last-modified`, new URLs return 200), not just a `done` status.
+**Deploy trigger — verify, don't assume.** Dokploy has `autoDeploy: true`,
+`triggerType: push`, and `watchPaths: ["/public"]`. Push-triggered deploys *do* land:
+the deployment log shows pushes deploying 3–4 s after their commit. **But `watchPaths`
+means a push touching only source (`content/`, `layouts/`) and not `public/` never
+deploys — silently, with no error.** That is the usual cause of an apparently "broken"
+webhook: the fix is to rebuild `public/` and commit it, not to chase the webhook.
+After pushing, confirm the live site actually changed (fresh `last-modified`, new URLs
+return 200); if no deploy appears within ~30 s, trigger one with the `dokploy-mcp`
+`application-deploy` tool (`applicationId: wb7Ed-dnU3a9-683O8Qdu`) — a `done` status
+alone is not proof.
 
 ```bash
-# STOP any running `hugo server` first: it bakes localhost URLs + a livereload
-# script into public/, which must never be committed.
+# Always run `hugo server` with -M so it never writes public/. If it ever ran without
+# -M, STOP it and rebuild — public/ will hold localhost URLs + livereload scripts.
 hugo --cleanDestinationDir    # clean production build (plain, NO --buildDrafts)
 git add content/ public/      # stage source AND built output
 git commit -m "Add new post"
-git push                      # push to main (does NOT auto-deploy right now)
+git push                      # push to main; auto-deploys only if public/ changed
 # then: dokploy-mcp application-deploy (applicationId wb7Ed-dnU3a9-683O8Qdu), verify live
 ```
 
-Production is a **plain** build (no `--buildDrafts`), so `content/health/*-weekly-update.md`
-(`draft: true`) stays unpublished; do not publish drafts unless explicitly asked.
+Production is a **plain** build (no `--buildDrafts`), so `draft: true` health posts stay
+unpublished; do not publish drafts unless explicitly asked.
 Always build with `--cleanDestinationDir`: Hugo does not purge `publishDir`, so
 without it, deleted/renamed pages, orphaned `draft: true` health pages, and stale
 fingerprinted assets linger in `public/` and get served (draft health URLs would
