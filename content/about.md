@@ -9,18 +9,22 @@ url: "/about.html"
 
 ## Hello, I'm Robert Wilde 👋
 
-I have worked with Technology for 30+ years, from Electronic Engineering, Sound and Lighting, Radio, PC Hardware, and
-now Software Development.
-I love fixing things and working with legacy code; to me, it's like restoring an old car to its original condition.
-Sometimes you have to scrap it and do enjoy working on greenfield bespoke projects. As long as it's
-challenging, solving a complex problem, and I am always happy to learn something new.
+I have worked in technology for over 30 years, with experience spanning electronic engineering, sound and lighting,
+radio, PC hardware, and software development.
+
+I enjoy fixing things and working with legacy code. To me, it feels like restoring an old car to its original condition:
+understanding how it works, improving it carefully, and bringing it back to life.
+
+I also enjoy greenfield, bespoke software projects where there is room to design and build something new. Whether
+maintaining existing systems or solving complex new problems, I am happiest when the work is challenging and gives me
+the opportunity to keep learning.
 
 ## My Expertise
 
-I built my first PHP application in 2005, and have worked through all the classic frameworks since. I spent a long time
+I built my first PHP application in 2005 and have worked through all the classic frameworks since. I spent a long time
 with WordPress, played with CakePHP and CodeIgnitor but then discovered Laravel. I have worked on a few Symfony
 applications, and I do really like Symfony, but Laravel is GOAT when it comes to building things fast. I have also
-worked with some other languages such as C++, Java, and Python. I am know building a few projects with Go and loving it.
+worked with some other languages such as C++, Java, and Python. I am now building a few projects with Go and loving it.
 
 ## My Approach
 
