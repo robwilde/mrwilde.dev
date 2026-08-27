@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Sun, 02 Aug 2026 00:00:00 +1000</lastBuildDate>
+			<lastBuildDate>Wed, 26 Aug 2026 00:00:00 +1000</lastBuildDate>
 		
 			<atom:link href="https://mrwilde.dev/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor</title>
+				<link>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</link>
+				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</guid>
+				<description>&lt;p&gt;I had four terminals open and no clear idea what three of them were doing.&lt;/p&gt;&#xA;&lt;p&gt;One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&amp;rsquo;d stopped checking it. The fourth I genuinely could not identify — and somewhere inside it was a prompt I&amp;rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Health Week: July 27 — August 02, 2026</title>
 				<link>https://mrwilde.dev/health/2026-08-02-weekly-update/</link>

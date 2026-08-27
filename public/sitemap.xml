@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mrwilde.dev/tags/ai-tools/</loc>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
+  </url><url>
     <loc>https://mrwilde.dev/authors/</loc>
-    <lastmod>2026-08-02T00:00:00+10:00</lastmod>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/bun/</loc>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/developer-tools/</loc>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/oh-my-pi/</loc>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</loc>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
+  </url><url>
+    <loc>https://mrwilde.dev/tags/typescript/</loc>
+    <lastmod>2026-08-26T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/tags/health/</loc>
     <lastmod>2026-08-02T00:00:00+10:00</lastmod>
@@ -127,9 +145,6 @@
   </url><url>
     <loc>https://mrwilde.dev/tags/technical-leadership/</loc>
     <lastmod>2025-10-17T00:00:00+11:00</lastmod>
-  </url><url>
-    <loc>https://mrwilde.dev/tags/ai-tools/</loc>
-    <lastmod>2025-08-02T00:00:00+10:00</lastmod>
   </url><url>
     <loc>https://mrwilde.dev/blog/2025/08/02/building-my-first-mcp-server-scratching-that-obsidian-itch/</loc>
     <lastmod>2025-08-02T00:00:00+10:00</lastmod>

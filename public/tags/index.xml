@@ -10,9 +10,44 @@
 		
 		
 		
-			<lastBuildDate>Sun, 02 Aug 2026 00:00:00 +1000</lastBuildDate>
+			<lastBuildDate>Wed, 26 Aug 2026 00:00:00 +1000</lastBuildDate>
 		
 			<atom:link href="https://mrwilde.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>AI Tools</title>
+				<link>https://mrwilde.dev/tags/ai-tools/</link>
+				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/tags/ai-tools/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Bun</title>
+				<link>https://mrwilde.dev/tags/bun/</link>
+				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/tags/bun/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Developer Tools</title>
+				<link>https://mrwilde.dev/tags/developer-tools/</link>
+				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/tags/developer-tools/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Oh My Pi</title>
+				<link>https://mrwilde.dev/tags/oh-my-pi/</link>
+				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/tags/oh-my-pi/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>TypeScript</title>
+				<link>https://mrwilde.dev/tags/typescript/</link>
+				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+				<guid>https://mrwilde.dev/tags/typescript/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Health</title>
 				<link>https://mrwilde.dev/tags/health/</link>
@@ -151,13 +186,6 @@
 				<link>https://mrwilde.dev/tags/technical-leadership/</link>
 				<pubDate>Fri, 17 Oct 2025 00:00:00 +1100</pubDate>
 				<guid>https://mrwilde.dev/tags/technical-leadership/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>AI Tools</title>
-				<link>https://mrwilde.dev/tags/ai-tools/</link>
-				<pubDate>Sat, 02 Aug 2025 00:00:00 +1000</pubDate>
-				<guid>https://mrwilde.dev/tags/ai-tools/</guid>
 				<description></description>
 			</item>
 			<item>
