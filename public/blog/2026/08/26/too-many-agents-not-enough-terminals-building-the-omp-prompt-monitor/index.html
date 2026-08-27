@@ -5,11 +5,11 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions — and it accidentally handed me a readable decision log for every run."><link rel="canonical" href="https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/">
+<meta name="description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions, and it accidentally handed me a readable decision log for every run."><link rel="canonical" href="https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/">
 <link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="https://mrwilde.dev/blog/index.xml"><meta name="author" content="Robert Wilde">
 <meta name="language" content="en-au"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
 <meta property="og:title" content="Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor">
-<meta property="og:description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions — and it accidentally handed me a readable decision log for every run.">
+<meta property="og:description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions, and it accidentally handed me a readable decision log for every run.">
 <meta property="og:url" content="https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/">
 <meta property="og:locale" content="en_AU"><meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-08-26T00:00:00&#43;10:00">
@@ -38,7 +38,7 @@
 <meta name="twitter:site" content="@mrwilde">
 <meta name="twitter:creator" content="@mrwilde">
 <meta name="twitter:title" content="Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor">
-<meta name="twitter:description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions — and it accidentally handed me a readable decision log for every run.">
+<meta name="twitter:description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions, and it accidentally handed me a readable decision log for every run.">
 <meta name="twitter:image" content="https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/01-dashboard-overview.png">
 <meta name="twitter:image:alt" content="Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor"><link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/jpeg" href="/favicon.jpg">
@@ -125,7 +125,7 @@
       <h2 class="text-3xl max-sm:text-2xl font-bold">Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor</h2>
       
       
-        <p class="text-slate-400 italic">Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions — and it accidentally handed me a readable decision log for every run.</p>
+        <p class="text-slate-400 italic">Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions, and it accidentally handed me a readable decision log for every run.</p>
       
       
       <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
@@ -173,14 +173,14 @@
       <div class="flex flex-col gap-10">
         <div class="prose prose-invert max-w-full">
           <p>I had four terminals open and no clear idea what three of them were doing.</p>
-<p>One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&rsquo;d stopped checking it. The fourth I genuinely could not identify — and somewhere inside it was a prompt I&rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.</p>
-<p>This isn&rsquo;t a flaw in any particular agent. <a href="https://github.com/can1357/oh-my-pi">Oh My Pi</a> — omp, the harness I&rsquo;ve been living in — is very good at running <em>a</em> session. So is every other agentic CLI I&rsquo;ve used. What none of them give you is the view <em>across</em> sessions: which repositories have work in flight, which agents are actually alive right now, and what on earth you asked them.</p>
+<p>One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&rsquo;d stopped checking it. The fourth I genuinely could not identify. Somewhere inside it was a prompt I&rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.</p>
+<p>This isn&rsquo;t a flaw in any particular agent. The harness I&rsquo;ve been living in is <a href="https://github.com/can1357/oh-my-pi">Oh My Pi</a>, or omp for short. It is very good at running <em>a</em> session. So is every other agentic CLI I&rsquo;ve used. What none of them give you is the view <em>across</em> sessions: which repositories have work in flight, which agents are alive right now, and what on earth you asked them.</p>
 <p>So I built that view. It&rsquo;s called <a href="https://github.com/robwilde/omp-prompt-monitor">omp-prompt-monitor</a>, it took a weekend, and it surfaced something I wasn&rsquo;t looking for.</p>
-<h2 id="the-bit-that-actually-breaks">The bit that actually breaks</h2>
-<p>Running one agent is a conversation. Running six is an operations problem, and it fails in a specific way: <strong>the useful context is split across terminal tabs, and a terminal is the worst database ever built.</strong></p>
+<h2 id="so-where-does-it-break">So where does it break?</h2>
+<p>Running one agent is a conversation. Running six is an operations problem, and it fails in a specific way: <strong>the useful context is split across terminal tabs, and scrollback is not a record you can search.</strong> There is no index, and once a line scrolls off the top of the buffer it&rsquo;s gone. Think of a whiteboard that somebody wipes every few minutes.</p>
 <p>Concretely, I kept needing to answer three questions and having no way to answer any of them:</p>
 <ol>
-<li><strong>Which projects have work in flight?</strong> Not &ldquo;which terminals are open&rdquo; — which <em>repositories</em> currently have an agent doing something.</li>
+<li><strong>Which projects have work in flight?</strong> Not &ldquo;which terminals are open&rdquo;: which <em>repositories</em> currently have an agent doing something.</li>
 <li><strong>Is this session alive, or did it finish an hour ago?</strong> A tab that last printed output at 09:12 tells you nothing about whether a process is still attached to it.</li>
 <li><strong>What did I ask it?</strong> Especially the long, carefully-written prompts. Those are the expensive artefact in this workflow, and they were the easiest thing to lose.</li>
 </ol>
@@ -194,15 +194,15 @@
 
 <p>Projects on the left, sessions in the middle, the selected session&rsquo;s journal on the right.</p>
 <p>That&rsquo;s 17 repositories and 490 sessions on my machine, accumulated over a couple of months of using omp as a daily driver. It is also a fairly complete argument for why terminal tabs were never going to be enough.</p>
-<p>Projects group by git root, falling back to working directory, so <code>~/work/api</code> and <code>~/work/api/packages/db</code> collapse into one card instead of two. Each card carries a session count, a relative last-activity time, and — when it applies — a live count.</p>
-<h2 id="live-recent-idle--and-why-that-needed-a-heartbeat">Live, recent, idle — and why that needed a heartbeat</h2>
+<p>Projects group by git root, falling back to working directory, so <code>~/work/api</code> and <code>~/work/api/packages/db</code> collapse into one card instead of two. Each card carries a session count, a relative last-activity time, and, when it applies, a live count.</p>
+<h2 id="live-recent-or-idle-why-did-that-need-a-heartbeat">Live, recent or idle: why did that need a heartbeat?</h2>
 <p>Question two turned out to be the interesting one, because you can&rsquo;t answer it from the files alone. A journal&rsquo;s mtime tells you when a session last <em>wrote</em>, not whether anything is still attached to it.</p>
-<p>So the plugin half of the project writes a heartbeat: a small JSON file per session, refreshed every 20 seconds while the session runs, removed on shutdown. Anything older than 60 seconds is stale and gets cleaned up on read — which covers the case where omp is killed rather than exited.</p>
+<p>So the plugin half of the project writes a heartbeat: a small JSON file per session, refreshed every 20 seconds while the session runs, removed on shutdown. Anything older than 60 seconds is stale and gets cleaned up on read, which covers the case where omp is killed rather than exited.</p>
 <p>That gives three honest states:</p>
 <ul>
-<li><strong>live</strong> — a valid heartbeat exists; something is attached right now</li>
-<li><strong>recent</strong> — no heartbeat, but the journal was touched within the last 15 minutes</li>
-<li><strong>idle</strong> — everything else</li>
+<li><strong>live</strong>: a valid heartbeat exists; something is attached right now</li>
+<li><strong>recent</strong>: no heartbeat, but the journal was touched within the last 15 minutes</li>
+<li><strong>idle</strong>: everything else</li>
 </ul>
 <figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/02-live-across-projects.png"
 			alt="Projects and sessions columns with the Live filter active, showing two live sessions in two different repositories, each project card carrying a 1 LIVE chip"><figcaption>
@@ -210,7 +210,7 @@
 		</figcaption>
 </figure>
 
-<h2 id="the-journal-what-you-actually-typed">The journal: what you actually typed</h2>
+<h2 id="the-journal-what-did-you-type">The journal: what did you type?</h2>
 <figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/03-journal-what-i-asked.png"
 			alt="Journal column filtered to You, showing three user prompts newest-first with timestamps and character counts of 9, 39 and 9.2k characters"><figcaption>
 			<p>Three prompts, newest first: &lsquo;PR merged&rsquo; at nine characters, a 39-character correction, and the 9.2k-character brief that started it. Each one copyable.</p>
@@ -218,12 +218,12 @@
 </figure>
 
 <p>The <code>You</code> filter is the feature I originally set out to build: every prompt I typed in that session, newest first, timestamped, with a character count and a copy button.</p>
-<p>The character counts are more useful than they sound. That session is three prompts — a 9,200-character code-review brief, a 39-character follow-up, and <code>PR merged</code>, all nine characters of it. You can see the shape of a session before reading a word of it.</p>
-<p>Getting that list clean took more filtering than I expected. A harness doesn&rsquo;t only record what you type. omp also writes synthetic messages, steering messages, and user-role entries attributed to an agent rather than to me. All of those are legitimately part of the conversation, and none of them are things I typed, so the parser drops them. What&rsquo;s left under <code>You</code> is only ever me. Skill invocations survive as their own tagged entry kind, because those <em>are</em> deliberate user actions.</p>
+<p>The character counts are more useful than they sound. That session is three prompts: a 9,200-character code-review brief, a 39-character follow-up, and <code>PR merged</code>, all nine characters of it. You can see the shape of a session before reading a word of it.</p>
+<p>Getting that list clean took more filtering than I expected. A harness doesn&rsquo;t only record what you type. omp also writes synthetic messages, steering messages, and user-role entries attributed to an agent rather than to me. All of those are legitimately part of the conversation, and none of them are things I typed, so the parser drops them. What&rsquo;s left under <code>You</code> is only ever me. Skill invocations survive as their own tagged entry kind, because those <em>are</em> things I chose to run.</p>
 <h2 id="the-side-effect-reading-the-agents-running-commentary">The side effect: reading the agent&rsquo;s running commentary</h2>
 <p>Here&rsquo;s the part I didn&rsquo;t plan.</p>
-<p>Once the parser understood user messages, adding assistant messages was about ten lines: any assistant turn carrying non-empty text becomes a journal entry. I expected that to give me the final answers — the summary at the end of a task.</p>
-<p>What it actually gives you is everything the model says <em>between tool calls</em>.</p>
+<p>Once the parser understood user messages, adding assistant messages was about ten lines: any assistant turn carrying non-empty text becomes a journal entry. I expected that to give me the final answers: the summary at the end of a task.</p>
+<p>What it gives you is everything the model says <em>between tool calls</em>.</p>
 <figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/04-journal-harness-voice.png"
 			alt="Journal column filtered to Agent, showing 37 short timestamped assistant entries narrating git operations step by step"><figcaption>
 			<p>Same session, Agent filter: 3 entries become 37. This is the commentary that normally scrolls past between tool calls.</p>
@@ -232,50 +232,50 @@
 
 <p>Switch that same session to <code>Agent</code> and it goes from 3 entries to 37. Most of them are tiny:</p>
 <blockquote>
-<p><code>Now verify with CI gates and commit.</code> — 36 chars</p>
-<p><code>All green. Commit and push.</code> — 27 chars</p>
-<p><code>Confirmed merged (`28f4cdb`). Cleaning up: sync `main`, remove the feature branch locally and on origin if still present.</code> — 121 chars</p>
+<p><code>Now verify with CI gates and commit.</code> (36 chars)</p>
+<p><code>All green. Commit and push.</code> (27 chars)</p>
+<p><code>Confirmed merged (`28f4cdb`). Cleaning up: sync `main`, remove the feature branch locally and on origin if still present.</code> (121 chars)</p>
 </blockquote>
-<p>In the TUI those flash past between tool calls and then they&rsquo;re gone. Sitting still, timestamped, filtered to one role, they read as a decision log — the agent narrating its own plan, one step at a time. And because every entry is timestamped, you can see where a run spent forty minutes and where it spent four seconds.</p>
-<p>I&rsquo;ve found this more useful for debugging a bad run than the final summary is. When an agent goes sideways, the summary tells you where it ended up; the narration tells you the exact step where it decided to go there. That third line up there — 121 characters naming the merged commit and the exact cleanup that follows — is a whole decision I&rsquo;d otherwise be reconstructing from <code>git reflog</code>.</p>
+<p>In the TUI those flash past between tool calls and then they&rsquo;re gone. Sitting still, timestamped, filtered to one role, they read as a decision log: the agent narrating its own plan, one step at a time. And because every entry is timestamped, you can see where a run spent forty minutes and where it spent four seconds.</p>
+<p>I&rsquo;ve found this more useful for debugging a bad run than the final summary is. When an agent goes sideways, the summary tells you where it ended up; the narration tells you the exact step where it decided to go there. That third line up there (121 characters naming the merged commit and the exact cleanup that follows) is a whole decision I&rsquo;d otherwise be reconstructing from <code>git reflog</code>.</p>
 <p>It has also quietly changed how I write prompts. Reading fifty of these back, the good runs and the bad runs diverge at a visible point, and it&rsquo;s almost always the point where the model restated my request slightly wrong and I wasn&rsquo;t watching closely enough to catch it.</p>
 <h2 id="finding-the-thing-you-half-remember">Finding the thing you half-remember</h2>
 <figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/05-journal-search.png"
 			alt="Search box containing the word heartbeat, with the journal entry count reduced from 40 to 1 matching entry while the project and session lists stay unchanged"><figcaption>
-			<p>Search narrows the journal only — 40 entries down to 1 — leaving the project and session lists exactly where you left them.</p>
+			<p>Search narrows the journal only (40 entries down to 1), leaving the project and session lists exactly where you left them.</p>
 		</figcaption>
 </figure>
 
-<p>Search filters journal entries inside the selected session: 40 entries down to the one that mentions <code>heartbeat</code>. It&rsquo;s deliberately scoped that way. It doesn&rsquo;t touch the project or session lists, so you keep your place while you dig.</p>
+<p>Search filters journal entries inside the selected session: 40 entries down to the one that mentions <code>heartbeat</code>. That narrow scope is the whole point. It doesn&rsquo;t touch the project or session lists, so you keep your place while you dig.</p>
 <h2 id="how-it-works">How it works</h2>
-<p>The pipeline is one-way and boring on purpose:</p>
+<p>The pipeline is one-way and boring, and that is the idea:</p>
 <pre tabindex="0"><code>journal.ts          index-store.ts        view.ts               server.ts
 parse one      →   incremental index  →  snapshot          →   HTTP + JSON API
 .jsonl file         (size + mtime)        (+ git, heartbeats)
-</code></pre><p><strong>Parsing.</strong> Each file starts with an optional title-slot record, then a session header. Malformed JSON lines are counted, not thrown — one truncated journal from a hard kill must never take down the whole index. Titles fall back through: explicit title slot → header title → first 60 characters of the first prompt → <code>Session &lt;id8&gt;</code>.</p>
-<p><strong>Indexing.</strong> The scan globs exactly one directory level (<code>*/*.jsonl</code>). That&rsquo;s deliberate: omp writes subagent journals into nested trees, and pulling those in would bury the sessions you actually started under fan-out noise. Entries are cached by size and mtime, so refreshing across 490 sessions only re-reads the handful that changed, with a bounded worker pool rather than 490 concurrent file reads.</p>
-<p><strong>The cache never stores assistant replies.</strong> Prompts are small and needed for the list view; replies are large and only needed for the one session you have open, so they&rsquo;re re-parsed on demand.</p>
-<p><strong>Privacy lives in the route, not the model.</strong> <code>/api/snapshot</code> — the endpoint the list view polls every 10 seconds — strips prompt text from every session before responding. Full text only ever comes back from <code>/api/session/:id</code>, one session at a time. The server binds <code>127.0.0.1</code>; passing <code>--host</code> is a deliberate act and worth thinking about twice, because the detail endpoint and <code>--json</code> will hand full prompt history to anyone who can reach them.</p>
-<p><strong>Instance reuse without a PID file.</strong> Every response carries an <code>x-omp-monitor: 1</code> header. A second <code>omp-monitor</code> — or a second <code>/monitor</code> — probes <code>/healthz</code> for that header first, and reuses the running dashboard instead of fighting over the port.</p>
-<p>The entire frontend is one static HTML file: inline CSS, vanilla JS, no framework, no build step. Prompt text goes into <code>&lt;pre&gt;</code> via <code>textContent</code>, never <code>innerHTML</code>, because arbitrary transcript content is exactly the sort of thing you don&rsquo;t want parsed as markup. Bun runs the TypeScript directly — no runtime dependencies, nothing to compile.</p>
+</code></pre><p>Each file starts with an optional title-slot record, then a session header. Malformed JSON lines are counted, not thrown: one truncated journal from a hard kill must never take down the whole index. Titles fall back through: explicit title slot → header title → first 60 characters of the first prompt → <code>Session &lt;id8&gt;</code>.</p>
+<p>The scan globs exactly one directory level (<code>*/*.jsonl</code>). There is a reason for that. omp writes subagent journals into nested trees, and pulling those in would bury the sessions you started under fan-out noise.</p>
+<p>Entries are cached by size and mtime, so refreshing across 490 sessions only re-reads the handful that changed, with a bounded worker pool rather than 490 concurrent file reads. The cache never stores assistant replies. Prompts are small and needed for the list view, replies are large and only needed for the one session you have open, so they&rsquo;re re-parsed on demand.</p>
+<p>Privacy lives in the route, not the model. The list view polls <code>/api/snapshot</code> every 10 seconds, and that endpoint strips prompt text from every session before responding. Full text only ever comes back from <code>/api/session/:id</code>, one session at a time. The server binds <code>127.0.0.1</code>, and passing <code>--host</code> is a choice to make with your eyes open, because the detail endpoint and <code>--json</code> will hand full prompt history to anyone who can reach them.</p>
+<p>Instance reuse happens without a PID file. Every response carries an <code>x-omp-monitor: 1</code> header, so a second <code>omp-monitor</code> or a second <code>/monitor</code> probes <code>/healthz</code> for that header first and reuses the running dashboard instead of fighting over the port.</p>
+<p>The entire frontend is one static HTML file: inline CSS, vanilla JS, no framework, no build step. Prompt text goes into <code>&lt;pre&gt;</code> via <code>textContent</code>, never <code>innerHTML</code>, because arbitrary transcript content is exactly the sort of thing you don&rsquo;t want parsed as markup. Bun runs the TypeScript directly, so there are no runtime dependencies and nothing to compile.</p>
 <h2 id="running-it">Running it</h2>
-<p>Standalone:</p>
+<p>Run it standalone:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://get.mrwilde.dev/setup | bash
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>omp-monitor                       <span style="color:#75715e"># http://127.0.0.1:7333</span>
 </span></span><span style="display:flex;"><span>omp-monitor --port <span style="color:#ae81ff">8080</span> --open
 </span></span><span style="display:flex;"><span>omp-monitor --json &gt; snapshot.json
-</span></span></code></pre></div><p>As an omp plugin — which is the version you want, because it&rsquo;s the plugin that writes the heartbeats that make <code>live</code> mean anything:</p>
+</span></span></code></pre></div><p>The plugin version is the one you want, because it writes the heartbeats that make <code>live</code> mean anything. Run it as an omp plugin:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omp install github:robwilde/omp-prompt-monitor
 </span></span></code></pre></div><p>Restart omp afterwards. Newly installed extensions need a real restart; <code>/reload-plugins</code> won&rsquo;t rebuild them. Then run <code>/monitor</code> in any session: it starts the dashboard if one isn&rsquo;t already up and reports the URL. <code>/monitor stop</code>, <code>/monitor restart</code>, and <code>/monitor update</code> do what they say.</p>
 <p>Needs Bun 1.3.14 or newer. The installer will put a user-scoped Bun in place if you don&rsquo;t have one.</p>
 <h2 id="what-id-change">What I&rsquo;d change</h2>
-<p><strong>Subagent trees are invisible.</strong> A <code>task</code> fan-out spawning six subagents still shows as a single session. That&rsquo;s the right default — the alternative is a list nobody can read — but &ldquo;expand this session&rsquo;s subagents&rdquo; is the obvious next thing to build.</p>
+<p><strong>Subagent trees are invisible.</strong> A <code>task</code> fan-out spawning six subagents still shows as a single session. That&rsquo;s the right default, because the alternative is a list nobody can read. But &ldquo;expand this session&rsquo;s subagents&rdquo; is the obvious next thing to build.</p>
 <p><strong>It&rsquo;s read-only.</strong> I can see that a session has been sitting idle for forty minutes; I can&rsquo;t do anything about it from the browser. Steering an agent from a dashboard is tempting and probably a mistake, but I keep thinking about it.</p>
 <p><strong>One machine.</strong> The snapshot is plain JSON and the boundary was drawn so a remote collector could slot in, but none exists yet. Running agents on a box in the corner and watching them from a laptop is the version of this I actually want.</p>
 <hr>
-<p>Four merged PRs and a weekend. It hasn&rsquo;t made my agents any better — but I stopped losing prompts, I can tell at a glance which repos have something running, and I&rsquo;ve accidentally acquired a decision log for every run I&rsquo;ve ever done.</p>
-<p>The code is at <a href="https://github.com/robwilde/omp-prompt-monitor">robwilde/omp-prompt-monitor</a>. It reads files omp already writes, so there&rsquo;s nothing to configure.</p>
+<p>Four merged PRs and a weekend. It hasn&rsquo;t made my agents any better, but I stopped losing prompts, I can tell at a glance which repos have something running, and I&rsquo;ve accidentally acquired a decision log for every run I&rsquo;ve ever done.</p>
+<p>The code is at <a href="https://github.com/robwilde/omp-prompt-monitor">robwilde/omp-prompt-monitor</a>. It reads files omp already writes, so there is nothing to configure. If you are running more than one agent at a time, point it at your own sessions and have a read of what your agents have been telling you. And if it breaks, or you find something sitting in those journals that I haven&rsquo;t thought to surface yet, open an issue and tell me about it. I would genuinely like to know.</p>
 
           <hr />
         </div>

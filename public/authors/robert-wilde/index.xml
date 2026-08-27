@@ -18,7 +18,7 @@
 				<link>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</link>
 				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
 				<guid>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</guid>
-				<description>&lt;p&gt;I had four terminals open and no clear idea what three of them were doing.&lt;/p&gt;&#xA;&lt;p&gt;One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&amp;rsquo;d stopped checking it. The fourth I genuinely could not identify — and somewhere inside it was a prompt I&amp;rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.&lt;/p&gt;</description>
+				<description>&lt;p&gt;I had four terminals open and no clear idea what three of them were doing.&lt;/p&gt;&#xA;&lt;p&gt;One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&amp;rsquo;d stopped checking it. The fourth I genuinely could not identify. Somewhere inside it was a prompt I&amp;rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Four Bugs Deep: Getting SignalRGB to Control ARGB on an MSI Z790</title>
