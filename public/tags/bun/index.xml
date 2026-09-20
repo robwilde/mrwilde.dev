@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Bun on Mr Wilde</title>
-		<link>https://mrwilde.dev/tags/bun/</link>
-		<description>Recent content in Bun on Mr Wilde</description>
-		<generator>Hugo</generator>
-		<language>en-au</language>
-		
-		
-		
-		
-			<lastBuildDate>Wed, 26 Aug 2026 00:00:00 +1000</lastBuildDate>
-		
-			<atom:link href="https://mrwilde.dev/tags/bun/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor</title>
-				<link>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</link>
-				<pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
-				<guid>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</guid>
-				<description>&lt;p&gt;I had four terminals open and no clear idea what three of them were doing.&lt;/p&gt;&#xA;&lt;p&gt;One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&amp;rsquo;d stopped checking it. The fourth I genuinely could not identify. Somewhere inside it was a prompt I&amp;rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Bun on Mr Wilde</title>
+    <link>https://mrwilde.dev/tags/bun/</link>
+    <description>Recent content in Bun on Mr Wilde</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Aug 2026 00:00:00 +1000</lastBuildDate>
+    <atom:link href="https://mrwilde.dev/tags/bun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor</title>
+      <link>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +1000</pubDate>
+      <guid>https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/</guid>
+      <description>I had four terminals open and no clear idea what three of them were doing.&#xA;One was part-way through a migration. One was grinding through a dependency sweep. One had been quiet long enough that I&amp;rsquo;d stopped checking it. The fourth I genuinely could not identify. Somewhere inside it was a prompt I&amp;rsquo;d written twenty minutes earlier that I needed to read again. The only copy of that prompt was in a scrollback buffer I had already scrolled past.</description>
+    </item>
+  </channel>
 </rss>

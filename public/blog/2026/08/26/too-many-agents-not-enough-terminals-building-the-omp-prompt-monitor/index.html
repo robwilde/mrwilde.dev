@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-au"
+<html lang="en"
   dir="ltr">
 
 <head>
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions, and it accidentally handed me a readable decision log for every run."><link rel="canonical" href="https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/">
 <link rel="alternate" type="application/rss+xml" title="Mr Wilde - Blog Feed" href="https://mrwilde.dev/blog/index.xml"><meta name="author" content="Robert Wilde">
-<meta name="language" content="en-au"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
+<meta name="language" content="en-AU"><meta name="robots" content="index, follow"><meta property="og:site_name" content="Mr Wilde">
 <meta property="og:title" content="Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor">
 <meta property="og:description" content="Several agents across several repos and no clear idea what any of them were doing. So I built a dashboard for omp sessions, and it accidentally handed me a readable decision log for every run.">
 <meta property="og:url" content="https://mrwilde.dev/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/">
@@ -52,7 +52,7 @@
 <title>Too Many Agents, Not Enough Terminals: Building the OMP Prompt Monitor | Mr Wilde</title>
 
 
-        <link rel="stylesheet" href="/css/tailwind.min.99905fd149bc765c4a3184a943032ad794835dbb1965875ed36c4d4ac1358fb5.css" type="text/css" integrity="sha256-mZBf0Um8dlxKMYSpQwMq15SDXbsZZYde02xNSsE1j7U=" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/tailwind.min.9e64dfbae35dbfe316803d2cd527efd87943dc52e152a147629916f0f10f3a53.css" type="text/css" integrity="sha256-nmTfuuNdv&#43;MWgD0s1Sfv2HlD3FLhUqFHYpkW8PEPOlM=" crossorigin="anonymous">
 </head>
 
 <body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
@@ -186,10 +186,10 @@
 </ol>
 <p>omp already writes everything needed to answer all three. Every session appends a JSONL journal under <code>~/.omp/agent/sessions</code>. Nobody was reading it.</p>
 <h2 id="one-tab-three-columns">One tab, three columns</h2>
-<figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/01-dashboard-overview.png"
-			alt="OMP Prompt Monitor dashboard: a projects column listing 17 repositories, a sessions column listing 490 sessions, and an empty journal column prompting you to select a session"><figcaption>
-			<p>17 projects, 490 sessions, one tab. Client project names are blurred; every count is real.</p>
-		</figcaption>
+<figure><img src="01-dashboard-overview.png"
+         alt="OMP Prompt Monitor dashboard: a projects column listing 17 repositories, a sessions column listing 490 sessions, and an empty journal column prompting you to select a session"/><figcaption>
+            <p>17 projects, 490 sessions, one tab. Client project names are blurred; every count is real.</p>
+        </figcaption>
 </figure>
 
 <p>Projects on the left, sessions in the middle, the selected session&rsquo;s journal on the right.</p>
@@ -204,17 +204,17 @@
 <li><strong>recent</strong>: no heartbeat, but the journal was touched within the last 15 minutes</li>
 <li><strong>idle</strong>: everything else</li>
 </ul>
-<figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/02-live-across-projects.png"
-			alt="Projects and sessions columns with the Live filter active, showing two live sessions in two different repositories, each project card carrying a 1 LIVE chip"><figcaption>
-			<p>Two agents, two repos, both attached right now. Working that out used to mean cycling through tabs and guessing.</p>
-		</figcaption>
+<figure><img src="02-live-across-projects.png"
+         alt="Projects and sessions columns with the Live filter active, showing two live sessions in two different repositories, each project card carrying a 1 LIVE chip"/><figcaption>
+            <p>Two agents, two repos, both attached right now. Working that out used to mean cycling through tabs and guessing.</p>
+        </figcaption>
 </figure>
 
 <h2 id="the-journal-what-did-you-type">The journal: what did you type?</h2>
-<figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/03-journal-what-i-asked.png"
-			alt="Journal column filtered to You, showing three user prompts newest-first with timestamps and character counts of 9, 39 and 9.2k characters"><figcaption>
-			<p>Three prompts, newest first: &lsquo;PR merged&rsquo; at nine characters, a 39-character correction, and the 9.2k-character brief that started it. Each one copyable.</p>
-		</figcaption>
+<figure><img src="03-journal-what-i-asked.png"
+         alt="Journal column filtered to You, showing three user prompts newest-first with timestamps and character counts of 9, 39 and 9.2k characters"/><figcaption>
+            <p>Three prompts, newest first: &lsquo;PR merged&rsquo; at nine characters, a 39-character correction, and the 9.2k-character brief that started it. Each one copyable.</p>
+        </figcaption>
 </figure>
 
 <p>The <code>You</code> filter is the feature I originally set out to build: every prompt I typed in that session, newest first, timestamped, with a character count and a copy button.</p>
@@ -224,10 +224,10 @@
 <p>Here&rsquo;s the part I didn&rsquo;t plan.</p>
 <p>Once the parser understood user messages, adding assistant messages was about ten lines: any assistant turn carrying non-empty text becomes a journal entry. I expected that to give me the final answers: the summary at the end of a task.</p>
 <p>What it gives you is everything the model says <em>between tool calls</em>.</p>
-<figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/04-journal-harness-voice.png"
-			alt="Journal column filtered to Agent, showing 37 short timestamped assistant entries narrating git operations step by step"><figcaption>
-			<p>Same session, Agent filter: 3 entries become 37. This is the commentary that normally scrolls past between tool calls.</p>
-		</figcaption>
+<figure><img src="04-journal-harness-voice.png"
+         alt="Journal column filtered to Agent, showing 37 short timestamped assistant entries narrating git operations step by step"/><figcaption>
+            <p>Same session, Agent filter: 3 entries become 37. This is the commentary that normally scrolls past between tool calls.</p>
+        </figcaption>
 </figure>
 
 <p>Switch that same session to <code>Agent</code> and it goes from 3 entries to 37. Most of them are tiny:</p>
@@ -240,10 +240,10 @@
 <p>I&rsquo;ve found this more useful for debugging a bad run than the final summary is. When an agent goes sideways, the summary tells you where it ended up; the narration tells you the exact step where it decided to go there. That third line up there (121 characters naming the merged commit and the exact cleanup that follows) is a whole decision I&rsquo;d otherwise be reconstructing from <code>git reflog</code>.</p>
 <p>It has also quietly changed how I write prompts. Reading fifty of these back, the good runs and the bad runs diverge at a visible point, and it&rsquo;s almost always the point where the model restated my request slightly wrong and I wasn&rsquo;t watching closely enough to catch it.</p>
 <h2 id="finding-the-thing-you-half-remember">Finding the thing you half-remember</h2>
-<figure><img src="/blog/2026/08/26/too-many-agents-not-enough-terminals-building-the-omp-prompt-monitor/05-journal-search.png"
-			alt="Search box containing the word heartbeat, with the journal entry count reduced from 40 to 1 matching entry while the project and session lists stay unchanged"><figcaption>
-			<p>Search narrows the journal only (40 entries down to 1), leaving the project and session lists exactly where you left them.</p>
-		</figcaption>
+<figure><img src="05-journal-search.png"
+         alt="Search box containing the word heartbeat, with the journal entry count reduced from 40 to 1 matching entry while the project and session lists stay unchanged"/><figcaption>
+            <p>Search narrows the journal only (40 entries down to 1), leaving the project and session lists exactly where you left them.</p>
+        </figcaption>
 </figure>
 
 <p>Search filters journal entries inside the selected session: 40 entries down to the one that mentions <code>heartbeat</code>. That narrow scope is the whole point. It doesn&rsquo;t touch the project or session lists, so you keep your place while you dig.</p>
@@ -260,13 +260,13 @@ parse one      →   incremental index  →  snapshot          →   HTTP + JSON
 <p>The entire frontend is one static HTML file: inline CSS, vanilla JS, no framework, no build step. Prompt text goes into <code>&lt;pre&gt;</code> via <code>textContent</code>, never <code>innerHTML</code>, because arbitrary transcript content is exactly the sort of thing you don&rsquo;t want parsed as markup. Bun runs the TypeScript directly, so there are no runtime dependencies and nothing to compile.</p>
 <h2 id="running-it">Running it</h2>
 <p>Run it standalone:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://get.mrwilde.dev/setup | bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://get.mrwilde.dev/setup | bash
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>omp-monitor                       <span style="color:#75715e"># http://127.0.0.1:7333</span>
 </span></span><span style="display:flex;"><span>omp-monitor --port <span style="color:#ae81ff">8080</span> --open
 </span></span><span style="display:flex;"><span>omp-monitor --json &gt; snapshot.json
 </span></span></code></pre></div><p>The plugin version is the one you want, because it writes the heartbeats that make <code>live</code> mean anything. Run it as an omp plugin:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omp install github:robwilde/omp-prompt-monitor
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>omp install github:robwilde/omp-prompt-monitor
 </span></span></code></pre></div><p>Restart omp afterwards. Newly installed extensions need a real restart; <code>/reload-plugins</code> won&rsquo;t rebuild them. Then run <code>/monitor</code> in any session: it starts the dashboard if one isn&rsquo;t already up and reports the URL. <code>/monitor stop</code>, <code>/monitor restart</code>, and <code>/monitor update</code> do what they say.</p>
 <p>Needs Bun 1.3.14 or newer. The installer will put a user-scoped Bun in place if you don&rsquo;t have one.</p>
 <h2 id="what-id-change">What I&rsquo;d change</h2>
