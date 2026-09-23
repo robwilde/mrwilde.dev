@@ -22,7 +22,7 @@ description: "Weekly health metrics: sleep, activity, productivity, nutrition"
 | Metric | This Week | Previous Week | Trend |
 |--------|-----------|---------------|-------|
 | Total Steps | 20,087.0 | 27,479.0 | -7,392.0 |
-| Active Minutes | 647.0 min | 1,751.0 min | -1,104.0 min |
+| Active Minutes | 1,159.0 min | 1,751.0 min | -592.0 min |
 | Floors | 0.0 | 0.0 | Stable |
 
 
@@ -70,9 +70,9 @@ No body composition data available this week.
 
 | Metric | This Week | Previous Week | Trend |
 |--------|-----------|---------------|-------|
-| Productive Time | 3,554.0 min | 4,522.0 min | -968.0 min |
-| Distracting Time | 38.0 min | 507.0 min | -469.0 min |
-| Neutral Time | 1,773.0 min | 1,448.0 min | +325.0 min |
+| Productive Time | 3,872.0 min | 4,522.0 min | -650.0 min |
+| Distracting Time | 96.0 min | 507.0 min | -411.0 min |
+| Neutral Time | 1,809.0 min | 1,448.0 min | +361.0 min |
 
 
 ## Exercise
@@ -95,5 +95,5 @@ No body composition data available this week.
 
 - eating_well positively correlates with steps_3000 (5 stars)
 
-- heartrate positively correlates with heartrate_max (5 stars)
+- good_code positively correlates with eating_ok (5 stars)
 
