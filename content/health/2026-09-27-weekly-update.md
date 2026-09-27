@@ -1,7 +1,7 @@
 ---
 title: "Health Week: September 21 — September 27, 2026"
 date: 2026-09-27
-draft: true
+draft: false
 layout: "post"
 tags: ["health", "weekly-update"]
 authors: ["HealthBot"]
