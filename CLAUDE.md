@@ -21,7 +21,9 @@ hugo new blog/my-post-name.md
 
 ## Deployment Workflow
 
-The site is hosted via Dokploy (self-managed server). **The `public/` folder must be committed** because Dokploy serves pre-built output without running Hugo. Dokploy **auto-deploys on every push to `main`** (GitHub webhook, watches `/public`) — no manual UI trigger needed.
+The site is hosted via Dokploy (self-managed server). **The `public/` folder must be committed** because Dokploy serves pre-built output without running Hugo. **Auto-deploy is BROKEN — you MUST trigger every deploy manually.** Dokploy reports `autoDeploy: true` / `triggerType: push`, but the repo has no GitHub webhooks (Dokploy uses a GitHub App whose delivery log is unreadable). Deploys seen landing seconds after commits are the external HealthBot explicitly calling `application-deploy`, not a webhook. So after every push, trigger the `dokploy-mcp` `application-deploy` tool (`applicationId: wb7Ed-dnU3a9-683O8Qdu`), then verify the live site (fresh `last-modified`, new URLs return 200).
+
+Also, `watchPaths` is `["/public"]`: a push that changes only `content/` or `layouts/` and not `public/` will never deploy. Rebuild and commit `public/`.
 
 ```bash
 # Full publish workflow — STOP any running `hugo server` first
@@ -29,7 +31,7 @@ The site is hosted via Dokploy (self-managed server). **The `public/` folder mus
 hugo                          # clean production build → public/
 git add content/ public/      # stage source AND built output
 git commit -m "Add new post"
-git push                      # push to main → Dokploy auto-deploys
+git push                      # push to main, then trigger dokploy-mcp application-deploy manually
 ```
 
 ## Content Structure
@@ -65,4 +67,4 @@ description: Brief description for SEO and previews.
 - **Third-party JS**: Place scripts in `layouts/partials/third_party_js/`
 - **Hugo extended** is required (min version 0.116.0) for Tailwind CSS processing
 - Permalink format: `/blog/:year/:month/:day/:title/`
-- **Automated publishing**: The HealthBot `blog-publisher` skill auto-commits and pushes weekly health summary posts. Dokploy MCP tools are available for triggering deploys programmatically
+- **Automated publishing**: The HealthBot `blog-publisher` skill auto-commits and pushes weekly health summary posts, then explicitly calls the Dokploy MCP `application-deploy` tool (pushing alone does not deploy)
