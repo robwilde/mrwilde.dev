@@ -12,7 +12,7 @@
       <!-- Blog Post Metadata -->
       <div class="flex flex-row flex-wrap max-md:gap-4 gap-10">
         <p>📅 {{ .Date.Format "Monday, Jan 2, 2006" }}</p>
-        {{ with .Params.lastmod }}
+        {{ with .Lastmod }}
           <p>🔄 {{ .Format "Monday, Jan 2, 2006" }}</p>
         {{ end }}
         <p>📖 Reading time: {{ .ReadingTime }} min</p>
