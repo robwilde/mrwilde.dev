@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "your-code-is-crap"
 layout: "post"
+aliases:
+  - "/blog/your-code-is-crap-thats-ok/"
 tags: [ "Better Dev", "Clean Code", "Development" ]
 authors: [ "Robert Wilde" ]
 description: Except the truth that your code is 💩

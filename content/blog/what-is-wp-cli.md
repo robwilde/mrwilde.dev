@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "what-is-wp-cli"
 layout: "post"
+aliases:
+  - "/blog/what-is-wp-cli/"
 tags: ["wordpress", "cli", "Tools"]
 authors: ["Robert Wilde"]
 description: the back-door to your WordPress website

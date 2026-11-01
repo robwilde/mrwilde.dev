@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "speaking-at-wordcamp"
 layout: "post"
+aliases:
+  - "/blog/speaking-at-wordcamp/"
 tags: ["wordpress", "public-speaking", "Talks"]
 authors: ["Robert Wilde"]
 description: My First time not only attending WordCamp but also speaking.

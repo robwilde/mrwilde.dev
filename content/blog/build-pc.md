@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "how-to-build-a-budget-pc"
 layout: "post"
+aliases:
+  - "/blog/build-pc/"
 tags: ["guide", "computers", "Hardware"]
 authors: ["Robert Wilde"]
 description: This is a custom description for this page

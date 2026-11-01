@@ -5,6 +5,9 @@ draft: false
 params:
   slug: "hosting-retype-blog-with-cicd"
 layout: "post"
+aliases:
+  - "/blog/hosting-retype-blog-with-cicd/"
+  - "/blog/2025/07/03/hosting-my-retype-blog-with-ci/cd/"
 tags: ["docker", "cicd", "github-actions", "nginx", "letsencrypt", "retype", "DevOps"]
 authors: ["Robert Wilde"]
 description: My experience deploying a Retype blog with Docker, GitHub Actions, and Let's Encrypt on a home server

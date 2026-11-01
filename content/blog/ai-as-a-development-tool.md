@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "ai-as-a-development-tool"
 layout: "post"
+aliases:
+  - "/blog/ai-as-a-development-tool/"
 tags: [ "AI", "Development", "Guide" ]
 authors: [ "Robert Wilde" ]
 description: How using AI tools has made me a better developer by reducing arrogance and enhancing decision-making.

@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "alf-alias-manager"
 layout: "post"
+aliases:
+  - "/blog/alf-alias-manager/"
 tags: [ "dev", "dev-environment", "helpers", "Tools" ]
 authors: [ "Robert Wilde" ]
 description: Alf alias manager - Create and synchronize bash aliases across hosts using a config file

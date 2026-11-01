@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "intentional-git-history"
 layout: "post"
+aliases:
+  - "/blog/the-power-of-intentional-git-history/"
 tags: [ "Git", "Development", "Workflow", "Version Control" ]
 authors: [ "Robert Wilde" ]
 description: A two-stage merge strategy that gives developers the history they need while keeping releases clean.

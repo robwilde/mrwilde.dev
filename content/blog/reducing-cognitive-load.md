@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "reducing-cognitive-load"
 layout: "post"
+aliases:
+  - "/blog/reducing-cognitive-load/"
 tags: ["SoftwareEngineering", "DeveloperProductivity", "TechnicalLeadership", "Better Developer"]
 authors: ["Robert Wilde"]
 description: Doing a little bit of everything to reduce cognitive load in a project.

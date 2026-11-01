@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "thorium-is-the-new-gold"
 layout: "post"
+aliases:
+  - "/blog/thorium/"
 tags: [ "science", "energy", "Thorium" ]
 authors: [ "Robert Wilde" ]
 description: The answer to cheap and clean power, is Thorium and Australia has one of the largest supplies of it on the planet

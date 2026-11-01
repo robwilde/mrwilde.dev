@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "technical-interview-failure-framework"
 layout: "post"
+aliases:
+  - "/blog/doing-to-much-of-the-wrong-thing/technical-interview-failure-framework/"
 tags: [ "Technical Leadership", "Software Engineering", "Better Developer", "Guide" ]
 authors: [ "Robert Wilde" ]
 description: A post-mortem on how cognitive bias sabotaged my interview preparation, and the systematic approach I built to prevent it from happening again.

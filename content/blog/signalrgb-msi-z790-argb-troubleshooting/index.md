@@ -6,6 +6,8 @@ params:
   slug: "signalrgb-msi-z790-argb-troubleshooting"
   image: "06-partner-permissions-banner.png"
 layout: "post"
+aliases:
+  - "/blog/signalrgb-msi-z790-argb-troubleshooting/"
 tags: ["Hardware", "RGB", "SignalRGB", "MSI", "Troubleshooting", "PC Building"]
 authors: ["Robert Wilde"]
 description: "My MSI Z790's ARGB headers ignored SignalRGB completely. Turns out it wasn't one problem. It was four separate problems stacked on top of each other. Here's the full debug story and the checklist so you don't lose a Saturday like I did."

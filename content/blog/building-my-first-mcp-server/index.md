@@ -5,6 +5,8 @@ draft: false
 params:
   slug: "building-my-first-mcp-server"
 layout: "post"
+aliases:
+  - "/blog/building-my-first-mcp-server/"
 tags: ["MCP", "Claude", "Obsidian", "Python", "AI Tools", "Development"]
 authors: ["Robert Wilde"]
 description: How I built my first MCP server to automatically save Claude Code responses to Obsidian - from scratch to itch.
